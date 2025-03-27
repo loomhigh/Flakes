@@ -102,7 +102,7 @@
   # Install firefox.
   programs = {
   firefox.enable = true;
-  
+  systemd.enable = true;
   };
 
   # Allow unfree packages

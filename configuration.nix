@@ -115,6 +115,7 @@
   git
   nh
   micro
+  gnome-tweaks
   ];
   
 #  shellAliases = {

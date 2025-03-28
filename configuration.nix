@@ -116,6 +116,7 @@
   nh
   micro
   gnome-tweaks
+  luanti
   ];
   
 #  shellAliases = {

@@ -42,12 +42,6 @@
     LC_TELEPHONE = "en_AU.UTF-8";
     LC_TIME = "en_AU.UTF-8";
   };
-  
-  home.sessionVariables = {
-    EDITOR = "micro";
-    BROWSER = "firefox";
-    TERMINAL = "kitty";
-  };
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
   
@@ -112,8 +106,14 @@
     packages = with pkgs; [
     #  thunderbird
     ];
-  };
 
+  };
+  
+environment.sessionVariables = {
+    EDITOR = "micro";
+    BROWSER = "firefox";
+    TERMINAL = "kitty";
+};
   # Enable automatic login for the user.
   services.xserver.displayManager.autoLogin.enable = true;
   services.xserver.displayManager.autoLogin.user = "truebeliever";

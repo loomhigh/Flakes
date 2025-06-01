@@ -108,16 +108,16 @@
 # an attempt to make a command that updates the computer on startup 01-06-25
 # Currently created, but ignored by system and not active
 
-environment.etc = {
-UpdateFlake.sh = { #Shell file which can hopefully be used by systemd to run updateflake command
-  text = ''
-  #!/bin/bash
-  exec git -C $HOME/Flakes/ pull origin main && nixos-rebuild switch
-  '';
-   # The UNIX file mode bits, idk what that means, but the stackexchange forum post included it
-  mode = "0440";
-};
-};
+#environment.etc = {
+#UpdateFlake.sh = { #Shell file which can hopefully be used by systemd to run updateflake command
+#  text = ''
+#  #!/bin/bash
+#  exec git -C $HOME/Flakes/ pull origin main && nixos-rebuild switch
+#  '';
+#   # The UNIX file mode bits, idk what that means, but the stackexchange forum post included it
+#  mode = "0440";
+#};
+#}; using this produces build error: the option environment.etc.updateflake.sh does not exist
 systemd.user.services.updateflake = {
   enable = true;
   description = "update the nixOS Flake";
@@ -125,7 +125,7 @@ systemd.user.services.updateflake = {
     Type = "simple";
   };
   serviceConfig = {
-    ExecStart = "/etc/UpdateFlake.sh"; #File created above
+    ExecStart = "$HOME/Flakes/syncflake.sh"; #File created above
   };
   wantedBy = [ "multi-user.target" ]; # starts after login
 };

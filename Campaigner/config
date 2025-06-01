@@ -38,11 +38,10 @@ exec --no-startup-id nm-applet
 
 #i3-msg "workspace 1; append_layout ~/.config/i3/workspace-1.json"
 exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/loomhigh/.config/i3/workspace-1.json'"
-exec --no-startup-id picom -b
-exec --no-startup-id feh --bg-tile ~/dirtcraft.png
+exec --no-startup-id luakit -b
+exec --no-startup-id feh --bg-tile ~/Flakes/Campaigner/background.jpg
 #exec --no-startup-id kitty
 exec --no-startup-id kitty && Btop
-exec --no-startup-id spigot start
 
 ## END OF PERSONAL ADDITIONS SECTION ##
 

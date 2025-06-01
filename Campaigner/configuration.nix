@@ -160,6 +160,7 @@ services.udev.extraRules = ''
   kitty #cute terminal
   fish # update this comment when I get it working
   luakit
+  feh
   ];
   
 #  shellAliases = {

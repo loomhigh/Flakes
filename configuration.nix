@@ -94,6 +94,16 @@
   services.xserver.displayManager.autoLogin.enable = true;
   services.xserver.displayManager.autoLogin.user = "truebeliever";
 
+# an attempt to make a command that updates the computer on startup 01-06-25
+# Currently untested, not known if it works
+systemd.user.services.UpdateFlake = {
+  description = "update the nixOS Flake";
+  serviceConfig.PassEnvironment = "DISPLAY";
+  script = 'git fetch origin && git reset --hard origin/main && git clean -fd && nixos-rebuild switch --flake .#nixos'
+  ;
+  wantedBy = [ "multi-user.target" ]; # starts after login
+}
+
   # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
@@ -111,12 +121,12 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  btop
-  git
-  nh
-  micro
-  gnome-tweaks
-  luanti
+  btop # System monitor you can run in Terminal, I love this thing
+  git # Main way of updating the software
+  nh # I genuinely cannot remember what this does
+  micro # Like the nano text editor, but a little more advamced
+  gnome-tweaks # a way of messing with the settings of gnome better
+  luanti # FOSS minecraft-like game, cannot remember why I put this here
   ];
   
 #  shellAliases = {

@@ -113,7 +113,7 @@ systemd.user.services.updateflake = {
   script = ''
   git -C $HOME/Flakes/ pull origin main && nixos-rebuild switch
   ''; #Replacing the old command: git fetch origin && git reset --hard origin/main && git clean -fd && nixos-rebuild switch --flake .#nixos
-  wantedBy = [ "multi-user.target" ]; # starts after login
+  WantedBy = [ "multi-user.target" ]; # starts after login
 };
 
   systemd.services."updateflake".enable = true;

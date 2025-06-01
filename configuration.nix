@@ -99,8 +99,9 @@
 systemd.user.services.UpdateFlake = {
   description = "update the nixOS Flake";
   serviceConfig.PassEnvironment = "DISPLAY";
-  script = 'git fetch origin && git reset --hard origin/main && git clean -fd && nixos-rebuild switch --flake .#nixos'
-  ;
+  script = ''
+  git fetch origin && git reset --hard origin/main && git clean -fd && nixos-rebuild switch --flake .#nixos
+  '';
   wantedBy = [ "multi-user.target" ]; # starts after login
 }
 

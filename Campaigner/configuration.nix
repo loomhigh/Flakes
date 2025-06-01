@@ -97,7 +97,7 @@
     isNormalUser = true;
     description = "TrueBeliever";
     extraGroups = [ "networkmanager" "wheel" ];
-    shell = pkg.fish;
+    shell = pkgs.fish;
     packages = with pkgs; [
     #  thunderbird
     ];

@@ -37,7 +37,7 @@ exec --no-startup-id nm-applet
 ## PERSONAL ADDITONS SECTION ##
 
 #i3-msg "workspace 1; append_layout ~/.config/i3/workspace-1.json"
-exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/loomhigh/.config/i3/workspace-1.json'"
+exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/truebeliever/.config/i3/workspace-1.json'"
 exec --no-startup-id luakit -b
 exec --no-startup-id feh --bg-tile ~/Flakes/Campaigner/background.jpg
 #exec --no-startup-id kitty

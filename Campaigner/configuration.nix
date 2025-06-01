@@ -46,9 +46,7 @@
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
   
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
+  # Enable the X11 windowing system &
   # Enable the i3 Window Manager.
   #services.xserver.displayManager.gdm.enable = true; not sure if needed
  services.xserver = {

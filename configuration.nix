@@ -114,6 +114,8 @@ UpdateFlake.sh = { #Shell file which can hopefully be used by systemd to run upd
   #!/bin/bash
   exec git -C $HOME/Flakes/ pull origin main && nixos-rebuild switch
   '';
+   # The UNIX file mode bits, idk what that means, but the stackexchange forum post included it
+  mode = "0440";
 };
 };
 systemd.user.services.updateflake = {

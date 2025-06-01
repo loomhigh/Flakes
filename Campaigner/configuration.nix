@@ -164,6 +164,7 @@ services.udev.extraRules = ''
   openttd #video game I am using to test whether the updating works
   kitty #cute terminal
   fish # update this comment when I get it working
+  luakit
   ];
   
 #  shellAliases = {

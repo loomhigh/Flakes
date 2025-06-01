@@ -126,7 +126,7 @@ systemd.user.services.UpdateFlake = {
   nh # I genuinely cannot remember what this does
   micro # Like the nano text editor, but a little more advamced
   gnome-tweaks # a way of messing with the settings of gnome better
-  luanti # FOSS minecraft-like game, cannot remember why I put this here
+  #luanti # FOSS minecraft-like game, cannot remember why I put this here originally, also, nixos doesn't believe it exists anyway
   systemd #does background tasks. Mainly installed to update the device
   ];
   

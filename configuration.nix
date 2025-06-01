@@ -45,6 +45,8 @@
   
   nix.settings.experimental-features = ["nix-command" "flakes"];
   
+  builtins.trace "NOTE: this is altconfig!"
+
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 

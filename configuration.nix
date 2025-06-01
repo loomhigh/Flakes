@@ -102,7 +102,6 @@
   # Install firefox.
   programs = {
   firefox.enable = true;
-  systemd.enable = true;
   };
 
 # an attempt to make a command that updates the computer on startup 01-06-25

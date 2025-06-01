@@ -103,7 +103,7 @@ systemd.user.services.UpdateFlake = {
   git fetch origin && git reset --hard origin/main && git clean -fd && nixos-rebuild switch --flake .#nixos
   '';
   wantedBy = [ "multi-user.target" ]; # starts after login
-}
+};
 
   # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
   systemd.services."getty@tty1".enable = false;

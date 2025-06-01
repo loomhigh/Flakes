@@ -50,8 +50,20 @@
   services.xserver.enable = true;
 
   # Enable the i3 Window Manager.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.i3.enable = true;
+  #services.xserver.displayManager.gdm.enable = true; not sure if needed
+     displayManager = {
+        defaultSession = "none+i3";
+    };
+
+    windowManager.i3 = {
+      enable = true;
+      extraPackages = with pkgs; [
+        dmenu #application launcher most people use
+        i3status # gives you the default i3 status bar
+        i3lock #default i3 screen locker
+        i3blocks #if you are planning on using i3blocks over i3status
+     ];
+    };
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -97,8 +109,8 @@
 
   # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229 
   # might not relevant when not using gnome, but keeping in case it is related to gdm
-  systemd.services."getty@tty1".enable = false;
-  systemd.services."autovt@tty1".enable = false;
+  #systemd.services."getty@tty1".enable = false;
+  #systemd.services."autovt@tty1".enable = false;
 
 
 

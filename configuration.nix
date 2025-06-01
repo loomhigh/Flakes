@@ -94,17 +94,6 @@
   services.xserver.displayManager.autoLogin.enable = true;
   services.xserver.displayManager.autoLogin.user = "truebeliever";
 
-# an attempt to make a command that updates the computer on startup 01-06-25
-# Currently untested, not known if it works
-systemd.user.services.UpdateFlake = {
-  description = "update the nixOS Flake";
-  serviceConfig.PassEnvironment = "DISPLAY";
-  script = ''
-  git fetch origin && git reset --hard origin/main && git clean -fd && nixos-rebuild switch --flake .#nixos
-  '';
-  wantedBy = [ "multi-user.target" ]; # starts after login
-};
-
   # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
@@ -115,6 +104,17 @@ systemd.user.services.UpdateFlake = {
   firefox.enable = true;
   systemd.enable = true;
   };
+
+# an attempt to make a command that updates the computer on startup 01-06-25
+# Currently untested, not known if it works
+systemd.user.services.UpdateFlake = {
+  description = "update the nixOS Flake";
+  serviceConfig.PassEnvironment = "DISPLAY";
+  script = ''
+  git fetch origin && git reset --hard origin/main && git clean -fd && nixos-rebuild switch --flake .#nixos
+  '';
+  wantedBy = [ "multi-user.target" ]; # starts after login
+};
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -128,6 +128,7 @@ systemd.user.services.UpdateFlake = {
   micro # Like the nano text editor, but a little more advamced
   gnome-tweaks # a way of messing with the settings of gnome better
   luanti # FOSS minecraft-like game, cannot remember why I put this here
+  systemd #does background tasks. Mainly installed to update the device
   ];
   
 #  shellAliases = {

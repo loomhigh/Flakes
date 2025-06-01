@@ -97,15 +97,12 @@
     isNormalUser = true;
     description = "TrueBeliever";
     extraGroups = [ "networkmanager" "wheel" ];
-    
+    shell = pkg.fish;
     packages = with pkgs; [
     #  thunderbird
     ];
 
   };
-home-manager.users.truebeliever = {
-  programs.fish.enable = true;
-};
 
 environment.sessionVariables = {
     EDITOR = "micro";
@@ -126,6 +123,7 @@ environment.sessionVariables = {
   # Install firefox.
   programs = {
   firefox.enable = true;
+  fish.enable = true;
   };
 
 # an attempt to make a command that updates the computer on startup 01-06-25

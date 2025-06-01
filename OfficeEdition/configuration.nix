@@ -43,7 +43,7 @@
     LC_TIME = "en_AU.UTF-8";
   };
   
-  builtins.trace "NOTE: this is altconfig!"
+  builtins.trace = "NOTE: this is altconfig!";
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
   

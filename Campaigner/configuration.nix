@@ -103,12 +103,13 @@
     isNormalUser = true;
     description = "TrueBeliever";
     extraGroups = [ "networkmanager" "wheel" ];
+    programs.fish.enable = true;
     packages = with pkgs; [
     #  thunderbird
     ];
 
   };
-  
+
 environment.sessionVariables = {
     EDITOR = "micro";
     BROWSER = "firefox";
@@ -162,6 +163,7 @@ services.udev.extraRules = ''
   systemd #does background tasks. Mainly installed to update the device
   openttd #video game I am using to test whether the updating works
   kitty #cute terminal
+  fish # update this comment when I get it working
   ];
   
 #  shellAliases = {

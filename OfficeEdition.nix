@@ -7,7 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      /etc/nixos/Flakes/hardware-configuration.nix
+      ./hardware-configuration.nix
     ];
 
 
@@ -136,7 +136,7 @@ services.udev.extraRules = ''
   gnome-tweaks # a way of messing with the settings of gnome better
   #luanti # FOSS minecraft-like game, cannot remember why I put this here originally, also, nixos doesn't believe it exists anyway
   systemd #does background tasks. Mainly installed to update the device
-  openttd #video game I am using to test whether the updating works
+  #openttd #video game I am using to test whether the updating works
   ];
   
 #  shellAliases = {

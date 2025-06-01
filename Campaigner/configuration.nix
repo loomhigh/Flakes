@@ -51,7 +51,14 @@
 
   # Enable the i3 Window Manager.
   #services.xserver.displayManager.gdm.enable = true; not sure if needed
-     displayManager = {
+ services.xserver = {
+    enable = true;
+
+    desktopManager = {
+      xterm.enable = false;
+    };
+   
+    displayManager = {
         defaultSession = "none+i3";
     };
 
@@ -64,6 +71,7 @@
         i3blocks #if you are planning on using i3blocks over i3status
      ];
     };
+  };
 
   # Configure keymap in X11
   services.xserver.xkb = {

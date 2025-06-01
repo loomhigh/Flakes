@@ -43,6 +43,11 @@
     LC_TIME = "en_AU.UTF-8";
   };
   
+  home.sessionVariables = {
+    EDITOR = "micro";
+    BROWSER = "firefox";
+    TERMINAL = "kitty";
+  };
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
   
@@ -156,6 +161,7 @@ services.udev.extraRules = ''
   #luanti # FOSS minecraft-like game, cannot remember why I put this here originally, also, nixos doesn't believe it exists anyway
   systemd #does background tasks. Mainly installed to update the device
   openttd #video game I am using to test whether the updating works
+  kitty #cute terminal
   ];
   
 #  shellAliases = {

@@ -97,6 +97,7 @@
   # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
+  systemd.services."updateflake".enable = true;
 
 
   # Install firefox.
@@ -106,12 +107,12 @@
 
 # an attempt to make a command that updates the computer on startup 01-06-25
 # Currently untested, not known if it works
-systemd.user.services.UpdateFlake = {
+systemd.user.services.updateflake = {
   description = "update the nixOS Flake";
   serviceConfig.PassEnvironment = "DISPLAY";
   script = ''
-  git fetch origin && git reset --hard origin/main && git clean -fd && nixos-rebuild switch --flake .#nixos
-  '';
+  git -C ~/Flakes/ pull origin main && nixos-rebuild switch
+  ''; #Replacing the old command: git fetch origin && git reset --hard origin/main && git clean -fd && nixos-rebuild switch --flake .#nixos
   wantedBy = [ "multi-user.target" ]; # starts after login
 };
 

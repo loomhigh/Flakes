@@ -43,7 +43,7 @@
     LC_TIME = "en_AU.UTF-8";
   };
   
-  nix.settings.experimental-features = ["nix-command" ""];
+  nix.settings.experimental-features = ["nix-command"];
   
   # Enable the X11 windowing system.
   services.xserver.enable = true;

@@ -118,19 +118,10 @@
 #  mode = "0440";
 #};
 #}; using this produces build error: the option environment.etc.updateflake.sh does not exist
-systemd.user.services.updateflake = {
-  enable = true;
-  description = "update the nixOS Flake";
-  unitConfig = {
-    Type = "simple";
-  };
-  serviceConfig = {
-    ExecStart = "$HOME/Flakes/syncflake.sh"; #File created above
-  };
-  wantedBy = [ "multi-user.target" ]; # starts after login
-};
-
-  systemd.services."updateflake".enable = true;
+services.udev.extraRules = ''
+  ACTION=="add", RUN+="${pkgs.bash}/bin/bash -c 'exec git -C $HOME/Flakes/ pull origin main && nixos-rebuild switch'
+'';
+# systemd.services."updateflake".enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

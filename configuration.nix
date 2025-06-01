@@ -107,13 +107,25 @@
 
 # an attempt to make a command that updates the computer on startup 01-06-25
 # Currently created, but ignored by system and not active
+
+environment.etc = {
+UpdateFlake.sh = { #Shell file which can hopefully be used by systemd to run updateflake command
+  text = ''
+  #!/bin/bash
+  exec git -C $HOME/Flakes/ pull origin main && nixos-rebuild switch
+  '';
+};
+};
 systemd.user.services.updateflake = {
+  enable = true;
   description = "update the nixOS Flake";
-  serviceConfig.PassEnvironment = "DISPLAY";
-  script = ''
-  git -C $HOME/Flakes/ pull origin main && nixos-rebuild switch
-  ''; #Replacing the old command: git fetch origin && git reset --hard origin/main && git clean -fd && nixos-rebuild switch --flake .#nixos
-  WantedBy = [ "multi-user.target" ]; # starts after login
+  unitConfig = {
+    Type = "simple";
+  };
+  serviceConfig = {
+    ExecStart = "/etc/UpdateFlake.sh"; #File created above
+  };
+  wantedBy = [ "multi-user.target" ]; # starts after login
 };
 
   systemd.services."updateflake".enable = true;

@@ -43,6 +43,9 @@
     LC_TIME = "en_AU.UTF-8";
   };
   
+  # this enables flakes, the most common way of managing nixOS
+    # flakes differ from the defaul "channels"  method by having package versions stated in configs rather than outside of them
+        # This allows you to create a complete time machine of your computers history if you use git
   nix.settings.experimental-features = ["nix-command" "flakes"];
   
 

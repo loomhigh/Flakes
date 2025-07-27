@@ -7,7 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+      ../hardware-configuration.nix
     ];
   hardware.enableAllHardware = true;
 
@@ -15,12 +15,6 @@
     # old systemd version
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = false;
-
-# boot.loader.systemd-boot.enable = false;
-#boot.loader.grub.enable = true;
-#boot.loader.grub.device = "nodev";
-#boot.loader.grub.efiSupport = false;
-#boot.loader.efi.canTouchEfiVariables = false;
 
   networking.hostName = "truebeliever"; # Define your hostname.
   #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.

@@ -55,7 +55,18 @@
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
-
+  environment.gnome.excludePackages = with pkgs; [
+    totem
+    geary
+    tour
+    maps
+    music
+    mines
+    chess
+    sudoku
+    robots
+    weather
+  ];
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "au";
@@ -108,24 +119,6 @@
   programs = {
   firefox.enable = true;
   };
-
-# an attempt to make a command that updates the computer on startup 01-06-25
-# Currently created, but ignored by system and not active
-
-#environment.etc = {
-#UpdateFlake.sh = { #Shell file which can hopefully be used by systemd to run updateflake command
-#  text = ''
-#  #!/bin/bash
-#  exec git -C $HOME/Flakes/ pull origin main && nixos-rebuild switch
-#  '';
-#   # The UNIX file mode bits, idk what that means, but the stackexchange forum post included it
-#  mode = "0440";
-#};
-#}; using this produces build error: the option environment.etc.updateflake.sh does not exist
-#services.udev.extraRules = '' 
-#  ACTION=="add", RUN+="${pkgs.bash}/bin/bash -c 'exec git -C $HOME/Flakes/ pull origin main && nixos-rebuild switch'
-#''; # pretty sure this does not work
-# systemd.services."updateflake".enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

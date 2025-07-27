@@ -59,13 +59,13 @@
     totem
     geary
     gnome-tour
-    maps
-    music
-    mines
-    chess
-    sudoku
-    robots
-    weather
+    gnome-maps
+    gnome-music
+    gnome-mines
+    gnome-chess
+    gnome-sudoku
+    gnome-robots
+    gnome-weather
   ];
   # Configure keymap in X11
   services.xserver.xkb = {

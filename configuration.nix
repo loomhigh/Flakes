@@ -122,9 +122,9 @@
 #  mode = "0440";
 #};
 #}; using this produces build error: the option environment.etc.updateflake.sh does not exist
-services.udev.extraRules = '' 
-  ACTION=="add", RUN+="${pkgs.bash}/bin/bash -c 'exec git -C $HOME/Flakes/ pull origin main && nixos-rebuild switch'
-''; # pretty sure this does not work
+#services.udev.extraRules = '' 
+#  ACTION=="add", RUN+="${pkgs.bash}/bin/bash -c 'exec git -C $HOME/Flakes/ pull origin main && nixos-rebuild switch'
+#''; # pretty sure this does not work
 # systemd.services."updateflake".enable = true;
 
   # Allow unfree packages

@@ -9,7 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
-  hardware.enableAllHardware = true
+  hardware.enableAllHardware = true;
 
   # Bootloader.
     # old systemd version

@@ -58,7 +58,7 @@
   environment.gnome.excludePackages = with pkgs; [
     totem
     geary
-    tour
+    gnome-tour
     maps
     music
     mines

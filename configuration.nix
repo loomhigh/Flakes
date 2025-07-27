@@ -14,7 +14,7 @@
   # Bootloader.
     # old systemd version
     boot.loader.systemd-boot.enable = true;
-    boot.loader.efi.canTouchEfiVariables = true;
+    boot.loader.efi.canTouchEfiVariables = false;
 
 # boot.loader.systemd-boot.enable = false;
 #boot.loader.grub.enable = true;

@@ -124,7 +124,7 @@
   fish.enable = true;
   fish.shellAliases = {
     SyncFlake = "git -C /etc/nixos/ pull"
-  }
+  };
   };
 
   # Allow unfree packages

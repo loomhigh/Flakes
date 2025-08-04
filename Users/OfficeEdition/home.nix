@@ -11,14 +11,9 @@
   home.username = "officeedition";
   home.homeDirectory = "/home/officeedition";
   
- # Enable automatic login for the user.
-  services.displayManager.autoLogin.enable = true;
-  services.displayManager.autoLogin.user = "officeedition";
-
   # User packages
   home.packages = with pkgs; [
    fastfetch
-  
   
   ];
  home.packages = with pkgs; [

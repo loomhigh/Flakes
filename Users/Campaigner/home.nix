@@ -5,10 +5,6 @@
   home.username = "campaigner";
   home.homeDirectory = "/home/campaigner";
 
- # Enable automatic login for the user.
-  services.displayManager.autoLogin.enable = true;
-  services.displayManager.autoLogin.user = "campaigner";
-
   # User packages
   home.packages = with pkgs; [
    fastfetch

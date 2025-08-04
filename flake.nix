@@ -6,8 +6,11 @@
 # inputs directs where to find package files
   # usually just need to direct it to nixOS's github repo, as shown.
   inputs = {
-    # NixOS official package source, using the nixos-24.11 branch here
+    # NixOS official package source, using the nixos-25.05 branch here
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    #copy-pasted from nix-community github tutorial on adding home-manager module to flakes
+    home-manager.url = "github:nix-community/home-manager"; 
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
 ## /INPUTS ##
@@ -29,7 +32,18 @@
       modules = [
         # Import the previous configuration.nix we used,
         # so the old configuration file still takes effect
-        ./configuration.nix
+          ./configuration.nix
+
+          #copy-pasted from nix-community github tutorial on adding home-manager module to flakes
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.jdoe = ./home.nix;
+
+            # Optionally, use home-manager.extraSpecialArgs to pass
+            # arguments to home.nix
+          }
       ];
     };
   };

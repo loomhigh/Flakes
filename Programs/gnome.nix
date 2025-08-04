@@ -9,19 +9,6 @@
     gnome-tweaks # a way of messing with the settings of gnome better
 
   ];
-  environment.gnome.excludePackages = with pkgs; [
-    totem
-    geary
-    gnome-tour
-    gnome-maps
-    gnome-music
-    gnome-mines
-    gnome-chess
-    gnome-sudoku
-    gnome-robots
-    gnome-weather
-  ];
-  
   
   dconf.enable = true;
   dconf.settings = {

@@ -88,6 +88,18 @@
     shell = pkgs.fish;
   };
 
+  environment.gnome.excludePackages = with pkgs; [
+    totem
+    geary
+    gnome-tour
+    gnome-maps
+    gnome-music
+    gnome-mines
+    gnome-chess
+    gnome-sudoku
+    gnome-robots
+    gnome-weather
+  ];
 
   # Enable automatic login for the user.
   services.displayManager.autoLogin.enable = true;

@@ -111,8 +111,6 @@
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
 
-
-
   # Install firefox and set default shell to fish
   users.defaultUserShell = pkgs.fish;
   programs = {

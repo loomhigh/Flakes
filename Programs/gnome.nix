@@ -9,7 +9,7 @@
     gnome-tweaks # a way of messing with the settings of gnome better
 
   ];
-  home.gnome.excludePackages = with pkgs; [
+  gnome.excludePackages = with pkgs; [
     totem
     geary
     gnome-tour

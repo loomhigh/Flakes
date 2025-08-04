@@ -1,4 +1,4 @@
-{config, pkgs, ...}:
+{config, pkgs, lib, ...}:
 
 {
    # Enable the GNOME Desktop Environment.
@@ -9,7 +9,7 @@
     gnome-tweaks # a way of messing with the settings of gnome better
 
   ];
-  home.excludePackages = with pkgs; [
+  environment.gnome.excludePackages = with pkgs; [
     totem
     geary
     gnome-tour

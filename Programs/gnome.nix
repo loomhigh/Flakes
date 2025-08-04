@@ -4,12 +4,12 @@
    # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
-  environment.systemPackages = with pkgs; [
+  home.packages = with pkgs; [
 
     gnome-tweaks # a way of messing with the settings of gnome better
 
   ];
-  environment.gnome.excludePackages = with pkgs; [
+  home.gnome.excludePackages = with pkgs; [
     totem
     geary
     gnome-tour

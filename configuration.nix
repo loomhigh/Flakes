@@ -108,7 +108,7 @@
 
  environment.shellAliases = {
     SyncFlake = "sudo git -C /etc/nixos/ pull";
-    NixUpdate = "sudo git -C /etc/nixos/ pull && nixos-rebuild switch";
+    NixUpdate = "sudo git -C /etc/nixos/ pull && sudo nixos-rebuild switch";
   };
 
   # Allow unfree packages
@@ -126,10 +126,6 @@
   #systemd #does background tasks. Mainly installed to update the device
   #openttd #video game I am using to test whether the updating works
   ];
-  
-#  shellAliases = {
-#   sync-rebuild = "git fetch origin && git reset --hard origin/main && git clean -fd && nixos-rebuild switch --flake .#nixos";
-#  };
   
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

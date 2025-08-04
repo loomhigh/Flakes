@@ -122,10 +122,11 @@
   programs = {
   firefox.enable = true;
   fish.enable = true;
-  fish.shellAliases = {
+  };
+
+ environment.shellAliases = {
     SyncFlake = "git -C /etc/nixos/ pull";
     NixUpdate = "SyncFlake && nixos-rebuild switch";
-  }
   };
 
   # Allow unfree packages

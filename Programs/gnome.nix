@@ -8,7 +8,7 @@
       accent-color = "blue";
     };
     "/org/gnome/desktop/background" = {
-      picture-uri = "/etc/nixos/Profiles/Campaigner/background.jpg";
+      picture-uri = "file:///etc/nixos/Profiles/Campaigner/background.jpg";
     };
   };
 }

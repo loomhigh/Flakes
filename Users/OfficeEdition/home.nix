@@ -1,6 +1,26 @@
 
 { config, pkgs, ... }:
 {
+    imports = [
+    ../../Programs/gnome.nix
+
+  ];
+  
+  # Home Manager needs a bit of information about you and the
+  # paths it should manage.
+  home.username = "officeedition";
+  home.homeDirectory = "/home/officeedition";
+  
+ # Enable automatic login for the user.
+  services.displayManager.autoLogin.enable = true;
+  services.displayManager.autoLogin.user = "officeedition";
+
+  # User packages
+  home.packages = with pkgs; [
+   fastfetch
+  
+  
+  ];
  home.packages = with pkgs; [
   btop # System monitor you can run in Terminal, I love this thing
   git # Main way of updating the software

@@ -55,21 +55,6 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-  environment.gnome.excludePackages = with pkgs; [
-    totem
-    geary
-    gnome-tour
-    gnome-maps
-    gnome-music
-    gnome-mines
-    gnome-chess
-    gnome-sudoku
-    gnome-robots
-    gnome-weather
-  ];
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "au";
@@ -87,12 +72,6 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
@@ -143,7 +122,6 @@
   git # Main way of updating the software
   nh # I genuinely cannot remember what this does
   micro # Like the nano text editor, but a little more advamced
-  gnome-tweaks # a way of messing with the settings of gnome better
   luanti # FOSS minecraft-like game, cannot remember why I put this here originally, also, nixos doesn't believe it exists anyway
   #systemd #does background tasks. Mainly installed to update the device
   #openttd #video game I am using to test whether the updating works

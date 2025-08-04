@@ -4,12 +4,6 @@
 
 {config, pkgs, lib, ...}:
 
-{
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
-
 # copypasted from nix-community nixos module setup tutorial
 let
   home-manager = builtins.fetchTarball https://github.com/nix-community/home-manager/archive/release-25.05.tar.gz;
@@ -30,6 +24,11 @@ in
     home.stateVersion = "25.05";
   };
 }
+{
+  imports =
+    [ # Include the results of the hardware scan.
+      ./hardware-configuration.nix
+    ];
 
 
   hardware.enableAllHardware = true;

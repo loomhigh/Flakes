@@ -5,11 +5,10 @@
   dconf.enable = true;
   dconf.settings = {
     "org/gnome/desktop/interface" = {
-      accent-color = "red";
+      accent-color = "blue";
     };
     "/org/gnome/desktop/background" = {
       picture-uri = "/etc/nixos/Profiles/Campaigner/background.jpg";
-      picture-options = "scaled";
     };
   };
 }

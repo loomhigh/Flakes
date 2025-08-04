@@ -106,7 +106,9 @@
     packages = with pkgs; [
     #  thunderbird
     ];
+    shell = fish;
   };
+
 
   # Enable automatic login for the user.
   services.displayManager.autoLogin.enable = true;
@@ -118,15 +120,16 @@
 
 
 
-  # Install firefox.
+  # Install firefox and set default shell to fish
+  users.defaultUserShell = pkgs.fish;
   programs = {
   firefox.enable = true;
   fish.enable = true;
   };
 
  environment.shellAliases = {
-    SyncFlake = "git -C /etc/nixos/ pull";
-    NixUpdate = "SyncFlake && nixos-rebuild switch";
+    SyncFlake = "sudo git -C /etc/nixos/ pull";
+    NixUpdate = "sudo SyncFlake && nixos-rebuild switch";
   };
 
   # Allow unfree packages

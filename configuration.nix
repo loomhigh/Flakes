@@ -2,13 +2,36 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{config, pkgs, ...}:
+{config, pkgs, lib, ...}:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
+
+# copypasted from nix-community nixos module setup tutorial
+let
+  home-manager = builtins.fetchTarball https://github.com/nix-community/home-manager/archive/release-25.05.tar.gz;
+in
+{
+  imports =
+    [
+      (import "${home-manager}/nixos")
+    ];
+
+  users.users.eve.isNormalUser = true;
+  home-manager.users.eve = { pkgs, ... }: {
+    home.packages = [ pkgs.atool pkgs.httpie ];
+    programs.bash.enable = true;
+  
+    # The state version is required and should stay at the version you
+    # originally installed.
+    home.stateVersion = "25.05";
+  };
+}
+
+
   hardware.enableAllHardware = true;
 
   # Bootloader.

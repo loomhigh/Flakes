@@ -47,8 +47,8 @@
 ### Setting up nixOS flake ###
   # Normal install
   # add git to config
-  # in nixos directory type `github clone https://github.com/loomhigh/Flakes`
-  # delete default config file `sudo rm /etc/nixos/configuration.nix`
-  # link flake file to folder `sudo ln -s /home/truebliever/Flakes/flake.nix /etc/nixos/`
+  # delete files from nixos folder and cut the hardware config `sudo rm /etc/nixos/configuration.nix`
+  # in nixos directory type `github clone https://github.com/loomhigh/Flakes ./`
+  # paste the hardware config file back in and add it to git folder `git add hardware-configuration.nix`
   # nixos-rebuild boot
 ### / ###

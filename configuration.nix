@@ -129,7 +129,7 @@
 
  environment.shellAliases = {
     SyncFlake = "sudo git -C /etc/nixos/ pull";
-    NixUpdate = "sudo SyncFlake && nixos-rebuild switch";
+    NixUpdate = "sudo git -C /etc/nixos/ pull && nixos-rebuild switch";
   };
 
   # Allow unfree packages

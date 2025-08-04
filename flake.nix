@@ -39,7 +39,9 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.truebeliever = ./TrueBeliever/home.nix;
+            home-manager.users.truebeliever = ./Users/TrueBeliever/home.nix;
+            #home-manager.users.OfficeEdition = ./Users/OfficeEdition/home.nix;
+            #home-manager.users.Campaigner = ./Users/Campaigner/home.nix;
 
             # Optionally, use home-manager.extraSpecialArgs to pass
             # arguments to home.nix

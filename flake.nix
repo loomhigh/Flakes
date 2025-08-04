@@ -21,7 +21,7 @@
 
 # outputs tell nixOS how to build the system
   # the "self, nixpkgs, ..." allows functions like lib to work
-  outputs = { self, nixpkgs, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
     # nixosConfigurations is where we describe how to find out setup files
       # it uses the function from nixpkgs.lib called "nixosSystem" to do this
         # this function requires two details:

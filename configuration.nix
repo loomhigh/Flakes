@@ -106,7 +106,7 @@
     packages = with pkgs; [
     #  thunderbird
     ];
-    shell = fish;
+    shell = pkgs.fish;
   };
 
 

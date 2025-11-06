@@ -41,7 +41,7 @@
             home-manager.useUserPackages = true;
             #home-manager.users.truebeliever = ./Profiles/TrueBeliever/home.nix;
             #home-manager.users.officeedition = ./Profiles/OfficeEdition/home.nix;
-            home-manager.users.campaigner = ./Profiles/Campaigner/home.nix;
+            #home-manager.users.campaigner = ./Profiles/Campaigner/home.nix;
             #home-manager.users.personal = ./Profiles/Personal/home.nix;
 
             # Optionally, use home-manager.extraSpecialArgs to pass

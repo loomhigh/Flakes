@@ -40,8 +40,9 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.truebeliever = ./Profiles/TrueBeliever/home.nix;
-            #home-manager.users.officeedition = ./Profiles/OfficeEdition/home.nix;
-            #home-manager.users.campaigner = ./Profiles/Campaigner/home.nix;
+            home-manager.users.officeedition = ./Profiles/OfficeEdition/home.nix;
+            home-manager.users.campaigner = ./Profiles/Campaigner/home.nix;
+            home-manager.users.personal = ./Profiles/Personal/home.nix;
 
             # Optionally, use home-manager.extraSpecialArgs to pass
             # arguments to home.nix
@@ -64,7 +65,8 @@
   # Normal install
   # add git to config
   # delete files from nixos folder and cut the hardware config `sudo rm /etc/nixos/configuration.nix`
-  # in nixos directory type `github clone https://github.com/loomhigh/Flakes ./`
+  # in nixos directory type `git clone https://github.com/loomhigh/Flakes ./`
   # paste the hardware config file back in and add it to git folder `git add hardware-configuration.nix`
   # nixos-rebuild boot
+  # NOTE: Doesn't work this way, I think I forgot a step along the way
 ### / ###

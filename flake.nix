@@ -18,7 +18,44 @@
 
 ##  OUTPUTS ##
 
+outputs = input@{ self, ...}:
+    in {
+      # generate a nixos configuration for every host in ./hosts
+      nixosConfigurations = builtins.listToAttrs
+        (map (host: {
+          name = host;
+          value = lib.nixosSystem {
+            system = "x86_64-linux";
+            modules = [
+              # host specific config
+              { config.networking.hostName = host; }
+              (./hosts + "/${host}")
+              (inputs.secrets.hostSecrets.${host})
 
+              # my modules
+              ./modules/system
+
+              # home manager
+              inputs.home-manager.nixosModules.home-manager
+              {
+                home-manager.extraSpecialArgs = {
+                  inherit pkgs;
+                  inherit pkgs-stable;
+                  inherit inputs;
+                };
+              }
+
+              # chaos... control!
+              inputs.chaotic.nixosModules.default
+            ];
+            specialArgs = {
+              inherit pkgs-stable;
+              inherit inputs;
+            };
+          };
+        }) hosts);
+    };
+/*
 # outputs tell nixOS how to build the system
   # the "self, nixpkgs, ..." allows functions like lib to work
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {
@@ -27,6 +64,9 @@
         # this function requires two details:
           # `system` which is the cpu architecture we are running the system on
           # `modules` the location of all our .nix files which set the system up 
+
+  
+
     nixosConfigurations = {
       truebeliever = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -40,7 +80,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.truebeliever = ./Profiles/TrueBeliever/home.nix;
+            home-manager.users.truebeliever = ./hosts/TrueBeliever/home.nix;
 
             # Optionally, use home-manager.extraSpecialArgs to pass
             # arguments to home.nix
@@ -59,7 +99,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.truebeliever = ./Profiles/Campaigner/home.nix;
+            home-manager.users.truebeliever = ./hosts/Campaigner/home.nix;
 
             # Optionally, use home-manager.extraSpecialArgs to pass
             # arguments to home.nix
@@ -78,7 +118,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.truebeliever = ./Profiles/Personal/home.nix;
+            home-manager.users.truebeliever = ./hosts/Personal/home.nix;
 
             # Optionally, use home-manager.extraSpecialArgs to pass
             # arguments to home.nix
@@ -88,6 +128,7 @@
     };
   };
 }
+*/
 
 
 ## /OUTPUTS ##
@@ -107,4 +148,5 @@
   # nixos-rebuild boot
   # Make sure to specify the right user when doing this command. The "git+file://" error happens because its the wrong user
   # command used: `sudo nixos-rebuild boot --flake /etc/nixos#truebeliever`
+  # note, when changing to a new user, make sure to set the password
 ### / ###

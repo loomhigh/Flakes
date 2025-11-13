@@ -19,7 +19,7 @@
 
 ##  OUTPUTS ##
 
-outputs = input@{ self, inputs, ...}:
+outputs = inputs@{ self, ...}:
     let
     # configure lib
       lib = inputs.nixpkgs.lib;

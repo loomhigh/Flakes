@@ -19,6 +19,10 @@
 ##  OUTPUTS ##
 
 outputs = input@{ self, ...}:
+    let
+      # create a list of all directories inside of ./hosts
+      # every directory in ./hosts has config for that machine
+      hosts = builtins.filter (x: x != null) (lib.mapAttrsToList (name: value: if (value == "directory") then name else null) (builtins.readDir ./hosts));
     in {
       # generate a nixos configuration for every host in ./hosts
       nixosConfigurations = builtins.listToAttrs

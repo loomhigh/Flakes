@@ -18,6 +18,7 @@
 
 # Gnome customizations
 #dconf.enable = true;
+/*
 dconf.settings = {
     "org/gnome/desktop/interface" = {
       accent-color = "blue";

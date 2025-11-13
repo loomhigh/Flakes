@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{config, pkgs, lib, ...}:
+{config, pkgs, lib, inputs, ...}:
 
 {
   imports =
@@ -77,7 +77,35 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-# Moved the useraccount stuff previously here to home.nix
+  # Define a user account. Don't forget to set a password with ‘passwd’.
+  users.users.truebeliever = {
+    isNormalUser = true;
+    description = "TrueBeliever";
+    extraGroups = [ "networkmanager" "wheel" ];
+    packages = with pkgs; [
+    #  thunderbird
+    ];
+    shell = pkgs.fish;
+  };
+   # Enable the GNOME Desktop Environment.
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
+  environment.gnome.excludePackages = with pkgs; [
+    totem
+    geary
+    gnome-tour
+    gnome-maps
+    gnome-music
+    gnome-mines
+    gnome-chess
+    gnome-sudoku
+    gnome-robots
+    gnome-weather
+  ];
+
+  # Enable automatic login for the user.
+  services.displayManager.autoLogin.enable = true;
+  services.displayManager.autoLogin.user = "truebeliever";
 
   # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
   systemd.services."getty@tty1".enable = false;

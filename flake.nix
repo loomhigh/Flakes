@@ -21,39 +21,6 @@
 
 outputs = input@{ self, ...}:
     let
- # create patched nixpkgs
-      nixpkgs-patched =
-        (import inputs.nixpkgs { inherit system; }).applyPatches {
-          name = "nixpkgs-patched";
-          src = inputs.nixpkgs;
-          patches = [
-            #(builtins.fetchurl {
-            #  url = "https://asdf1234.patch";
-            #  sha256 = "sha256:qwerty123456...";
-            #})
-          ];
-        };
-
-      # configure pkgs
-      # use nixpkgs if running a server (homelab or worklab profile)
-      # otherwise use patched nixos-unstable nixpkgs
-      pkgs = import nixpkgs-patched {
-        inherit system;
-        config = {
-          allowUnfree = true;
-          allowUnfreePredicate = (_: true);
-        };
-        overlays = [ inputs.rust-overlay.overlays.default inputs.emacs-overlay.overlays.default inputs.chaotic.overlays.default ];
-      };
-
-      pkgs-stable = import inputs.nixpkgs-stable {
-        inherit system;
-        config = {
-          allowUnfree = true;
-          allowUnfreePredicate = (_: true);
-        };
-      };
-
     # configure lib
       lib = inputs.nixpkgs.lib;
       # create a list of all directories inside of ./hosts

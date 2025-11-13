@@ -39,7 +39,7 @@ outputs = inputs@{ self, ...}:
               (./hosts + "/${host}")
 
               # my modules
-              ./modules
+              ./modules/base
               # Hardware Config
               ./hardware-configuration.nix
 

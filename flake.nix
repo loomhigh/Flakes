@@ -27,7 +27,8 @@
         # this function requires two details:
           # `system` which is the cpu architecture we are running the system on
           # `modules` the location of all our .nix files which set the system up 
-    nixosConfigurations.truebeliever = nixpkgs.lib.nixosSystem {
+    nixosConfigurations = {
+      truebeliever = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         # Import the previous configuration.nix we used,
@@ -39,15 +40,51 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            #home-manager.users.truebeliever = ./Profiles/TrueBeliever/home.nix;
-            #home-manager.users.officeedition = ./Profiles/OfficeEdition/home.nix;
-            #home-manager.users.campaigner = ./Profiles/Campaigner/home.nix;
-            #home-manager.users.personal = ./Profiles/Personal/home.nix;
+            home-manager.users.truebeliever = ./Profiles/TrueBeliever/home.nix;
 
             # Optionally, use home-manager.extraSpecialArgs to pass
             # arguments to home.nix
           }
       ];
+    };
+      campaigner = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      modules = [
+        # Import the previous configuration.nix we used,
+        # so the old configuration file still takes effect
+          ./configuration.nix
+
+          #copy-pasted from nix-community github tutorial on adding home-manager module to flakes
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.truebeliever = ./Profiles/Campaigner/home.nix;
+
+            # Optionally, use home-manager.extraSpecialArgs to pass
+            # arguments to home.nix
+          }
+      ];
+    };
+      personal = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      modules = [
+        # Import the previous configuration.nix we used,
+        # so the old configuration file still takes effect
+          ./configuration.nix
+
+          #copy-pasted from nix-community github tutorial on adding home-manager module to flakes
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.truebeliever = ./Profiles/Personal/home.nix;
+
+            # Optionally, use home-manager.extraSpecialArgs to pass
+            # arguments to home.nix
+          }
+      ];
+    };
     };
   };
 }
@@ -68,5 +105,6 @@
   # in nixos directory type `git clone https://github.com/loomhigh/Flakes ./`
   # paste the hardware config file back in and add it to git folder `git add hardware-configuration.nix`
   # nixos-rebuild boot
-  # NOTE: Doesn't work this way, I think I forgot a step along the way
+  # Make sure to specify the right user when doing this command. The "git+file://" error happens because its the wrong user
+  # command used: `sudo nixos-rebuild boot --flake /etc/nixos#truebeliever`
 ### / ###

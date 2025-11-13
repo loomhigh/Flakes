@@ -61,82 +61,6 @@ outputs = inputs@{ self, ...}:
         }) hosts);
     };
 }
-/*
-# outputs tell nixOS how to build the system
-  # the "self, nixpkgs, ..." allows functions like lib to work
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
-    # nixosConfigurations is where we describe how to find out setup files
-      # it uses the function from nixpkgs.lib called "nixosSystem" to do this
-        # this function requires two details:
-          # `system` which is the cpu architecture we are running the system on
-          # `modules` the location of all our .nix files which set the system up 
-
-  
-
-    nixosConfigurations = {
-      truebeliever = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      modules = [
-        # Import the previous configuration.nix we used,
-        # so the old configuration file still takes effect
-          ./configuration.nix
-
-          #copy-pasted from nix-community github tutorial on adding home-manager module to flakes
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.truebeliever = ./hosts/TrueBeliever/home.nix;
-
-            # Optionally, use home-manager.extraSpecialArgs to pass
-            # arguments to home.nix
-          }
-      ];
-    };
-      campaigner = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      modules = [
-        # Import the previous configuration.nix we used,
-        # so the old configuration file still takes effect
-          ./configuration.nix
-
-          #copy-pasted from nix-community github tutorial on adding home-manager module to flakes
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.truebeliever = ./hosts/Campaigner/home.nix;
-
-            # Optionally, use home-manager.extraSpecialArgs to pass
-            # arguments to home.nix
-          }
-      ];
-    };
-      personal = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      modules = [
-        # Import the previous configuration.nix we used,
-        # so the old configuration file still takes effect
-          ./configuration.nix
-
-          #copy-pasted from nix-community github tutorial on adding home-manager module to flakes
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.truebeliever = ./hosts/Personal/home.nix;
-
-            # Optionally, use home-manager.extraSpecialArgs to pass
-            # arguments to home.nix
-          }
-      ];
-    };
-    };
-  };
-}
-*/
-
-
 ## /OUTPUTS ##
 
 ## USEFUL TO KNOW ##
@@ -156,3 +80,13 @@ outputs = inputs@{ self, ...}:
   # command used: `sudo nixos-rebuild boot --flake /etc/nixos#truebeliever`
   # note, when changing to a new user, make sure to set the password
 ### / ###
+
+/*
+  ____20251113 - TO-DOs____
+  - Module referencing. Make a system that allows you to reference specific modules for each host configuration.
+    - Current idea: import modules directly through the config file, idk if thats how you do that, look at a tutorial
+  - Cleanup Configs. Config files have a lot of likely reduntant parts, or parts that can be made into a universal config like 
+    - locale settings
+    - bootloader (might vary from user, don't know yet)
+    - fish shell aliases
+  */

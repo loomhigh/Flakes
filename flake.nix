@@ -46,8 +46,6 @@ outputs = input@{ self, inputs, ...}:
               inputs.home-manager.nixosModules.home-manager
               {
                 home-manager.extraSpecialArgs = {
-                  inherit pkgs;
-                  inherit pkgs-stable;
                   inherit inputs;
                 };
               }
@@ -56,7 +54,6 @@ outputs = input@{ self, inputs, ...}:
               inputs.chaotic.nixosModules.default
             ];
             specialArgs = {
-              inherit pkgs-stable;
               inherit inputs;
             };
           };

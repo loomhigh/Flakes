@@ -40,7 +40,7 @@ outputs = inputs@{ self, ...}:
               (inputs.secrets.hostSecrets.${host})
 
               # my modules
-              ./modules/system
+              ./modules
 
               # home manager
               inputs.home-manager.nixosModules.home-manager

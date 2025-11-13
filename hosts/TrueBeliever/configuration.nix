@@ -73,7 +73,8 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
-
+  
+  programs.dconf.enable = true;
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 

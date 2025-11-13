@@ -28,5 +28,5 @@ dconf.settings = {
       picture-uri = "file:///etc/nixos/hosts/Campaigner/background.jpg";
     };
   };
-
+*/
 }

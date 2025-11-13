@@ -59,6 +59,7 @@ outputs = input@{ self, ...}:
           };
         }) hosts);
     };
+}
 /*
 # outputs tell nixOS how to build the system
   # the "self, nixpkgs, ..." allows functions like lib to work

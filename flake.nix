@@ -21,7 +21,7 @@
 
 outputs = input@{ self, ...}:
     let
-      # create patched nixpkgs
+ # create patched nixpkgs
       nixpkgs-patched =
         (import inputs.nixpkgs { inherit system; }).applyPatches {
           name = "nixpkgs-patched";

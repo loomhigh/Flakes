@@ -37,7 +37,6 @@ outputs = inputs@{ self, ...}:
               # host specific config
               { config.networking.hostName = host; }
               (./hosts + "/${host}")
-              (inputs.secrets.hostSecrets.${host})
 
               # my modules
               ./modules

@@ -41,6 +41,8 @@ outputs = inputs@{ self, ...}:
 
               # my modules
               ./modules
+              # Hardware Config
+              ./hardware-configuration.nix
 
               # home manager
               inputs.home-manager.nixosModules.home-manager

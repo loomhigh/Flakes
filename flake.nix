@@ -11,6 +11,7 @@
     #copy-pasted from nix-community github tutorial on adding home-manager module to flakes
     home-manager.url = "github:nix-community/home-manager"; 
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    chaotic.url = "github:chaotic-cx/nyx";
   };
 
 ## /INPUTS ##

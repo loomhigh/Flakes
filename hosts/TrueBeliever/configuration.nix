@@ -5,11 +5,6 @@
 {config, pkgs, lib, inputs, ...}:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-
-    ];
-
 
   hardware.enableAllHardware = true;
 
@@ -122,8 +117,6 @@
   nh # I genuinely cannot remember what this does
   micro # Like the nano text editor, but a little more advamced
   luanti # FOSS minecraft-like game, cannot remember why I put this here originally, also, nixos doesn't believe it exists anyway
-  #systemd #does background tasks. Mainly installed to update the device
-  #openttd #video game I am using to test whether the updating works
   ];
   
   # This value determines the NixOS release from which the default

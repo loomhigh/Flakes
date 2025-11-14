@@ -38,7 +38,7 @@
           color-scheme = "prefer dark"
         };
       };
-    }
+    };
   ];
 
 }

@@ -36,7 +36,7 @@
         "org/gnome/desktop/interface" = {
           accent-color = "red";
           color-scheme = "prefer-dark";
-          show-battery-percentage = true;
+          show-battery-percentage = false;
         };
         /* Broken atm apparently
         "org/gnome/desktop/session" = {

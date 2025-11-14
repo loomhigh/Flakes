@@ -48,7 +48,7 @@
         };
           "org/gnome/desktop/screensaver" = {
           picture-uri = "/etc/nixos/Campaigner/background.jpg";
-          lock-delay = 1800;
+          lock-delay = "1800";
         };
           "org/gnome/desktop/background" = {
           picture-uri = "/etc/nixos/Campaigner/background.jpg";

@@ -5,7 +5,7 @@
   gnome-tweaks
 
   gnomeExtensions.blur-my-shell
-  gnomeExtensions.just-perfection
+  gnomeExtensions.gsconnect
 
   ];
 
@@ -37,6 +37,13 @@
           accent-color = "red";
           color-scheme = "prefer dark";
         };
+        "org/gnome/shell" = {
+        # disable-user-extensions = true; # Optionally disable user extensions entirely
+        enabled-extensions = [
+          pkgs.gnomeExtensions.gsconnect.extensionUuid
+          pkgs.gnomeExtensions.blur-my-shell.extensionUuid
+        ];
+      };
       };
     }
   ];

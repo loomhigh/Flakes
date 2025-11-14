@@ -49,7 +49,7 @@
           idle-dim = false;
         };
           "org/gnome/desktop/screensaver" = {
-          picture-uri = "file://" + ./../../../hosts + "/Campaigner/" + "Background-light.jpg" +;
+          picture-uri = "file://" + ./../../../hosts + "/Campaigner/" + "Background-light.jpg";
           #picture-uri-dark = "file://" + ./Background-dark.jpg;
           lock-delay = lib.gvariant.mkInt32 1800;
         };

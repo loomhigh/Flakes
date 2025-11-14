@@ -89,4 +89,14 @@ outputs = inputs@{ self, ...}:
     - locale settings
     - bootloader (might vary from user, don't know yet)
     - fish shell aliases
+  
+  ____20251114 -  ___
+  Managed to set up gnome to my delighful levels. 
+  - Figure out how to edit the gnome app menu and favourites
+  - clean up systemdboot's menu
+  - add windows Dualboot
+  - set main filesystem to direct to spare SSD
+  
+  
+  
   */

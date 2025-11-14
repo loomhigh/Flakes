@@ -44,15 +44,14 @@
 # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
-  services.xserver.displayManager.gdm.autoSuspend = false;
   programs.dconf.profiles.user.databases = [
     {
-      lockAll = false; # determines overriding
+      lockAll = true; # determines overriding
       settings = {
         "org/gnome/desktop/interface" = {
           accent-color = "red";
           color-scheme = "prefer-dark";
-          show-battery-percentage = false;
+          show-battery-percentage = true;
         };
         /* Broken atm apparently
         "org/gnome/desktop/session" = {
@@ -71,6 +70,7 @@
   # "background-Light.jpg" is the name of the image in that folder.
           picture-uri = "file://" + ./../../../hosts + "/${config.networking.hostName}/" + "Background-light.jpg";
           #picture-uri-dark = "file://" + ./Background-dark.jpg;
+          lock-enabled = true;
           lock-delay = lib.gvariant.mkInt32 1800;
         };
           "org/gnome/desktop/background" = {
@@ -86,6 +86,8 @@
         enabled-extensions = with pkgs.gnomeExtensions; [
           gsconnect.extensionUuid
           blur-my-shell.extensionUuid
+        ];
+        favourite-apps = ["['org.gnome.Nautilus.desktop','org.gnome.settings.desktop','firefox']"
         ];
       };
       };

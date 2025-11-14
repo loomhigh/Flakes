@@ -28,7 +28,7 @@
 # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
-
+  services.xserver.displayManager.gdm.autoSuspend = false;
   programs.dconf.profiles.user.databases = [
     {
       lockAll = true; # determines overriding
@@ -38,20 +38,22 @@
           color-scheme = "prefer-dark";
           show-battery-percentage = true;
         };
+        /* Broken atm apparently
         "org/gnome/desktop/session" = {
           idle-delay = lib.gvariant.mkInt32 1200;
         };
+        */
         "org/gnome/settings-daemon/plugins/power" = {
           sleep-inactive-battery-timeout = lib.gvariant.mkInt32 2700;
           sleep-inactive-ac-timeout = lib.gvariant.mkInt32 7200;
           idle-dim = false;
         };
           "org/gnome/desktop/screensaver" = {
-          picture-uri = "file:///etc/nixos/Campaigner/background.jpg";
+          picture-uri = "file://etc/nixos/Campaigner/background.jpg";
           lock-delay = lib.gvariant.mkInt32 1800;
         };
           "org/gnome/desktop/background" = {
-          picture-uri = "file:///etc/nixos/Campaigner/background.jpg";
+          picture-uri = "file://etc/nixos/Campaigner/background.jpg";
         };
 
         ## Needs testing

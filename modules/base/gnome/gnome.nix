@@ -39,11 +39,11 @@
           show-battery-percentage = true;
         };
         "org/gnome/desktop/session" = {
-          idle-delay = uint32 1200;
+          idle-delay = "uint32 1200";
         };
         "org/gnome/settings-daemon/plugins/power" = {
-          sleep-inactive-battery-timeout = uint32 2700;
-          sleep-inactive-ac-timeout = uint32 7200;
+          sleep-inactive-battery-timeout = "uint32 2700";
+          sleep-inactive-ac-timeout = "uint32 7200";
           idle-dim = false;
         };
           "org/gnome/desktop/screensaver" = {

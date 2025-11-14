@@ -54,6 +54,7 @@ outputs = inputs@{ self, ...}:
             ];
             specialArgs = {
               inherit inputs;
+              inherit host;
             };
           };
         }) hosts);

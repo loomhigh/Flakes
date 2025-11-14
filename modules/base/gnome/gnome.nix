@@ -1,4 +1,4 @@
-{config, pkgs, lib, self, inputs, ...}:
+{config, pkgs, lib, self, inputs, host, ...}:
 
 {
   environment.systemPackages = with pkgs; [
@@ -56,7 +56,7 @@
           "org/gnome/desktop/background" = {
           picture-options = "zoom";
           picture-uri = "file://" + ./../../../hosts + "/Personal/" + "Background-light.jpg";
-          picture-uri-dark = "file://" + ./../../../hosts + "/${hostname}" + "Background-dark.jpg";
+          picture-uri-dark = "file://" + ./../../../hosts + "/${host}" + "Background-dark.jpg";
         };
 
         ## Needs testing

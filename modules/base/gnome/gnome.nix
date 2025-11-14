@@ -57,7 +57,7 @@
           color-shading-type = "solid";
           picture-options = "zoom";
           picture-uri = "file://etc/nixos/Campaigner/background.jpg";
-          picture-uri-dark = "file://" + ./Background-dark.jpg;
+          picture-uri-dark = "file://" + "./../../../hosts" + "/${host}/" + "Background-dark.jpg";
         };
 
         ## Needs testing

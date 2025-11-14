@@ -9,6 +9,7 @@
     ./../../modules/locale.nix
     ./../../modules/base/default.nix #adds base packages and gnome
     ./../../modules/mediaEditing/default.nix #adds media editing tools
+    ./../../modules/development/default.nix #adds media editing tools
   ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -35,7 +36,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   btop # System monitor you can run in Terminal, I love this thing
-  git # Main way of updating the software
   nh # I genuinely cannot remember what this does
   micro # Like the nano text editor, but a little more advamced
   luanti # FOSS minecraft-like game, cannot remember why I put this here originally, also, nixos doesn't believe it exists anyway

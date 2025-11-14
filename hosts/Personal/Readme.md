@@ -34,18 +34,19 @@ Creates Thumbnails for video files
 - QGIS  
 
 ### Coding and development
-- VsCodium
+- VsCodium ~
 - A good way to mess with Python
-- godot  
+- godot  ~
 Video Game maker
-- draw.io
+- draw.io ~
 - 
 #### Android manipulation
 - Android Toolkit
 - mobydroid
-- universal-android-debloater
-- pmbootstrap
+- universal-android-debloater ~
+- pmbootstrap ~
 - android-toolkit
+- android-tools ~
 #### Messing with Apple
 - sideloader
 - 
@@ -56,7 +57,7 @@ Video Game maker
 - Zotero
 
 ### Misc
-- Fastfetch
+- Fastfetch ~
 - Armcord or other discord client
 - fractal gnome matrix client
 - moosync or similar background music player

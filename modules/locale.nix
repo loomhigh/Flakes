@@ -85,5 +85,10 @@
   environment.systemPackages = with pkgs; [
   git # needed to run SynkFlake
   btop # System monitor you can run in Terminal, I love this thing
+  fastfetch
+
+  texlivePackages.opensans
+  comic-mono
+  times-newer-roman
   ];
   }

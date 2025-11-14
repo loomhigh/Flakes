@@ -31,13 +31,29 @@
 
   programs.dconf.profiles.user.databases = [
     {
-      lockAll = true; # prevents overriding
+      lockAll = false; # allows overriding
       settings = {
         "org/gnome/desktop/interface" = {
           accent-color = "red";
-          color-scheme = "prefer dark";
+          color-scheme = "prefer-dark";
+          show-battery-percentage = true;
         };
-      /*
+        "org/gnome/desktop/session" = {
+          idle-delay = uint32 1200;
+        };
+        "org/gnome/settings-daemon/plugins/power" = {
+          sleep-inactive-battery-timeout = uint32 2700;
+          sleep-inactive-ac-timeout = uint32 7200;
+          idle-dim = false;
+        };
+          "org/gnome/desktop/screensaver" = {
+          picture-uri = "/etc/nixos/Campaigner/background.jpg";
+        };
+          "org/gnome/desktop/background" = {
+          picture-uri = "/etc/nixos/Campaigner/background.jpg";
+        };
+
+        ## Needs testing
         "org/gnome/shell" = {
         disable-extension-version-validation = true; # can run incompatible shell versions
         disable-user-extensions = false; # Optionally disable user extensions entirely
@@ -46,7 +62,6 @@
           blur-my-shell.extensionUuid
         ];
       };
-      */
       };
     }
   ];

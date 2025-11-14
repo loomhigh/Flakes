@@ -49,13 +49,13 @@
           idle-dim = false;
         };
           "org/gnome/desktop/screensaver" = {
-          picture-uri = "file://" + ./../../../hosts + "/Campaigner/" + "Background-light.jpg";
+          picture-uri = "file://" + ./../../../hosts + "/${host}/" + "Background-light.jpg";
           #picture-uri-dark = "file://" + ./Background-dark.jpg;
           lock-delay = lib.gvariant.mkInt32 1800;
         };
           "org/gnome/desktop/background" = {
           picture-options = "zoom";
-          picture-uri = "file://" + ./../../../hosts + "/Personal/" + "Background-light.jpg";
+          picture-uri = "file://" + ./../../../hosts + "/${networking.hostName}/" + "Background-light.jpg";
           picture-uri-dark = "file://" + ./../../../hosts + "/${host}/" + "Background-dark.jpg";
         };
 

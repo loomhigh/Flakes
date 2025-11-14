@@ -41,7 +41,7 @@
         disable-user-extensions = false; # Optionally disable user extensions entirely
         enabled-extensions = with pkgs.gnomeExtensions; [
           gsconnect.extensionUuid
-          blur-my-shell.extensionUuid
+
         ];
       };
       };

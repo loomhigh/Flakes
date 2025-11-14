@@ -7,7 +7,7 @@
 {
   imports = [
     ./../../modules/locale.nix
-    ./../../modules/base/gnome.nix
+    ./../../modules/base/gnome/gnome.nix
   ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.

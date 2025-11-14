@@ -20,7 +20,8 @@
   };
 
   # Enable automatic login for the user.
-  services.xserver.displayManager.lightdm.enable = true;
+  #services.xserver.displayManager.lightdm.enable = true;
+  services.displayManager.defaultSession = "none+i3";
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "entertainer";
 

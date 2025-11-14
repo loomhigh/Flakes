@@ -39,7 +39,6 @@
   environment.systemPackages = with pkgs; [
   btop # System monitor you can run in Terminal, I love this thing
   fish # better than bash IMO.
-  gnome-tweaks
   git # Main way of updating the software
   nh # I genuinely cannot remember what this does
   micro # Like the nano text editor, but a little more advamced

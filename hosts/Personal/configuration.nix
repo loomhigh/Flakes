@@ -25,10 +25,6 @@
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "personal";
 
-  # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
-  systemd.services."getty@tty1".enable = false;
-  systemd.services."autovt@tty1".enable = false;
-
   # Install firefox and set default shell to fish
   programs = {
   firefox.enable = true;
@@ -38,14 +34,10 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   btop # System monitor you can run in Terminal, I love this thing
-  fish # better than bash IMO.
-  gnome-tweaks
   git # Main way of updating the software
   nh # I genuinely cannot remember what this does
   micro # Like the nano text editor, but a little more advamced
   luanti # FOSS minecraft-like game, cannot remember why I put this here originally, also, nixos doesn't believe it exists anyway
-  #systemd #does background tasks. Mainly installed to update the device
-  #openttd #video game I am using to test whether the updating works
   ];
   
   # This value determines the NixOS release from which the default

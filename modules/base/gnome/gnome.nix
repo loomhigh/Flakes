@@ -1,7 +1,5 @@
 {config, pkgs, lib, ...}:
 
-with lib.hm.gvariant;
-
 {
   environment.systemPackages = with pkgs; [
   gnome-tweaks
@@ -41,16 +39,16 @@ with lib.hm.gvariant;
           show-battery-percentage = true;
         };
         "org/gnome/desktop/session" = {
-          idle-delay = mkUnit32 1200;
+          idle-delay = lib.gvariant.mkInt32 1200;
         };
         "org/gnome/settings-daemon/plugins/power" = {
-          sleep-inactive-battery-timeout = mkUnit32 2700;
-          sleep-inactive-ac-timeout = mkUnit32 7200;
+          sleep-inactive-battery-timeout = lib.gvariant.mkInt32 2700;
+          sleep-inactive-ac-timeout = lib.gvariant.mkInt32 7200;
           idle-dim = false;
         };
           "org/gnome/desktop/screensaver" = {
           picture-uri = "file:///etc/nixos/Campaigner/background.jpg";
-          lock-delay = mkUnit32 1800;
+          lock-delay = lib.gvariant.mkInt32 1800;
         };
           "org/gnome/desktop/background" = {
           picture-uri = "file:///etc/nixos/Campaigner/background.jpg";

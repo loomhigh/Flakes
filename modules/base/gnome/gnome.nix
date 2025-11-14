@@ -1,6 +1,9 @@
 {config, pkgs, lib, self, inputs, host, ...}:
 
 {
+
+config.networking.hostName = host;
+
   environment.systemPackages = with pkgs; [
   gnome-tweaks
 

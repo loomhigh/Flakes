@@ -27,6 +27,7 @@
     gnome-characters
     #gnome-clocks
     #gnome-console
+    gnome-tour
     gnome-contacts
     gnome-font-viewer
     gnome-logs
@@ -87,7 +88,7 @@
           gsconnect.extensionUuid
           blur-my-shell.extensionUuid
         ];
-        favourite-apps = ["['org.gnome.Nautilus.desktop','org.gnome.settings.desktop','firefox']"
+        favourite-apps = ["['org.gnome.Nautilus.desktop','org.gnome.settings.desktop','firefox.desktop','org.gnome.Console.desktop']"
         ];
       };
       };

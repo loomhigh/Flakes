@@ -83,7 +83,7 @@
 
   # ensure git is always installed
   environment.systemPackages = with pkgs; [
-  git
-
+  git # needed to run SynkFlake
+  btop # System monitor you can run in Terminal, I love this thing
   ];
   }

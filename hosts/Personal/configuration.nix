@@ -7,7 +7,8 @@
 {
   imports = [
     ./../../modules/locale.nix
-    ./../../modules/base/gnome/gnome.nix
+    ./../../modules/base/default.nix #adds base packages and gnome
+    ./../../modules/mediaEditing/default.nix #adds media editing tools
   ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.

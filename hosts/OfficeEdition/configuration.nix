@@ -32,8 +32,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  btop # System monitor you can run in Terminal, I love this thing
-  git # Main way of updating the software
+
 
   ];
   

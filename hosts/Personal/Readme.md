@@ -23,12 +23,12 @@ Connects devices with KDE connect to each other. Convenient!
 Creates Thumbnails for video files
 
 ### Media editing
-- blender
-- Krita
-- handbrake
-- audacity
-- rawtherapee
-- Davinci Resolve
+- blender ~
+- Krita ~
+- handbrake ~
+- audacity ~ 
+- rawtherapee [DONE]
+- davinci-resolve-studio ~
 - OBS studio
 ### Map and GIS
 - QGIS  

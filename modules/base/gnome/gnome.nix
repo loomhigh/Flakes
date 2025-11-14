@@ -57,6 +57,7 @@ host = config.networking.hostName;
           lock-delay = lib.gvariant.mkInt32 1800;
         };
           "org/gnome/desktop/background" = {
+        { config.networking.hostName = host; };
           picture-options = "zoom";
           picture-uri = "file://" + ./../../../hosts + "/${host}/" + "Background-light.jpg";
           picture-uri-dark = "file://" + ./../../../hosts + "/${host}/" + "Background-dark.jpg";

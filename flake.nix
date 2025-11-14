@@ -38,8 +38,6 @@ outputs = inputs@{ self, ...}:
               { config.networking.hostName = host; }
               (./hosts + "/${host}")
 
-              # my modules
-              ./modules/base
               # Hardware Config
               ./hardware-configuration.nix
 
@@ -85,6 +83,8 @@ outputs = inputs@{ self, ...}:
   ____20251113 - TO-DOs____
   - Module referencing. Make a system that allows you to reference specific modules for each host configuration.
     - Current idea: import modules directly through the config file, idk if thats how you do that, look at a tutorial
+    - Alternative Idea: Keep it simple, `./../../` reference the modules by moving up a folder to reach the module folder that needs referencing.
+    - Popular third option: toggleable modules. allows more customisation and allowing priority.
   - Cleanup Configs. Config files have a lot of likely reduntant parts, or parts that can be made into a universal config like 
     - locale settings
     - bootloader (might vary from user, don't know yet)

@@ -56,7 +56,7 @@
           "org/gnome/desktop/background" = {
           picture-options = "zoom";
           picture-uri = "file://" + ./../../../hosts + "/Personal/" + "Background-light.jpg";
-          picture-uri-dark = "file://" + ./../../../hosts + "/${users}" + "Background-dark.jpg";
+          picture-uri-dark = "file://" + ./../../../hosts + "/${hosts}" + "Background-dark.jpg";
         };
 
         ## Needs testing

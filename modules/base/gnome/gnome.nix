@@ -2,7 +2,7 @@
 
 {
 
-config.networking.hostName = host;
+host = config.networking.hostName;
 
   environment.systemPackages = with pkgs; [
   gnome-tweaks

@@ -31,7 +31,7 @@
   services.xserver.displayManager.gdm.autoSuspend = false;
   programs.dconf.profiles.user.databases = [
     {
-      lockAll = true; # determines overriding
+      lockAll = false; # determines overriding
       settings = {
         "org/gnome/desktop/interface" = {
           accent-color = "red";

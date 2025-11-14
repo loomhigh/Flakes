@@ -31,7 +31,7 @@
 
   programs.dconf.profiles.user.databases = [
     {
-      lockAll = false; # determines overriding
+      lockAll = true; # determines overriding
       settings = {
         "org/gnome/desktop/interface" = {
           accent-color = "red";

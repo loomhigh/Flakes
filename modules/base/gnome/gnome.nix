@@ -56,7 +56,7 @@
           "org/gnome/desktop/background" = {
           color-shading-type = "solid";
           picture-options = "zoom";
-          picture-uri = "file://etc/nixos/Campaigner/background.jpg";
+          picture-uri = "file://" + "./../../../hosts" + "/Personal/" + "Background-dark.jpg";
           picture-uri-dark = "file://" + "./../../../hosts" + "/Personal/" + "Background-dark.jpg";
         };
 

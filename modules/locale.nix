@@ -79,7 +79,9 @@
     NixUpdate = "sudo git -C /etc/nixos/ pull && sudo nixos-rebuild switch";
   };
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-  
+  # ensure git is always installed
+  environment.systemPackages = with pkgs; [
+  git
+
+  ];
   }

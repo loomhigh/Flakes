@@ -35,10 +35,10 @@
       settings = {
         "org/gnome/desktop/interface" = {
           accent-color = "red";
-          color-scheme = "prefer dark"
+          color-scheme = "prefer dark";
         };
       };
-    };
+    }
   ];
 
 }

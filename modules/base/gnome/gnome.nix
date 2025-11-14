@@ -31,7 +31,7 @@
 
   programs.dconf.profiles.user.databases = [
     {
-      lockAll = true; # determines overriding
+      lockAll = false; # determines overriding
       settings = {
         "org/gnome/desktop/interface" = {
           accent-color = "red";
@@ -47,11 +47,11 @@
           idle-dim = false;
         };
           "org/gnome/desktop/screensaver" = {
-          picture-uri = "/etc/nixos/Campaigner/background.jpg";
+          picture-uri = "file:///etc/nixos/Campaigner/background.jpg";
           lock-delay = "1800";
         };
           "org/gnome/desktop/background" = {
-          picture-uri = "/etc/nixos/Campaigner/background.jpg";
+          picture-uri = "file:///etc/nixos/Campaigner/background.jpg";
         };
 
         ## Needs testing

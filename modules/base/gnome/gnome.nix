@@ -37,11 +37,13 @@
           accent-color = "red";
           color-scheme = "prefer dark";
         };
+      
         "org/gnome/shell" = {
+        disable-extension-version-validation = true;
         disable-user-extensions = false; # Optionally disable user extensions entirely
         enabled-extensions = with pkgs.gnomeExtensions; [
           gsconnect.extensionUuid
-
+          blur-my-shell.extensionUuid
         ];
       };
       };

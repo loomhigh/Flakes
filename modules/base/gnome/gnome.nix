@@ -39,16 +39,16 @@
           show-battery-percentage = true;
         };
         "org/gnome/desktop/session" = {
-          idle-delay = "1200";
+          idle-delay = mkUnit32 1200;
         };
         "org/gnome/settings-daemon/plugins/power" = {
-          sleep-inactive-battery-timeout = "2700";
-          sleep-inactive-ac-timeout = "7200";
+          sleep-inactive-battery-timeout = mkUnit32 2700;
+          sleep-inactive-ac-timeout = mkUnit32 7200;
           idle-dim = false;
         };
           "org/gnome/desktop/screensaver" = {
           picture-uri = "file:///etc/nixos/Campaigner/background.jpg";
-          lock-delay = "1800";
+          lock-delay = mkUnit32 1800;
         };
           "org/gnome/desktop/background" = {
           picture-uri = "file:///etc/nixos/Campaigner/background.jpg";

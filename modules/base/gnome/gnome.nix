@@ -50,14 +50,14 @@
         };
           "org/gnome/desktop/screensaver" = {
           picture-uri = "file://etc/nixos/Campaigner/background.jpg";
-          picture-uri-dark = "file://etc/nixos/static/background-dark.jpg";
+          picture-uri-dark = "file://" + ./Background-dark.jpg;
           lock-delay = lib.gvariant.mkInt32 1800;
         };
           "org/gnome/desktop/background" = {
           color-shading-type = "solid";
           picture-options = "zoom";
           picture-uri = "file://etc/nixos/Campaigner/background.jpg";
-          picture-uri-dark = "file://etc/nixos/static/background-dark.jpg";
+          picture-uri-dark = "file://" + ./Background-dark.jpg;
         };
 
         ## Needs testing

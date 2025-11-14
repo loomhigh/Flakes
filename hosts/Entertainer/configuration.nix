@@ -7,6 +7,7 @@
 {
   imports = [
     ./../../modules/locale.nix
+    ./../../modules/extra/kodi/kodi.nix
   ];
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.entertainer = {
@@ -18,28 +19,11 @@
     ];
     shell = pkgs.fish;
   };
-  
-  services.xserver = {
-    enable = true;
 
-    desktopManager = {
-      xterm.enable = false;
-    };
-   
-    windowManager.i3 = {
-      enable = true;
-      extraPackages = with pkgs; [
-        dmenu #application launcher most people use
-        i3status # gives you the default i3 status bar
-        i3blocks #if you are planning on using i3blocks over i3status
-     ];
-    };
-  };
-  # Enable automatic login for the user.
-  #services.xserver.displayManager.lightdm.enable = true;
-  services.displayManager.defaultSession = "none+i3";
-  services.displayManager.autoLogin.enable = true;
+  services.xserver.enable = true;
+  services.xserver.desktopManager.kodi.enable = true;
   services.displayManager.autoLogin.user = "entertainer";
+  services.xserver.displayManager.lightdm.greeter.enable = false;
 
   # Install firefox and set default shell to fish
   users.defaultUserShell = pkgs.fish;
@@ -55,13 +39,14 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    luanti
     kodi
     i3
     lutris
+    qbittorrent
 
     #fossGames
     superTuxKart
+    luanti
   ];
   
   # This value determines the NixOS release from which the default

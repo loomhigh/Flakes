@@ -74,6 +74,8 @@
   fish.enable = true;
   };
 
+ nixpkgs.config.allowUnfree = true;
+
  environment.shellAliases = {
     SyncFlake = "sudo git -C /etc/nixos/ pull";
     NixUpdate = "sudo git -C /etc/nixos/ pull && sudo nixos-rebuild switch";

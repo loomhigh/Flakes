@@ -38,10 +38,10 @@
           color-scheme = "prefer dark";
         };
         "org/gnome/shell" = {
-        # disable-user-extensions = true; # Optionally disable user extensions entirely
-        enabled-extensions = [
-          pkgs.gnomeExtensions.gsconnect.extensionUuid
-          pkgs.gnomeExtensions.blur-my-shell.extensionUuid
+        disable-user-extensions = false; # Optionally disable user extensions entirely
+        enabled-extensions = with pkgs.gnomeExtensions; [
+          gsconnect.extensionUuid
+          blur-my-shell.extensionUuid
         ];
       };
       };

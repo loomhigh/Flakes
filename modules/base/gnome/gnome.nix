@@ -1,5 +1,7 @@
 {config, pkgs, lib, ...}:
 
+with lib.hm.gvariant;
+
 {
   environment.systemPackages = with pkgs; [
   gnome-tweaks

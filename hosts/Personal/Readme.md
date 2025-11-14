@@ -6,14 +6,12 @@ Also make it dualboot compatible with windows if doable.
 
 ### Core Files
 - Alacritty
-- btop
-- firefox
+- btop ~
+- firefox ~
 - gnome
-- fish  
-the perferred terminal thingy
+- fish  [DONE]
 - grub  
-The bootloader
-- gsconnect  
+- gsconnect  ~
 Connects devices with KDE connect to each other. Convenient!
 - micro  
 - Wine

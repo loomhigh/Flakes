@@ -15,16 +15,30 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
   environment.gnome.excludePackages = with pkgs; [
-    totem
+    #orca
+    #evince
     geary
-    gnome-tour
+    #gnome-disk-utility
+    #baobab
+    epiphany
+    gnome-text-editor
+    gnome-calculator
+    gnome-calendar
+    gnome-characters
+    #gnome-clocks
+    #gnome-console
+    gnome-contacts
+    gnome-font-viewer
+    gnome-logs
     gnome-maps
     gnome-music
-    gnome-mines
-    gnome-chess
-    gnome-sudoku
-    gnome-robots
     gnome-weather
+    gnome-connections
+    simple-scan
+    #snapshot
+    totem
+    yelp
+    gnome-software
   ];
 
 # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
@@ -33,7 +47,7 @@
   services.xserver.displayManager.gdm.autoSuspend = false;
   programs.dconf.profiles.user.databases = [
     {
-      lockAll = true; # determines overriding
+      lockAll = false; # determines overriding
       settings = {
         "org/gnome/desktop/interface" = {
           accent-color = "red";
@@ -51,6 +65,10 @@
           idle-dim = false;
         };
           "org/gnome/desktop/screensaver" = {
+  # "file://" informs gnome that you are directing it to a file
+  # ./../../../hosts moves the direction of the file three levels above where gnome.nix is located and then to /hosts/
+  # "/${config.networking.hostname}/" moves down to the folder with the name of the host in the configuration.nix being used
+  # "background-Light.jpg" is the name of the image in that folder.
           picture-uri = "file://" + ./../../../hosts + "/${config.networking.hostName}/" + "Background-light.jpg";
           #picture-uri-dark = "file://" + ./Background-dark.jpg;
           lock-delay = lib.gvariant.mkInt32 1800;

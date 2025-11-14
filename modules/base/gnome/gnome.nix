@@ -49,13 +49,15 @@
           idle-dim = false;
         };
           "org/gnome/desktop/screensaver" = {
-          picture-uri = "file:///etc/nixos/Campaigner/background.jpg";
-          picture-uri-dark = "file:///etc/nixos/static/background-dark.jpg";
+          picture-uri = "file://etc/nixos/Campaigner/background.jpg";
+          picture-uri-dark = "file://etc/nixos/static/background-dark.jpg";
           lock-delay = lib.gvariant.mkInt32 1800;
         };
           "org/gnome/desktop/background" = {
-          picture-uri = "file:///etc/nixos/Campaigner/background.jpg";
-          picture-uri-dark = "file:///etc/nixos/static/background-dark.jpg";
+          color-shading-type = "solid";
+          picture-options = "zoom";
+          picture-uri = "file://etc/nixos/Campaigner/background.jpg";
+          picture-uri-dark = "file://etc/nixos/static/background-dark.jpg";
         };
 
         ## Needs testing

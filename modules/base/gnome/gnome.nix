@@ -31,7 +31,7 @@
   services.xserver.displayManager.gdm.autoSuspend = false;
   programs.dconf.profiles.user.databases = [
     {
-      lockAll = false; # determines overriding
+      lockAll = true; # determines overriding
       settings = {
         "org/gnome/desktop/interface" = {
           accent-color = "red";
@@ -54,7 +54,6 @@
           lock-delay = lib.gvariant.mkInt32 1800;
         };
           "org/gnome/desktop/background" = {
-          color-shading-type = "solid";
           picture-options = "zoom";
           picture-uri = "file:///" + "./../../../hosts" + "/Personal/" + "Background-dark.jpg";
           picture-uri-dark = "file:///" + "./../../../hosts" + "/Personal/" + "Background-dark.jpg";

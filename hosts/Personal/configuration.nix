@@ -11,6 +11,7 @@
     ./../../modules/base/default.nix #adds base packages and gnome
     ./../../modules/mediaEditing/default.nix #adds media editing tools
     ./../../modules/development/default.nix #adds media editing tools
+    ./../../modules/extra/vesktop/vesktop.nix
   ];
 
   #bootloader enabling dual-boot

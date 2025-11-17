@@ -19,6 +19,7 @@
     nix4vscode = {
     url = "github:nix-community/nix4vscode";
     inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
 ## /INPUTS ##

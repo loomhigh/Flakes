@@ -21,7 +21,10 @@
     shell = pkgs.fish;
   };
 
-
+  #bootloader  
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+  
   # Enable automatic login for the user.
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "officeedition";

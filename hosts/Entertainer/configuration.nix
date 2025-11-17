@@ -21,6 +21,10 @@
     shell = pkgs.fish;
   };
 
+  #bootloader  
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+  
   services.xserver.enable = true;
   services.xserver.desktopManager.kodi.enable = true;
   services.displayManager.autoLogin.user = "entertainer";

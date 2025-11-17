@@ -9,7 +9,11 @@
     ./../../modules/locale.nix
     ./../../modules/base/gnome/gnome.nix
   ];
-
+    
+  #bootloader  
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+  
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.truebeliever = {
     isNormalUser = true;

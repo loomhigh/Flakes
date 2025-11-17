@@ -13,6 +13,10 @@
     ./../../modules/development/default.nix #adds media editing tools
   ];
 
+  boot.loader.grub.enable = true;
+  boot.loader.grub.device = "nodev";
+  boot.loader.grub.useOSProber = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.personal = {
     isNormalUser = true;

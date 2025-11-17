@@ -15,7 +15,6 @@
 
   #bootloader enabling dual-boot
   boot.loader = {
-    systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
     systemd-boot = {
       enable = true;

@@ -12,8 +12,8 @@
     home-manager.url = "github:nix-community/home-manager"; 
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     
-    # Came with librepheonix's setup, not sure what it does so commenting it out
-    #chaotic.url = "github:chaotic-cx/nyx";
+    #Came with librepheonix's setup, not sure what it does but my setup breaks without it
+    chaotic.url = "github:chaotic-cx/nyx";
 
     #nix4vscode, allows me to use shortcuts to install the right vscodium extensions
     nix4vscode = {

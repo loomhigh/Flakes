@@ -2,10 +2,10 @@
 
 {
 
-environment.systemPackages = [
+environment.systemPackages = with pkgs; [
 	
 	vesktop
-	
+
 ];
 
 }

@@ -15,7 +15,7 @@
     #Came with librepheonix's setup, not sure what it does but my setup breaks without it
     chaotic.url = "github:chaotic-cx/nyx";
 
-    #nix4vscode, allows me to use shortcuts to install the right vscodium extensions
+    #nix4vscode, allows me to use shortcuts to install the right vscodium extensions, not currently in use
     nix4vscode = {
     url = "github:nix-community/nix4vscode";
     inputs.nixpkgs.follows = "nixpkgs";

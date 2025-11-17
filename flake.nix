@@ -11,7 +11,14 @@
     #copy-pasted from nix-community github tutorial on adding home-manager module to flakes
     home-manager.url = "github:nix-community/home-manager"; 
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    chaotic.url = "github:chaotic-cx/nyx";
+    
+    # Came with librepheonix's setup, not sure what it does so commenting it out
+    #chaotic.url = "github:chaotic-cx/nyx";
+
+    #nix4vscode, allows me to use shortcuts to install the right vscodium extensions
+    nix4vscode = {
+    url = "github:nix-community/nix4vscode";
+    inputs.nixpkgs.follows = "nixpkgs";
   };
 
 ## /INPUTS ##

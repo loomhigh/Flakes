@@ -88,9 +88,9 @@
           gsconnect.extensionUuid
           blur-my-shell.extensionUuid
         ];
-        "org/gnome/shell/favourite-apps" = {
-          "['org.gnome.Nautilus.desktop', 'org.gnome.settings.desktop', 'firefox.desktop', 'org.gnome.Console.desktop']"
-        };
+      #  favourite-apps = [
+      #    "['org.gnome.Nautilus.desktop', 'org.gnome.settings.desktop', 'firefox.desktop', 'org.gnome.Console.desktop']"
+      #  ];
       };
       };
     }

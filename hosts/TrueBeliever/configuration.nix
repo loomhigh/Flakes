@@ -11,8 +11,8 @@
   ];
     
   #bootloader  
-  boot.loader.grub.enable = true;
-  #boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
   
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.truebeliever = {

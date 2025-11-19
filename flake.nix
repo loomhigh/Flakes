@@ -86,6 +86,7 @@ outputs = inputs@{ self, ...}:
   # command used: `sudo nixos-rebuild boot --flake /etc/nixos#truebeliever`
   # note, when changing to a new user, make sure to set the password
   # make sure to also git add the hardware config
+  # set user password with passwd command
 ### / ###
 
 /*

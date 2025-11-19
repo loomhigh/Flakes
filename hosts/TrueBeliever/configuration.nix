@@ -11,8 +11,8 @@
   ];
     
   #bootloader  
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.grub.enable = true;
+  #boot.loader.efi.canTouchEfiVariables = true;
   
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.truebeliever = {
@@ -30,9 +30,8 @@
   services.displayManager.autoLogin.user = "truebeliever";
 
   #make gnome work on older hardware at cost of performance
-  hardware.opengl.enable = true;
   environment.sessionVariables = rec {
-  GSK_RENDERER = "gl";
+  GSK_RENDERER = "cairo";
   };
 
   # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
@@ -51,7 +50,6 @@
   fish # better than bash IMO.
   nh # I genuinely cannot remember what this does
   micro # Like the nano text editor, but a little more advamced
-  luanti # FOSS minecraft-like game, cannot remember why I put this here originally.
   drawio # good for making flowcharts
   ];
   

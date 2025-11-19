@@ -85,6 +85,7 @@ outputs = inputs@{ self, ...}:
   # Make sure to specify the right user when doing this command. The "git+file://" error happens because its the wrong user
   # command used: `sudo nixos-rebuild boot --flake /etc/nixos#truebeliever`
   # note, when changing to a new user, make sure to set the password
+  # make sure to also git add the hardware config
 ### / ###
 
 /*

@@ -27,7 +27,15 @@
   
   services.xserver.enable = true;
   services.displayManager.defaultSession = "none+i3";
-  services.xserver.windowManager.i3.enable = true;
+
+# I3 WM
+  windowManager.i3 = {
+    enable = true;
+    extraPackages = with pkgs; [
+    ];
+    configFile = ./config;
+  };
+
   #services.xserver.desktopManager.kodi.enable = true;
   services.displayManager.autoLogin.user = "entertainer";
   services.xserver.displayManager.lightdm.greeter.enable = false;

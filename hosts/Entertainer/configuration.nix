@@ -41,7 +41,7 @@ xdg.terminal-exec = {
   settings = {
     default = [ "kodi" ];
   };
-}
+};
   #services.xserver.desktopManager.kodi.enable = true;
   services.displayManager.autoLogin.user = "entertainer";
   services.xserver.displayManager.lightdm.greeter.enable = false;

@@ -26,7 +26,9 @@
   boot.loader.efi.canTouchEfiVariables = true;
   
   services.xserver.enable = true;
-  services.xserver.desktopManager.kodi.enable = true;
+  services.displayManager.defaultSession = "none+i3";
+  services.xserver.desktopManager.i3.enable = true;
+  #services.xserver.desktopManager.kodi.enable = true;
   services.displayManager.autoLogin.user = "entertainer";
   services.xserver.displayManager.lightdm.greeter.enable = false;
 

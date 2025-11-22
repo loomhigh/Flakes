@@ -87,6 +87,7 @@ outputs = inputs@{ self, ...}:
   # note, when changing to a new user, make sure to set the password
   # make sure to also git add the hardware config
   # set user password with passwd command
+  # Make sure there is a GPT /boot partition when installing nixOS, don't mark boot with the boot flag
 ### / ###
 
 /*

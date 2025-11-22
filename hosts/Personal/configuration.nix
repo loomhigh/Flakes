@@ -8,7 +8,7 @@
   imports = [
     ./../../modules/locale.nix # misc configurations
     ./../../modules/core/default.nix #adds fundamental packages
-    ./../../modules/base/default.nix #adds base packages and gnome
+    ./../../modules/display/gnome/gnome.nix #adds gnome
     ./../../modules/mediaEditing/default.nix #adds media editing tools
     ./../../modules/development/default.nix #adds media editing tools
     ./../../modules/extra/vesktop/vesktop.nix

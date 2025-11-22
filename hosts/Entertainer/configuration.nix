@@ -9,6 +9,7 @@
     ./../../modules/locale.nix
     ./../../modules/core/default.nix
     ./../../modules/extra/kodi/kodi.nix
+    ./../../modules/display/i3wm/i3.nix
   ];
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.entertainer = {
@@ -33,15 +34,18 @@
     enable = true;
     extraPackages = with pkgs; [
     ];
-    configFile = ./config;
+    configFile = "/etc/nixos/hosts/Entertainer/config";
   };
 
+
+/* IDK what this does, kinda just copypasted it
 xdg.terminal-exec = {
   enable = true;
   settings = {
     default = [ "kodi" ];
   };
 };
+*/
   #services.xserver.desktopManager.kodi.enable = true;
   services.displayManager.autoLogin.user = "entertainer";
   services.xserver.displayManager.lightdm.greeter.enable = false;

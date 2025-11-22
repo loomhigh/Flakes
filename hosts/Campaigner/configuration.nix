@@ -8,6 +8,7 @@
   imports = [
     ./../../modules/locale.nix
     ./../../modules/core/default.nix
+    ./../../modules/display/i3wm/i3.nix
   ];
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.campaigner = {

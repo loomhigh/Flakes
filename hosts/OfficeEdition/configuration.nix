@@ -8,7 +8,7 @@
   imports = [
   ./../../modules/locale.nix
   ./../../modules/core/default.nix
-  ./../../modules/base/gnome/gnome.nix
+  ./../../modules/display/gnome/gnome.nix
   ];
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.officeedition = {

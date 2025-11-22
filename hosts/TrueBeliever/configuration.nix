@@ -7,7 +7,7 @@
 {
   imports = [
     ./../../modules/locale.nix
-    ./../../modules/base/gnome/gnome.nix
+    ./../../modules/display/gnome/gnome.nix
   ];
     
   #bootloader  

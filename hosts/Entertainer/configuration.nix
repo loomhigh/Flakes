@@ -29,7 +29,7 @@
   services.displayManager.defaultSession = "none+i3";
 
 # I3 WM
-  windowManager.i3 = {
+  services.xserver.windowManager.i3 = {
     enable = true;
     extraPackages = with pkgs; [
     ];

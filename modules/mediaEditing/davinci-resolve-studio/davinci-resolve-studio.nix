@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-  davinci-resolve-studio
+  #davinci-resolve-studio #Currently not building for some reason
   ];
 
 }

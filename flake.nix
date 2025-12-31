@@ -7,7 +7,7 @@
   # usually just need to direct it to nixOS's github repo, as shown.
   inputs = {
     # NixOS official package source, using the nixos-25.05 branch here
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     #copy-pasted from nix-community github tutorial on adding home-manager module to flakes
     home-manager.url = "github:nix-community/home-manager"; 
     home-manager.inputs.nixpkgs.follows = "nixpkgs";

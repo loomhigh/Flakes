@@ -3,7 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
   libreoffice-qt-fresh # QT Fixes a plasma bug and fresh just means latest stable version
-  jameica # Java Runtime Environment for libreoffice base
+  jre_minimal # Java Runtime Environment so libreoffice base will work
   ];
 
 }

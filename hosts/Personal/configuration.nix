@@ -11,7 +11,8 @@
     ./../../modules/display/gnome/gnome.nix #adds gnome
     ./../../modules/mediaEditing/default.nix #adds media editing tools
     ./../../modules/development/default.nix #adds media editing tools
-    ./../../modules/extra/vesktop/vesktop.nix
+    ./../../modules/extra/vesktop/vesktop.nix #Discord
+    ./../../modules/office/default.nix #libreoffice and such
   ];
 
   #bootloader enabling dual-boot

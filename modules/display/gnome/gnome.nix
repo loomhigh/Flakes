@@ -16,7 +16,7 @@
   services.desktopManager.gnome.enable = true;
   environment.gnome.excludePackages = with pkgs; [
     #orca
-    #evince
+    evince
     geary
     #gnome-disk-utility
     #baobab
@@ -38,6 +38,7 @@
     simple-scan
     #snapshot
     totem
+    showtime
     yelp
     gnome-software
   ];

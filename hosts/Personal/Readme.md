@@ -58,7 +58,7 @@ Video Game maker
 - Fastfetch ~
 - Vencord [DONE]
 - fractal gnome matrix client
-- moosync or similar background music player
+- moosync or similar background music player # going to try mopidy
 - Jdownloader2
 - jexiftoolgui
 - qbittorrent ~

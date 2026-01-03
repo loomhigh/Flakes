@@ -85,5 +85,7 @@
   texlivePackages.opensans
   comic-mono
   times-newer-roman
+  liberation_ttf_v1
+
   ];
   }

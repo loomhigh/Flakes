@@ -7,7 +7,7 @@
 environment.systemPackages = with pkgs; [
 	
 clementine
-spotifyd # FOSS Spotify Client
+spotify # Spotify, MOVE TO NEW FILE WHEN FINISHED
 
 ];
 

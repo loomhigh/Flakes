@@ -2,7 +2,8 @@
 
 {
   environment.systemPackages = with pkgs; [
-  obs-studio
+  #plasma not sorted out yet
+  kdePackages.ffmpegthumbs
   ];
 
 }

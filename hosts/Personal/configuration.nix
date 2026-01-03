@@ -8,11 +8,13 @@
   imports = [
     ./../../modules/locale.nix # misc configurations
     ./../../modules/core/default.nix #adds fundamental packages
+    ./../../modules/base/default.nix #Some basic packages that are good to have
     ./../../modules/display/gnome/gnome.nix #adds gnome
     ./../../modules/mediaEditing/default.nix #adds media editing tools
     ./../../modules/development/default.nix #adds media editing tools
     ./../../modules/extra/vesktop/vesktop.nix #Discord
     ./../../modules/office/default.nix #libreoffice and such
+    ./../../modules/extra/fractal/fractal.nix #Matrix Client for Gnome
   ];
 
   #bootloader enabling dual-boot

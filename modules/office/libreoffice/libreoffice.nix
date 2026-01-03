@@ -6,7 +6,7 @@
   hunspell # For spellcheck
   hunspellDicts.en_AU # Aussie spellings
   #jdk25_headless
-  #haven't tested if libreoffice base can function without jdk25
+  # Works without the need for JDK now.
   # For future reference, if libreoffice base crashes, delete configs with rm -rf ~/.config/libreoffice
   ];
 

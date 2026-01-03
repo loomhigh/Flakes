@@ -5,19 +5,19 @@ Also make it dualboot compatible with windows if doable.
 ## Requirements ##
 
 ### Core Files
-- Alacritty
-- btop ~
-- firefox ~
-- gnome
+- Alacritty [DONE]
+- btop [DONE]
+- firefox [DONE]
+- gnome [DONE]
 - fish  [DONE]
-- grub  
-- gsconnect  ~
+- grub  [REPLACED]
+- gsconnect  ~ (Not connecting to phone)
 Connects devices with KDE connect to each other. Convenient!
-- micro  
+- micro  [DONE]
 - Wine
 
 ### background
-- ffmpegthumbs  
+- ffmpegthumbs  [ONLY for KDE]
 Creates Thumbnails for video files
 
 ### Media editing
@@ -26,7 +26,7 @@ Creates Thumbnails for video files
 - handbrake ~
 - audacity ~ 
 - rawtherapee [DONE]
-- davinci-resolve-studio ~
+- davinci-resolve-studio [HAVING ISSUES]
 - OBS studio
 ### Map and GIS
 - QGIS  
@@ -46,28 +46,28 @@ Video Game maker
 - android-toolkit
 - android-tools ~
 #### Messing with Apple
-- sideloader
+- sideloader # No NixOS package
 - 
 #### Messing with other computers
-- Ventoy
+- Ventoy ~
 - Windows2usb
 ### Research
-- Zotero
+- Zotero ~
 
 ### Misc
 - Fastfetch ~
-- Armcord or other discord client
+- Vencord [DONE]
 - fractal gnome matrix client
 - moosync or similar background music player
 - Jdownloader2
 - jexiftoolgui
-- qbittorrent
-- libreoffice
-- vlc
+- qbittorrent ~
+- libreoffice ~
+- vlc ~
     - vlc-plugins-all & vlc-plugin-x265
-- yt-dlp
+- yt-dlp ~
 - libation  
-for stealing audiobooks from audible  
+for audiobooks
 - isotopo
 - QWinFF  
 Media converter

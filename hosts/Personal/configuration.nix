@@ -15,7 +15,8 @@
     ./../../modules/extra/vesktop/vesktop.nix #Discord
     ./../../modules/office/default.nix #libreoffice and such
     ./../../modules/extra/fractal/fractal.nix #Matrix Client for Gnome
-    ./../../modules/extra/mopidy/mopidy.nix
+    # ./../../modules/extra/mopidy/mopidy.nix #basic audio player. Too much work
+    ./../../modules/extra/clementine/clementine.nix #Music Playing app that connects to spotify
   ];
 
   #bootloader enabling dual-boot

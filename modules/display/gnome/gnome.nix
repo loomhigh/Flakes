@@ -8,6 +8,7 @@
 
   gnomeExtensions.blur-my-shell
   gnomeExtensions.gsconnect
+  gnomeExtensions.system-monitor
 
   ];
 

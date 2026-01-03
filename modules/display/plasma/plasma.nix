@@ -3,7 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
   #plasma not sorted out yet
-  kdePackages.ffmpegthumbs
+  kdePackages.ffmpegthumbs #thumbnail support
   ];
 
 }

@@ -15,6 +15,7 @@
     ./../../modules/extra/vesktop/vesktop.nix #Discord
     ./../../modules/office/default.nix #libreoffice and such
     ./../../modules/extra/fractal/fractal.nix #Matrix Client for Gnome
+    ./../../modules/extra/mopidy/mopidy.nix
   ];
 
   #bootloader enabling dual-boot

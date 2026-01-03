@@ -3,7 +3,7 @@
 {
 
 environment.systemPackages = with pkgs; [
-  ventoy-full
+  #ventoy-full #Currently not allowed due to vulnerabilities according to nixOS
   ];
 
 

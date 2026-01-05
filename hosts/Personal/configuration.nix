@@ -50,6 +50,7 @@
     description = "Personal";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
+    librewolf
     ];
     shell = pkgs.fish;
   };

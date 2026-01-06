@@ -6,6 +6,7 @@
   universal-android-debloater
   pmbootstrap
   android-tools
+  mtkclient # flasher for mtk phones
   ];
 
 }

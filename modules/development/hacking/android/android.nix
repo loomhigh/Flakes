@@ -8,6 +8,8 @@
   android-tools
   mtkclient # flasher for mtk phones
   uv
+  multipath-tools # includes kpartx which is needed for pmbootstrap to work
+  openssl # needed for pmbootstrap to work
   ];
 
 }

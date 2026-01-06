@@ -10,6 +10,7 @@
   uv
   multipath-tools # includes kpartx which is needed for pmbootstrap to work
   openssl # needed for pmbootstrap to work
+  heimdall # For flashing some samsung devices
   ];
 
 }

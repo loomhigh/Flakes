@@ -4,9 +4,10 @@
 {
   environment.systemPackages = with pkgs; [
   universal-android-debloater
-  pmbootstrap
+  # pmbootstrap #outdated, need to install manually
   android-tools
   mtkclient # flasher for mtk phones
+  uv
   ];
 
 }

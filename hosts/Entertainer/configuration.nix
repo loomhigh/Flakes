@@ -7,6 +7,7 @@
 {
   imports = [
     ./../../modules/locale.nix
+    ./../../modules/base/default.nix
     ./../../modules/core/default.nix
     ./../../modules/extra/kodi/kodi.nix
     ./../../modules/display/i3wm/i3.nix
@@ -67,7 +68,6 @@ xdg.terminal-exec = {
   environment.systemPackages = with pkgs; [
     kodi
     i3
-    qbittorrent
 
     #fossGames
     superTuxKart

@@ -10,6 +10,7 @@
   gnomeExtensions.gsconnect
   gnomeExtensions.system-monitor
   gnomeExtensions.gspotify
+  gnomeExtensions.impression
 
   ];
 
@@ -92,6 +93,7 @@
           blur-my-shell.extensionUuid
           system-monitor.extensionUuid
           gspotify.extensionUuid
+          impression.extensionUuid
         ];
       #  favourite-apps = [
       #    "['org.gnome.Nautilus.desktop', 'org.gnome.settings.desktop', 'firefox.desktop', 'org.gnome.Console.desktop']"

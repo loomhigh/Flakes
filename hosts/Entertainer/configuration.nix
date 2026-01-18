@@ -10,6 +10,7 @@
     ./../../modules/core/default.nix
     ./../../modules/extra/kodi/kodi.nix
     ./../../modules/display/i3wm/i3.nix
+    ./../../modules/extra/lutris/lutris.nix # includes wine
   ];
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.entertainer = {
@@ -66,7 +67,6 @@ xdg.terminal-exec = {
   environment.systemPackages = with pkgs; [
     kodi
     i3
-    lutris
     qbittorrent
 
     #fossGames

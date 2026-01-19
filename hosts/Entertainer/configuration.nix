@@ -39,6 +39,14 @@
     configFile = "/etc/nixos/hosts/Entertainer/config";
   };
 
+  xdg.terminal-exec = {
+    enable = true;
+    settings = {
+      default = [
+        "kitty.desktop"
+      ];
+    };
+  };
 
 /* IDK what this does, kinda just copypasted it
 xdg.terminal-exec = {
@@ -68,9 +76,10 @@ xdg.terminal-exec = {
   environment.systemPackages = with pkgs; [
     kodi
     i3
+    thunar
+    kitty
 
     #fossGames
-    superTuxKart
     luanti
   ];
   

@@ -2,7 +2,8 @@
 
 {
   environment.systemPackages = with pkgs; [
-  yt-dlp
+  vlc
+  libvlc
   ];
 
 }

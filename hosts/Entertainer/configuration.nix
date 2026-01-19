@@ -76,7 +76,7 @@ xdg.terminal-exec = {
   environment.systemPackages = with pkgs; [
     kodi
     i3
-    thunar
+    xfce.thunar
     kitty
 
     #fossGames

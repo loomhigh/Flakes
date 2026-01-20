@@ -5,7 +5,7 @@
 environment.systemPackages = with pkgs; [
 	
 	lutris
-	wine
+	wineWowPackages.staging #Wine Edge edition
 	winetricks
 ];
 

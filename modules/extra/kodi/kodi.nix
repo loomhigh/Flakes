@@ -5,10 +5,11 @@
 environment.systemPackages = [
 	(pkgs.kodi.withPackages (kodiPkgs: with kodiPkgs; [
 		youtube
+		joystick
 	]))
 ];
 
-hardware.xpadneo.enable = true; # for controller support
+#hardware.xpadneo.enable = true; # for controller support
 
 system.activationScripts.lutriskodi = {
 	text = ''

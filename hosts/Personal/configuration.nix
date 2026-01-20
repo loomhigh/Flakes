@@ -77,6 +77,7 @@
   nh # I genuinely cannot remember what this does
   micro # Like the nano text editor, but a little more advamced
   luanti # FOSS minecraft-like game, cannot remember why I put this here originally, also, nixos doesn't believe it exists anyway
+  xow_dongle-firmware #remote control firmware
   ];
   
   # This value determines the NixOS release from which the default

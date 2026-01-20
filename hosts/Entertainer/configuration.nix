@@ -82,10 +82,13 @@ xdg.terminal-exec = {
     kodi
     i3
     xfce.thunar
-    xfce.thunar-volman #allows thunar to auto mount new volumes
+
+    kdePackages.dolphin
+    kdePackages.qtsvg
+    
     kitty
     dmenu-rs
-    i3status
+    #i3status #having this stops automatic fullscreen
     #fossGames
     luanti
   ];

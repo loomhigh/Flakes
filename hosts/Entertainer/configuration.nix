@@ -66,7 +66,12 @@ xdg.terminal-exec = {
 
   };
 
-
+  #To enable Dynamic Links
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    # Add any missing dynamic libraries for unpackaged programs
+    # here, NOT in environment.systemPackages
+  ];
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

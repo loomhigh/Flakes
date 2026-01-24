@@ -11,8 +11,8 @@
   ./../../modules/display/plasma/plasma.nix
   ./../../modules/mediaEditing/default.nix
   ./../../modules/office/default.nix
-  ./../../modules/extra/lutris/default.nix
-  ./../../modules/extra/clementine/default.nix
+  ./../../modules/extra/lutris/lutris.nix
+  ./../../modules/extra/clementine/clementine.nix
   ./../../modules/base/default.nix
   ];
   # Define a user account. Don't forget to set a password with ‘passwd’.

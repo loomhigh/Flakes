@@ -22,19 +22,13 @@
 
 # Hardware Adjustments 
 #/*
-	hardware.nvidia.prime = {
-		# Make sure to use the correct Bus ID values for your system!
-		intelBusId = "PCI:0:2:0";
-		nvidiaBusId = "PCI:1:0:0";
-		# amdgpuBusId = "PCI:54:0:0"; For AMD GPU
-	};
  # Enable OpenGL
   hardware.graphics = {
     enable = true;
   };
 
   # Load nvidia driver for Xorg and Wayland
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = lib.mkForce [ "nvidia" ];
 
   hardware.nvidia = {
 
@@ -64,10 +58,18 @@
     nvidiaSettings = true;
 
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    #package = config.boot.kernelPackages.nvidiaPackages.stable;
+    package = config.boot.kernelPackages.nvidiaPackages.legacy_535; # Older versions
+    
+    # Prime
+    hardware.nvidia.prime = {
+		# Make sure to use the correct Bus ID values for your system!
+    reverseSync.enable = true;
+		intelBusId = "PCI:0:2:0";
+		nvidiaBusId = "PCI:1:0:0";
+		# amdgpuBusId = "PCI:54:0:0"; For AMD GPU
+	};
   };
-  ## END OF HARDWARE STUFF
-  #*/
   
   #bootloader enabling dual-boot
   boot.loader = {
@@ -93,6 +95,9 @@
       edk2-uefi-shell.sortKey = "z_edk2";
     };
   };
+  ## END OF HARDWARE STUFF
+  #*/
+
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.personal = {

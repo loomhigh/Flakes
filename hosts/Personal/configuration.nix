@@ -62,7 +62,7 @@
     package = config.boot.kernelPackages.nvidiaPackages.legacy_535; # Older versions
     
     # Prime
-    hardware.nvidia.prime = {
+    prime = {
 		# Make sure to use the correct Bus ID values for your system!
     reverseSync.enable = true;
 		intelBusId = "PCI:0:2:0";

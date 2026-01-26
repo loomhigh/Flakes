@@ -5,6 +5,8 @@
   wget
   usbutils
   yt-dlp
+  lshw
+  pciutils
   ];
 
 }

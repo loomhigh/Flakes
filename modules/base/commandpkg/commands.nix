@@ -5,7 +5,10 @@
   wget
   usbutils
   yt-dlp
-  lshw
+
+# Read Hardware info like GPUs and stuff
+  inxi
+  lshw 
   pciutils
   ];
 

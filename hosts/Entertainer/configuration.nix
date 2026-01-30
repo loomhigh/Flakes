@@ -87,10 +87,10 @@ xdg.terminal-exec = {
     kdePackages.qtsvg
     
     kitty
-    dmenu-rs
+    #dmenu-rs #for opening apps, stops automatic fullscreen
     #i3status #having this stops automatic fullscreen
     #fossGames
-    luanti
+    #luanti
   ];
   
   # This value determines the NixOS release from which the default

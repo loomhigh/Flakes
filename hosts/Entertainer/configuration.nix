@@ -83,8 +83,9 @@ xdg.terminal-exec = {
     i3
     xfce.thunar
 
+    udiskie
     kdePackages.dolphin
-    kdePackages.qtsvg
+    #kdePackages.qtsvg # Automount for dolphin, removing as was not working
     
     kitty
     #dmenu-rs #for opening apps, stops automatic fullscreen

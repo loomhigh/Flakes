@@ -84,6 +84,7 @@ xdg.terminal-exec = {
     xfce.thunar
     micro
 
+    pipewire
     usermount
     udisks
     udiskie

@@ -82,7 +82,10 @@ xdg.terminal-exec = {
     kodi
     i3
     xfce.thunar
+    micro
 
+    usermount
+    udisks
     udiskie
     kdePackages.dolphin
     #kdePackages.qtsvg # Automount for dolphin, removing as was not working

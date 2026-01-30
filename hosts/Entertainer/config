@@ -25,6 +25,7 @@ exec --no-startup-id xrandr --output HDMI-1 --mode 1600x900  #set it to a resolu
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id kodi
 exec --no-startup-id udiskie
+exec --no-startup-id xset s off
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.

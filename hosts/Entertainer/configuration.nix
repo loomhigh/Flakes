@@ -84,6 +84,7 @@ xdg.terminal-exec = {
     xfce.thunar
     micro
 
+    xorg.xset
     pulseaudio
     pipewire
     usermount

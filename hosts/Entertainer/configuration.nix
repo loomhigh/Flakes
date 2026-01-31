@@ -76,6 +76,9 @@ xdg.terminal-exec = {
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  #attempt to fix controller
+  hardware.xpadneo.enable = true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -91,6 +94,8 @@ xdg.terminal-exec = {
     udisks
     udiskie
     kdePackages.dolphin
+    antimicrox #keyboard controller mapper
+    linuxConsoleTools #tools to help deal with joysticks, might need it idk
     #kdePackages.qtsvg # Automount for dolphin, removing as was not working
     
     kitty

@@ -1,15 +1,20 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
+/*
+
+Woah boy this configuration is messy. the Entertainer Profile is an attempt to create a nixOS configuration of Kodi that is also able to launch Lutris games.
+If you use this flake, I am giving fair warning that I have probably made some fixes that are added post-install.
+There may also be additions to the configuration that don't work on your machine or break it to smitherines.
+Much love.
+
+*/
 
 {config, pkgs, lib, inputs, ...}:
 
 {
   imports = [
     ./../../modules/locale.nix
-    ./../../modules/base/default.nix
-    ./../../modules/core/default.nix
-    ./../../modules/extra/kodi/kodi.nix
+    ./../../modules/base/default.nix #imports basic utilities I like having in all systems like VLC, and some command utils
+    ./../../modules/core/default.nix #adds fish
+    ./../../modules/extra/kodi/kodi.nix 
     ./../../modules/display/i3wm/i3.nix
     ./../../modules/extra/lutris/lutris.nix # includes wine
   ];
@@ -21,7 +26,7 @@
     packages = with pkgs; [
     #  thunderbird
     ];
-    shell = pkgs.fish;
+    shell = pkgs.fish; #my favourite 
   };
 
   #bootloader  
@@ -29,7 +34,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   
   services.xserver.enable = true;
-  services.displayManager.defaultSession = "none+i3";
+  services.displayManager.defaultSession = "none+i3"; #bare minimum display manager
 
 # I3 WM
   services.xserver.windowManager.i3 = {
@@ -82,20 +87,29 @@ xdg.terminal-exec = {
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    # Reduntant addition of kodi and I3
     kodi
     i3
+    
+    #packages of convenience.
+    kdePackages.dolphin
     xfce.thunar
     micro
 
+    #Fixing Audio and screensaver. 
+    #Pipwire and pulse for the command utilities, and xorg.xset to have a command that turns off screensaver when starting up.
     xorg.xset
     pulseaudio
     pipewire
+    
+    #used to attempt fixing automount issues
     usermount
     udisks
     udiskie
-    kdePackages.dolphin
+
+    #controller profiles
     antimicrox #keyboard controller mapper
-    linuxConsoleTools #tools to help deal with joysticks, might need it idk
+    linuxConsoleTools #tools to help deal with joysticks. Also installing xbox controller libraries to WINE in case that fixes it.
     #kdePackages.qtsvg # Automount for dolphin, removing as was not working
     
     kitty

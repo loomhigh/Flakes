@@ -83,7 +83,7 @@ xdg.terminal-exec = {
 
   #attempt to fix controller
   hardware.xpadneo.enable = true;
-
+  hardware.xone.enable = true;
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -113,6 +113,7 @@ xdg.terminal-exec = {
     #kdePackages.qtsvg # Automount for dolphin, removing as was not working
     
     kitty
+    mangohud #for testing while gaming
     #dmenu-rs #for opening apps, stops automatic fullscreen
     #i3status #having this stops automatic fullscreen
     #fossGames

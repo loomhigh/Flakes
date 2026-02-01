@@ -25,6 +25,10 @@
  # Enable OpenGL
   hardware.graphics = {
     enable = true;
+    extraPackages = with pkgs; [
+      intel-media-driver # lets my intel get all hardware accelerated with it
+      # Apparently the nvidia video acceleration on linux is ass
+    ];
   };
 
   # Load nvidia driver for Xorg and Wayland

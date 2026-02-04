@@ -18,6 +18,7 @@
     # ./../../modules/extra/mopidy/mopidy.nix #basic audio player. Too much work
     ./../../modules/extra/clementine/clementine.nix #Music Playing app that connects to spotify
     ./../../modules/extra/PLUG/plug.nix #for programs relating to the Perth Linux Users Group
+    ./../../modules/extra/TAFE/TAFE.nix #packages needed for TAFE work, atm includes VMware workstation
   ];
 
 # Hardware Adjustments 

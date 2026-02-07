@@ -140,6 +140,7 @@
   xow_dongle-firmware #remote control firmware
   epson-escpr #firmware for epson Printer
   nvtopPackages.nvidia #for checking nvidia GPU
+  bash
   ];
   
   # This value determines the NixOS release from which the default

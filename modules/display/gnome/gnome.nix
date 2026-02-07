@@ -1,7 +1,8 @@
 {config, pkgs, lib, self, inputs, ...}:
 
 {
-services.xserver.enable = true; #trying to add an option for xorg login
+services.xserver.displayManager.gdm.enable = true; #attempting to add xorg option
+services.xserver.desktopManager.gnome3.enable = true; #not sure if this will help
 
 programs.kdeconnect = {
   enable = true;

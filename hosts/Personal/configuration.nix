@@ -143,6 +143,7 @@
   epson-escpr #firmware for epson Printer
   nvtopPackages.nvidia #for checking nvidia GPU
   bash
+  xfce
   ];
   
   # This value determines the NixOS release from which the default

@@ -143,9 +143,10 @@
   epson-escpr #firmware for epson Printer
   nvtopPackages.nvidia #for checking nvidia GPU
   bash
-  xfce
   ];
   
+  services.xserver.desktopManager.xfce.enable = true; #backup DesktopManager for xorg
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave

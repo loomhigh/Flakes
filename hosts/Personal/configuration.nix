@@ -143,6 +143,7 @@
   epson-escpr #firmware for epson Printer
   nvtopPackages.nvidia #for checking nvidia GPU
   bash
+  SDL2 # may help with rimworld issues, not sure yet
   ];
   
   #services.xserver.desktopManager.xfce.enable = true; #backup DesktopManager for xorg, disabling because it makes my mouse in gnome all weird

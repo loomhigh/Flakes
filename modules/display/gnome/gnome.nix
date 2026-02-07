@@ -3,8 +3,6 @@
 {
 #services.xserver.enable = true; #attempting to add xorg option
 
-environment.systemPackages = [ gnome.adwaita-icon-theme ];
-
 programs.kdeconnect = {
   enable = true;
   package = pkgs.gnomeExtensions.gsconnect;
@@ -12,7 +10,7 @@ programs.kdeconnect = {
 
   environment.systemPackages = with pkgs; [
   gnome-tweaks
-
+  gnome.adwaita-icon-theme
   gnomeExtensions.blur-my-shell
   gnomeExtensions.gsconnect
   gnomeExtensions.system-monitor

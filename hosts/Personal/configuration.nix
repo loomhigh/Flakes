@@ -76,7 +76,7 @@
 		# amdgpuBusId = "PCI:54:0:0"; For AMD GPU
 	};
   };
-  */
+  #*/
   ## END OF HARDWARE STUFF
 
   #bootloader enabling dual-boot

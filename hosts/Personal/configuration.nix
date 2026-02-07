@@ -20,6 +20,7 @@
     ./../../modules/extra/PLUG/plug.nix #for programs relating to the Perth Linux Users Group
     ./../../modules/extra/TAFE/TAFE.nix #packages needed for TAFE work, atm includes VMware workstation
     ./../../modules/extra/chromium/chromium.nix
+    ./../../modules/extra/lutris/lutris.nix #going to see if this lets me do the rim thing
   ];
 
 # Hardware Adjustments 
@@ -144,6 +145,7 @@
   nvtopPackages.nvidia #for checking nvidia GPU
   bash
   SDL2 # may help with rimworld issues, not sure yet
+  pkgs.xfce.xfwm4
   ];
   
   #services.xserver.desktopManager.xfce.enable = true; #backup DesktopManager for xorg, disabling because it makes my mouse in gnome all weird

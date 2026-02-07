@@ -5,7 +5,7 @@
 
 programs.kdeconnect = {
   enable = true;
-  package = pkgs.gnomeExtensions.gsconnect;
+  package = pkgs.gnomeExtensions.gsconnect; #this makes gsconnect work and actually connect to my phone
 };
 
   environment.systemPackages = with pkgs; [

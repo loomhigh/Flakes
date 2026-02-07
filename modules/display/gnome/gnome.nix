@@ -10,7 +10,7 @@ programs.kdeconnect = {
 
   environment.systemPackages = with pkgs; [
   gnome-tweaks
-  gnome.adwaita-icon-theme
+  pkgs.adwaita-icon-theme
   gnomeExtensions.blur-my-shell
   gnomeExtensions.gsconnect
   gnomeExtensions.system-monitor

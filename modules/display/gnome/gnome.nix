@@ -1,7 +1,9 @@
 {config, pkgs, lib, self, inputs, ...}:
 
 {
-services.xserver.enable = true; #attempting to add xorg option
+#services.xserver.enable = true; #attempting to add xorg option
+
+environment.systemPackages = [ gnome.adwaita-icon-theme ];
 
 programs.kdeconnect = {
   enable = true;

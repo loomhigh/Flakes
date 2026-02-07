@@ -23,7 +23,7 @@
   ];
 
 # Hardware Adjustments 
-#/*
+/*
  # Enable OpenGL
   hardware.graphics = {
     enable = true;
@@ -76,7 +76,9 @@
 		# amdgpuBusId = "PCI:54:0:0"; For AMD GPU
 	};
   };
-  
+  #*/
+  ## END OF HARDWARE STUFF
+
   #bootloader enabling dual-boot
   boot.loader = {
     efi.canTouchEfiVariables = true;
@@ -102,7 +104,7 @@
     };
   };
   ## END OF HARDWARE STUFF
-  #*/
+  
 
 
   # Define a user account. Don't forget to set a password with ‘passwd’.

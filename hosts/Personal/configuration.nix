@@ -111,7 +111,7 @@
   users.users.personal = {
     isNormalUser = true;
     description = "Personal";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "video"];
     packages = with pkgs; [
     librewolf
     ];

@@ -22,7 +22,7 @@ Much love.
   users.users.entertainer = {
     isNormalUser = true;
     description = "Entertainer";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "video"];
     packages = with pkgs; [
     #  thunderbird
     ];

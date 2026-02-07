@@ -1,11 +1,13 @@
 {config, pkgs, lib, self, inputs, ...}:
 
 {
+services.xserver.enable = true; #trying to add an option for xorg login
 
 programs.kdeconnect = {
   enable = true;
   package = pkgs.gnomeExtensions.gsconnect;
 };
+
   environment.systemPackages = with pkgs; [
   gnome-tweaks
 

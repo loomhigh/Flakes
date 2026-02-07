@@ -23,7 +23,7 @@
   ];
 
 # Hardware Adjustments 
-/*
+#/* HARDWARE STUFF
  # Enable OpenGL
   hardware.graphics = {
     enable = true;
@@ -34,7 +34,7 @@
   };
 
   # Load nvidia driver for Xorg and Wayland
-  services.xserver.videoDrivers = lib.mkForce [ "nvidia" ];
+  #services.xserver.videoDrivers = lib.mkForce [ "nvidia" ];
 
   hardware.nvidia = {
 
@@ -76,7 +76,7 @@
 		# amdgpuBusId = "PCI:54:0:0"; For AMD GPU
 	};
   };
-  #*/
+  */
   ## END OF HARDWARE STUFF
 
   #bootloader enabling dual-boot

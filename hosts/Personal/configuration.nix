@@ -145,7 +145,7 @@
   bash
   ];
   
-  services.xserver.desktopManager.xfce.enable = true; #backup DesktopManager for xorg
+  #services.xserver.desktopManager.xfce.enable = true; #backup DesktopManager for xorg, disabling because it makes my mouse in gnome all weird
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

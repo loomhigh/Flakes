@@ -10,6 +10,7 @@
   inxi
   lshw 
   pciutils
+  virtualgl # contains glxinfo
   ];
 
 }

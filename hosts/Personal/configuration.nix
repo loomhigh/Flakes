@@ -147,8 +147,10 @@
   SDL2 # may help with rimworld issues, not sure yet
   pkgs.xfce.xfwm4 #backup Desktop Manager
   
-  rimsort #for rimworld mod managmenet. Remind me to delete this game when I want to get a life
+  #rimsort #for rimworld mod managmenet. Remind me to delete this game when I want to get a life
   steamcmd #also for mod management
+  samba
+  gnome.gvfs #virtual folder library
   ];
   
   #services.xserver.desktopManager.xfce.enable = true; #backup DesktopManager for xorg, disabling because it makes my mouse in gnome all weird

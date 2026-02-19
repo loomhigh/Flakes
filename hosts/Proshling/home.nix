@@ -2,7 +2,7 @@
 {
 workspace = {
   wallpaper = "/etc/nixos/hosts/Proshling/background.jpg";
-  lookAndFeel = "Plasma-Overdose"
+  lookAndFeel = "Plasma-Overdose";
 };
 
 }

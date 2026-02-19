@@ -16,12 +16,12 @@
   ./../../modules/base/default.nix
   ];
 
-# attempt to set up a wallpaper
-  systemd.user.services.set-wallpaper = {
-      description = "Set KDE Plasma wallpaper";
-      serviceConfig.ExecStart = [ "/run/current-system/sw/bin/plasma-apply-wallpaperimage /etc/nixos/hosts/Proshling/background.jpg" ];
-      wantedBy = [ "graphical-session.target" ];
-    };
+# attempt to set up a wallpaper -- Doesn't seem to work
+#  systemd.user.services.set-wallpaper = {
+#      description = "Set KDE Plasma wallpaper";
+#      serviceConfig.ExecStart = [ "/run/current-system/sw/bin/plasma-apply-wallpaperimage /etc/nixos/hosts/Proshling/background.jpg" ];
+#      wantedBy = [ "graphical-session.target" ];
+#    };
       systemd.tmpfiles.rules = [ #pfp
     "L /var/lib/AccountsService/icons/proshling - - - - ${./pfp.png}"
   ];

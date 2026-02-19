@@ -11,7 +11,14 @@
     #copy-pasted from nix-community github tutorial on adding home-manager module to flakes
     home-manager.url = "github:nix-community/home-manager"; 
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    
+
+    #plasma-manager for managing plasma config
+    plasma-manager = {
+    url = "github:nix-community/plasma-manager";
+    inputs.nixpkgs.follows = "nixpkgs";
+    inputs.home-manager.follows = "home-manager";
+    };
+
     #Came with librepheonix's setup, not sure what it does but my setup breaks without it
     chaotic.url = "github:chaotic-cx/nyx";
 
@@ -27,7 +34,8 @@
 
 ##  OUTPUTS ##
 
-outputs = inputs@{ self, ...}:
+outputs = inputs@{ self, home-manager, plasma-manager, ...}:
+  
     let
     # configure lib
       lib = inputs.nixpkgs.lib;

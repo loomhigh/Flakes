@@ -1,6 +1,7 @@
 { pkgs, ... }:
 
 {
+ home.stateVersion = "23.11";
 
 #imports = [ <plasma-manager/modules> ];
 

@@ -1,7 +1,6 @@
-{ pkgs, ... }:
+{ pkgs, home-manager, plasma-manager, ... }:
 {
 
-imports = [ <plasma-manager/modules> ];
 
 programs.plasma = {
     enable = true;

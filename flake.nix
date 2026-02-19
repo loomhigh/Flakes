@@ -14,9 +14,9 @@
 
     #plasma-manager for managing plasma config
     plasma-manager = {
-    url = "github:nix-community/plasma-manager";
-    inputs.nixpkgs.follows = "nixpkgs";
-    inputs.home-manager.follows = "home-manager";
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
     };
 
     #Came with librepheonix's setup, not sure what it does but my setup breaks without it
@@ -34,7 +34,7 @@
 
 ##  OUTPUTS ##
 
-outputs = inputs@{ self, home-manager, plasma-manager, ...}:
+outputs = inputs@{ self, nixpkgs, home-manager, plasma-manager, ...}:
   
     let
     # configure lib

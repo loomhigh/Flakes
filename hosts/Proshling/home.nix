@@ -1,4 +1,8 @@
 { pkgs, ... }:
 {
-wallpaper = "/etc/nixos/hosts/Proshling/background.jpg";
+workspace = {
+  wallpaper = "/etc/nixos/hosts/Proshling/background.jpg";
+  lookAndFeel = "Plasma-Overdose"
+};
+
 }

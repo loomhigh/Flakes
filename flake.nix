@@ -72,7 +72,7 @@ outputs = inputs@{ self, home-manager, plasma-manager, ...}:
 
             # This should point to your home.nix path of course. For an example
             # of this see ./home.nix in this directory.
-            home-manager.users."${username}" = import ../home.nix;
+            home-manager.users."${host}" = import ./home.nix;
           }
               # chaos... control!
               inputs.chaotic.nixosModules.default

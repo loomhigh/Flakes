@@ -15,6 +15,14 @@
   ./../../modules/extra/clementine/clementine.nix
   ./../../modules/base/default.nix
   ];
+
+# attempt to set up a wallpaper
+  systemd.user.services.set-wallpaper = {
+      description = "Set KDE Plasma wallpaper";
+      serviceConfig.ExecStart = [ "/run/current-system/sw/bin/plasma-apply-wallpaperimage /etc/nixos/Proshling/background.jpg" ];
+      wantedBy = [ "graphical-session.target" ];
+    };
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.proshling = {
     isNormalUser = true;
@@ -57,3 +65,4 @@
   system.stateVersion = "25.05"; # Did you read the comment?
 
 }
+

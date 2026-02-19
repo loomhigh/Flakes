@@ -104,9 +104,9 @@ outputs = inputs@{ self, ...}:
   ____20251114 -  ___
   Managed to set up gnome to my delighful levels. 
   - Figure out how to edit the gnome app menu and favourites
-  - clean up systemdboot's menu
-  - add windows Dualboot
-  - set main filesystem to direct to spare SSD
+  - clean up systemdboot's menu -- DONE
+  - add windows Dualboot -- DONE
+  - set main filesystem to direct to spare SSD -- DONE
   
   
   

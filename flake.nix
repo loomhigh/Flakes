@@ -64,7 +64,16 @@ outputs = inputs@{ self, home-manager, plasma-manager, ...}:
                   inherit inputs;
                 };
               }
+              home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
 
+            # This should point to your home.nix path of course. For an example
+            # of this see ./home.nix in this directory.
+            home-manager.users."${username}" = import ../home.nix;
+          }
               # chaos... control!
               inputs.chaotic.nixosModules.default
             ];

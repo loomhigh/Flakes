@@ -58,6 +58,9 @@ outputs = inputs@{ self, nixpkgs, home-manager, plasma-manager, ...}:
               ./hardware-configuration.nix
 
               # home manager
+              {
+              users.users."${host}".isNormalUser = true;
+              }
               inputs.home-manager.nixosModules.home-manager
               {
                 home-manager.extraSpecialArgs = {

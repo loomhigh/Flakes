@@ -37,6 +37,9 @@
     shell = pkgs.fish;
   };
 
+  programs.plasma = {
+    enable = true;
+  };
   #bootloader  
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

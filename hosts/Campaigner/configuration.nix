@@ -35,7 +35,7 @@
     enable = true;
     extraPackages = with pkgs; [
     ];
-    configFile = "/etc/nixos/hosts/Entertainer/config";
+    configFile = "/etc/nixos/hosts/Campaigner/config";
   };
 
   # Install firefox and set default shell to fish

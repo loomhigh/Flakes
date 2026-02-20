@@ -11,6 +11,7 @@
   lshw 
   pciutils
   virtualgl # contains glxinfo
+  traceroute #allows you to see where your pings travel through
   ];
 
 }

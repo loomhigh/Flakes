@@ -27,8 +27,25 @@
   
   # Enable automatic login for the user.
   # Commented out until a Desktop Manager is determined
-  #services.displayManager.autoLogin.enable = true;
-  #services.displayManager.autoLogin.user = "campaigner";
+  services.displayManager.autoLogin.enable = true;
+  services.displayManager.autoLogin.user = "campaigner";
+
+# I3 WM
+  services.xserver.windowManager.i3 = {
+    enable = true;
+    extraPackages = with pkgs; [
+    ];
+    configFile = "/etc/nixos/hosts/Entertainer/config";
+  };
+
+  xdg.terminal-exec = {
+    enable = true;
+    settings = {
+      default = [
+        "kitty.desktop"
+      ];
+    };
+  };
 
   # Install firefox and set default shell to fish
   users.defaultUserShell = pkgs.fish;

@@ -26,8 +26,9 @@
   boot.loader.efi.canTouchEfiVariables = true;
   
   # Enable automatic login for the user.
-  services.displayManager.autoLogin.enable = true;
-  services.displayManager.autoLogin.user = "campaigner";
+  # Commented out until a Desktop Manager is determined
+  #services.displayManager.autoLogin.enable = true;
+  #services.displayManager.autoLogin.user = "campaigner";
 
   # Install firefox and set default shell to fish
   users.defaultUserShell = pkgs.fish;

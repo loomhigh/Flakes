@@ -26,8 +26,10 @@
   };
 
   # Enable automatic login for the user.
-  services.displayManager.autoLogin.enable = true;
-  services.displayManager.autoLogin.user = "truebeliever";
+  # Commented out until a Desktop Manager is determined
+
+  #services.displayManager.autoLogin.enable = true;
+  #services.displayManager.autoLogin.user = "truebeliever";
 
   #make gnome work on older hardware at cost of performance
   environment.sessionVariables = rec {

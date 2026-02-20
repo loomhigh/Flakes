@@ -38,15 +38,6 @@
     configFile = "/etc/nixos/hosts/Entertainer/config";
   };
 
-  xdg.terminal-exec = {
-    enable = true;
-    settings = {
-      default = [
-        "kitty.desktop"
-      ];
-    };
-  };
-
   # Install firefox and set default shell to fish
   users.defaultUserShell = pkgs.fish;
   programs = {

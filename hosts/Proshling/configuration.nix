@@ -23,10 +23,30 @@
 #      serviceConfig.ExecStart = [ "/run/current-system/sw/bin/plasma-apply-wallpaperimage /etc/nixos/hosts/Proshling/background.jpg" ];
 #      wantedBy = [ "graphical-session.target" ];
 #    };
-      systemd.tmpfiles.rules = [ #pfp
+      systemd = {
+        tmpfiles.rules = [ #pfp
     "L /var/lib/AccountsService/icons/Proshling - - - - ${./pfp.png}"
   ];
+    user.services.hmlinux = {
+      script = ''
+      cp -R /etc/nixos/hosts/Proshling/configs/Wallpapers /home/Proshling/
+      cp -R /etc/nixos/hosts/Proshling/configs/color-schemes /home/Proshling/.local/share/
+      mkdir /home/Proshling/.local/share/plasma
+      mkdir /home/Proshling/.local/share/plasma/look-and-feel
+      chown -R Proshling /home/Proshling/.local/share/plasma
+      wget -T 5 -P /home/Proshling/.local/share/plasma/look-and-feel -nc https://codeberg.org/esm/GangsterEdition/archive/main.zip
+      unzip /home/Proshling/.local/share/plasma/look-and-feel/GangsterEdition.zip
+      rm /home/Proshling/.local/share/plasma/look-and-feel/GangsterEdition.zip
+      '';
 
+    # This service runs once and finishes,
+    # instead of the default long-live services
+    type = "simple";
+
+    # "Enable" the service
+    wantedBy = [ "default.target" ];
+  };
+};
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.Proshling = {
     isNormalUser = true;
@@ -49,25 +69,7 @@
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "Proshling";
 
-    systemd.services.hmlinux = {
-    script = ''
-      cp -R /etc/nixos/hosts/Proshling/configs/Wallpapers /home/Proshling/
-      cp -R /etc/nixos/hosts/Proshling/configs/color-schemes /home/Proshling/.local/share/
-      mkdir /home/Proshling/.local/share/plasma
-      mkdir /home/Proshling/.local/share/plasma/look-and-feel
-      chown -R Proshling /home/Proshling/.local/share/plasma
-      wget -T 5 -P /home/Proshling/.local/share/plasma/look-and-feel -nc https://codeberg.org/esm/GangsterEdition/archive/main.zip
-      unzip /home/Proshling/.local/share/plasma/look-and-feel/GangsterEdition.zip
-      rm /home/Proshling/.local/share/plasma/look-and-feel/GangsterEdition.zip
-    '';
-
-    # This service runs once and finishes,
-    # instead of the default long-live services
-    type = "oneshot";
-
-    # "Enable" the service
-    wantedBy = [ "multi-user.target" ];
-  };
+  
 
   programs = {
   firefox.enable = true;

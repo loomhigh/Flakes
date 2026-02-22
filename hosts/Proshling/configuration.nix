@@ -28,9 +28,9 @@
   ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.proshling = {
+  users.users.Proshling = {
     isNormalUser = true;
-    description = "The Official Operating system of UWA's Prosh!";
+    #description = "The Official Operating system of UWA's Prosh!";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
     #  thunderbird

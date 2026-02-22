@@ -32,8 +32,10 @@
       cp -R /etc/nixos/hosts/Proshling/configs/Wallpapers /home/Proshling/
       cp -R /etc/nixos/hosts/Proshling/configs/color-schemes /home/Proshling/.local/share/
       mkdir -p /home/Proshling/.local/share/plasma/look-and-feel
-      chown -R Proshling /home/Proshling/.local/share/plasma
+      mkdir -p /home/Proshling/.local/share/sounds
+      chown -R Proshling /home/Proshling/.local/share
       cp -R /etc/nixos/hosts/Proshling/configs/GangsterEdition /home/Proshling/.local/share/plasma/look-and-feel/
+      cp -R /etc/nixos/hosts/Proshling/configs/GangsterEdition /home/Proshling/.local/share/plasma/sound/
       '';
 
     # This service runs once and finishes,

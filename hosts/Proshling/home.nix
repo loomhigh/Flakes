@@ -15,6 +15,7 @@ programs.plasma = {
     wallpaper = "/etc/nixos/hosts/Proshling/configs/Wallpapers/background.png";
     colorScheme = "HannahMontana";
     splashScreen.theme = "GangsterEdition";
+    soundTheme = "Proshygen";
   };  
 };
 

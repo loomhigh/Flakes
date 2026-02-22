@@ -35,7 +35,7 @@
       mkdir -p /home/Proshling/.local/share/sounds
       chown -R Proshling /home/Proshling/.local/share
       cp -R /etc/nixos/hosts/Proshling/configs/GangsterEdition /home/Proshling/.local/share/plasma/look-and-feel/
-      cp -R /etc/nixos/hosts/Proshling/configs/Proshygen /home/Proshling/.local/share/sound/
+      cp -R /etc/nixos/hosts/Proshling/configs/Proshygen /home/Proshling/.local/share/sound
       '';
 
     # This service runs once and finishes,

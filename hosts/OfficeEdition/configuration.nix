@@ -11,7 +11,7 @@
   ./../../modules/display/gnome/gnome.nix
   ];
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.officeedition = {
+  users.users.OfficeEdition = {
     isNormalUser = true;
     description = "OfficeEdition";
     extraGroups = [ "networkmanager" "wheel" ];
@@ -27,7 +27,7 @@
   
   # Enable automatic login for the user.
   services.displayManager.autoLogin.enable = true;
-  services.displayManager.autoLogin.user = "officeedition";
+  services.displayManager.autoLogin.user = "OfficeEdition";
 
   programs = {
   firefox.enable = true;

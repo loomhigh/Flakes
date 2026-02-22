@@ -15,7 +15,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.truebeliever = {
+  users.users.TrueBeliever = {
     isNormalUser = true;
     description = "TrueBeliever";
     extraGroups = [ "networkmanager" "wheel" ];
@@ -29,7 +29,7 @@
   # Commented out until a Desktop Manager is determined
 
   #services.displayManager.autoLogin.enable = true;
-  #services.displayManager.autoLogin.user = "truebeliever";
+  #services.displayManager.autoLogin.user = "TrueBeliever";
 
   #make gnome work on older hardware at cost of performance
   environment.sessionVariables = rec {

@@ -24,7 +24,7 @@
 #      wantedBy = [ "graphical-session.target" ];
 #    };
       systemd.tmpfiles.rules = [ #pfp
-    "L /var/lib/AccountsService/icons/proshling - - - - ${./pfp.png}"
+    "L /var/lib/AccountsService/icons/Proshling - - - - ${./pfp.png}"
   ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -47,11 +47,11 @@
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
   services.displayManager.autoLogin.enable = true;
-  services.displayManager.autoLogin.user = "proshling";
+  services.displayManager.autoLogin.user = "Proshling";
 
   system.activationScripts.cpbg = {
 	text = ''
-  cp /etc/nixos/hosts/Proshling/background.jpg /home/proshling/
+  cp /etc/nixos/hosts/Proshling/background.jpg /home/Proshling/
   '';
   };
 

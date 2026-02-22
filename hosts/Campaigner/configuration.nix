@@ -11,7 +11,7 @@
     ./../../modules/display/i3wm/i3.nix
   ];
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.campaigner = {
+  users.users.Campaigner = {
     isNormalUser = true;
     description = "Campaigner";
     extraGroups = [ "networkmanager" "wheel" ];
@@ -28,7 +28,7 @@
   # Enable automatic login for the user.
   # Commented out until a Desktop Manager is determined
   services.displayManager.autoLogin.enable = true;
-  services.displayManager.autoLogin.user = "campaigner";
+  services.displayManager.autoLogin.user = "Campaigner";
 
 # I3 WM
   services.xserver.windowManager.i3 = {

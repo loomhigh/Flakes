@@ -10,7 +10,7 @@ programs.plasma = {
 
   workspace = {
     wallpaper = "/etc/nixos/hosts/Proshling/background.jpg";
-    lookAndFeel = "org.kde.breezedark.desktop";
+    lookAndFeel = "org.kde.Plasma-Overdose.desktop";
   };  
 };
 

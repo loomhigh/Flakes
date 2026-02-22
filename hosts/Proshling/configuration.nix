@@ -15,8 +15,6 @@
   ./../../modules/extra/clementine/clementine.nix
   ./../../modules/base/default.nix
   
-  # see if this fixes issue
-  ./home.nix
   ];
 
 # attempt to set up a wallpaper -- Doesn't seem to work

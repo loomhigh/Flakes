@@ -8,7 +8,7 @@
 programs.plasma = {
     enable = true;
   
-  home.username = "Proshling";
+  home.username = "proshling";
   home.homeDirectory = "/home/proshling";
 
   workspace = {

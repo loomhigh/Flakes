@@ -49,12 +49,6 @@
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "Proshling";
 
-  system.activationScripts.hmlsetup = {
-
-  runtimeInputs = [
-    wget
-    unzip
-  ];
     systemd.services.hmlinux = {
     script = ''
       cp -R /etc/nixos/hosts/Proshling/configs/Wallpapers /home/Proshling/

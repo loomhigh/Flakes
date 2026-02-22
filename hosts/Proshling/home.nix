@@ -10,7 +10,7 @@ programs.plasma = {
 
   workspace = {
     wallpaper = "/etc/nixos/hosts/Proshling/configs/Wallpapers/background.png";
-    colorScheme = "HannahMontana"
+    colorScheme = "HannahMontana";
   };  
 };
 

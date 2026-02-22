@@ -9,8 +9,8 @@ programs.plasma = {
     enable = true;
 
   workspace = {
-    wallpaper = ./background.jpg;
-    lookAndFeel = "Plasma-Overdose";
+    wallpaper = ~/background.jpg;
+    #lookAndFeel = "Plasma-Overdose";
   };  
 };
 

@@ -49,7 +49,7 @@
 
   system.activationScripts.cpbg = {
 	text = ''
-  cp /etc/nixos/hosts/Proshling/background/jpg /home/Proshling/
+  cp /etc/nixos/hosts/Proshling/background/jpg /home/proshling/
   '';
   };
 

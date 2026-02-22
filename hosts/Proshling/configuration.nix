@@ -27,7 +27,7 @@
         tmpfiles.rules = [ #pfp
     "L /var/lib/AccountsService/icons/Proshling - - - - ${./pfp.png}"
   ];
-    user.services.hmlinux = {
+    services.hmlinux = {
       script = ''
       cp -R /etc/nixos/hosts/Proshling/configs/Wallpapers /home/Proshling/
       cp -R /etc/nixos/hosts/Proshling/configs/color-schemes /home/Proshling/.local/share/

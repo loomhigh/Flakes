@@ -41,7 +41,7 @@
 
     # This service runs once and finishes,
     # instead of the default long-live services
-    type = "simple";
+    #type = "simple";
 
     # "Enable" the service
     wantedBy = [ "default.target" ];

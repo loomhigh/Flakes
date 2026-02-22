@@ -7,9 +7,6 @@
 
 programs.plasma = {
     enable = true;
-  
-  home.username = "proshling";
-  home.homeDirectory = "/home/proshling";
 
   workspace = {
     wallpaper = ./background.jpg;

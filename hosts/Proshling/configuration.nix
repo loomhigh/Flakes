@@ -14,6 +14,9 @@
   ./../../modules/extra/lutris/lutris.nix
   ./../../modules/extra/clementine/clementine.nix
   ./../../modules/base/default.nix
+  
+  # see if this fixes issue
+  ./home.nix
   ];
 
 # attempt to set up a wallpaper -- Doesn't seem to work
@@ -36,6 +39,7 @@
     ];
     shell = pkgs.fish;
   };
+
 
   #bootloader  
   boot.loader.systemd-boot.enable = true;

@@ -9,8 +9,8 @@ programs.plasma = {
     enable = true;
 
   workspace = {
-    wallpaper = "/etc/nixos/hosts/Proshling/background.jpg";
-    lookAndFeel = "org.kde.Plasma-Overdose.desktop";
+    wallpaper = "/etc/nixos/hosts/Proshling/configs/Wallpapers/background.png";
+    
   };  
 };
 

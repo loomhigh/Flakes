@@ -51,7 +51,8 @@
 
   system.activationScripts.cpbg = {
 	text = ''
-  cp /etc/nixos/hosts/Proshling/background.jpg /home/Proshling/
+  cp -R /etc/nixos/hosts/Proshling/configs/Wallpapers /home/Proshling/
+  cp -R /etc/nixos/hosts/Proshling/configs/color-schemes /home/Proshling/.local/share/
   '';
   };
 

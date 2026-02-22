@@ -33,8 +33,8 @@
       cp -R /etc/nixos/hosts/Proshling/configs/color-schemes /home/Proshling/.local/share/
       mkdir -p /home/Proshling/.local/share/plasma/look-and-feel
       chown -R Proshling /home/Proshling/.local/share/plasma
-      wget -T 5 -P /home/Proshling/.local/share/plasma/look-and-feel -nc https://codeberg.org/esm/GangsterEdition/archive/main.zip
-      unzip /home/Proshling/.local/share/plasma/look-and-feel/GangsterEdition.zip
+      ${lib.getExe pkgs.wget} -T 5 -P /home/Proshling/.local/share/plasma/look-and-feel -nc https://codeberg.org/esm/GangsterEdition/archive/main.zip
+      ${lib.getExe pkgs.unzip} /home/Proshling/.local/share/plasma/look-and-feel/GangsterEdition.zip
       rm /home/Proshling/.local/share/plasma/look-and-feel/GangsterEdition.zip
       '';
 

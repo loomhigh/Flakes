@@ -1,0 +1,22 @@
+{
+    "KPackageStructure": "Plasma/LookAndFeel/Splash",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "essem@essem.space",
+                "Name": "Essem"
+            },
+            {
+                "Email": "plasma-devel@kde.org",
+                "Name": "KDE Visual Design Group"
+            }
+        ],
+        "Category": "",
+        "Description": "Plasma Gangster Edition",
+        "Id": "space.essem.gangster",
+        "License": "GPLv2+",
+        "Name": "GangsterEdition"
+    },
+    "Keywords": "Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;",
+    "X-Plasma-APIVersion": "2"
+}

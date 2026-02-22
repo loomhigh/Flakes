@@ -49,10 +49,12 @@
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "Proshling";
 
-  system.activationScripts.cpbg = {
+  system.activationScripts.hmlsetup = {
 	text = ''
   cp -R /etc/nixos/hosts/Proshling/configs/Wallpapers /home/Proshling/
   cp -R /etc/nixos/hosts/Proshling/configs/color-schemes /home/Proshling/.local/share/
+  mkdir /home/Proshling/.local/share/plasma/look-and-feel
+  git clone https://codeberg.org/esm/GangsterEdition/* /home/Proshling/.local/share/plasma/look-and-feel/
   '';
   };
 

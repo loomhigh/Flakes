@@ -6,11 +6,15 @@
 #imports = [ <plasma-manager/modules> ];
 
 programs.plasma = {
-    enable = true;
+  enable = true;
+  desktop = {
 
+
+  };
   workspace = {
     wallpaper = "/etc/nixos/hosts/Proshling/configs/Wallpapers/background.png";
     colorScheme = "HannahMontana";
+    splashScreen.theme = "space.essem.gangster";
   };  
 };
 

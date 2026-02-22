@@ -63,8 +63,8 @@
   mkdir /home/Proshling/.local/share/plasma/look-and-feel
   chown -R Proshling /home/Proshling/.local/share/plasma
   wget -T 5 -P /home/Proshling/.local/share/plasma/look-and-feel -nc https://codeberg.org/esm/GangsterEdition/archive/main.zip
-  unzip /home/Proshling/.local/share/plasma/look-and-feel/temp.zip
-  rm /home/Proshling/.local/share/plasma/look-and-feel/temp.zip
+  unzip /home/Proshling/.local/share/plasma/look-and-feel/GangsterEdition.zip
+  rm /home/Proshling/.local/share/plasma/look-and-feel/GangsterEdition.zip
   '';
   };
 

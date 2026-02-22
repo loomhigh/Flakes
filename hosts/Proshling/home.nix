@@ -9,7 +9,7 @@ programs.plasma = {
     enable = true;
 
   workspace = {
-    wallpaper = /etc/nixos/hosts/Proshling/background.jpg;
+    wallpaper = ./background.jpg;
     lookAndFeel = "Plasma-Overdose";
   };  
 };

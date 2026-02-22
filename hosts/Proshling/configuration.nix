@@ -47,6 +47,11 @@
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "proshling";
 
+  system.activationScripts.cpbg = {
+	text = ''
+  cp /etc/nixos/hosts/Proshling/background/jpg /home/Proshling/
+  '';
+  };
 
   programs = {
   firefox.enable = true;

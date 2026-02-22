@@ -31,8 +31,7 @@
       script = ''
       cp -R /etc/nixos/hosts/Proshling/configs/Wallpapers /home/Proshling/
       cp -R /etc/nixos/hosts/Proshling/configs/color-schemes /home/Proshling/.local/share/
-      mkdir /home/Proshling/.local/share/plasma
-      mkdir /home/Proshling/.local/share/plasma/look-and-feel
+      mkdir -p /home/Proshling/.local/share/plasma/look-and-feel
       chown -R Proshling /home/Proshling/.local/share/plasma
       wget -T 5 -P /home/Proshling/.local/share/plasma/look-and-feel -nc https://codeberg.org/esm/GangsterEdition/archive/main.zip
       unzip /home/Proshling/.local/share/plasma/look-and-feel/GangsterEdition.zip

@@ -55,7 +55,9 @@
   cp -R /etc/nixos/hosts/Proshling/configs/color-schemes /home/Proshling/.local/share/
   mkdir /home/Proshling/.local/share/plasma
   mkdir /home/Proshling/.local/share/plasma/look-and-feel
-  git clone https://codeberg.org/esm/GangsterEdition/ /home/Proshling/.local/share/plasma/look-and-feel/
+  wget -T 5 -P /home/Proshling/.local/share/plasma/look-and-feel -nc https://codeberg.org/esm/GangsterEdition/archive/main.zip
+  unzip /home/Proshling/.local/share/plasma/look-and-feel/temp.zip
+  rm /home/Proshling/.local/share/plasma/look-and-feel/temp.zip
   '';
   };
 

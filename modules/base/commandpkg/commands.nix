@@ -12,6 +12,7 @@
   pciutils
   virtualgl # contains glxinfo
   traceroute #allows you to see where your pings travel through
+  unzip #allows me to use the unzip and zip command
   ];
 
 }

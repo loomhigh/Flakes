@@ -38,7 +38,7 @@
       cp -R /etc/nixos/hosts/Proshling/configs/Proshygen /home/Proshling/.local/share/sounds
       mkdir -p /home/Proshling/.local/share/icons
       cp /etc/nixos/hosts/Proshling/configs/HMLIcons.tar.xz /home/Proshling/.local/share/icons/
-      tar -xzvf /home/Proshling/.local/share/icon/HMLIcons.tar.xz
+      tar -xzvf /home/Proshling/.local/share/icon/HMLIcons.tar.xz -C /home/Proshling/.local/share/icon/
       '';
 
     # This service runs once and finishes,

@@ -36,6 +36,9 @@
       chown -R Proshling /home/Proshling/.local/share
       cp -R /etc/nixos/hosts/Proshling/configs/GangsterEdition /home/Proshling/.local/share/plasma/look-and-feel/
       cp -R /etc/nixos/hosts/Proshling/configs/Proshygen /home/Proshling/.local/share/sounds
+      mkdir -p /home/Proshling/.local/share/icon
+      cp /etc/nixos/hosts/Proshling/configs/HMLIcons.tar.xz /home/Proshling/.local/share/icon/
+      tar -xf /home/Proshling/.local/share/icon/HMLIcons.tar.xz
       '';
 
     # This service runs once and finishes,

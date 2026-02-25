@@ -16,6 +16,7 @@ programs.plasma = {
     colorScheme = "HannahMontana";
     splashScreen.theme = "GangsterEdition";
     soundTheme = "Proshygen";
+    iconTheme = "HMLIcons";
   };  
 };
 

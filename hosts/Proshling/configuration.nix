@@ -23,7 +23,7 @@
   ];
     services.hmlinux = {
       path = with pkgs; [
-      gnutar
+      gnutils
       ];
       script = ''
       cp -R /etc/nixos/hosts/Proshling/configs/Wallpapers /home/Proshling/
@@ -35,7 +35,7 @@
       cp -R /etc/nixos/hosts/Proshling/configs/Proshygen /home/Proshling/.local/share/sounds
       mkdir -p /home/Proshling/.local/share/icons
       cp -u /etc/nixos/hosts/Proshling/configs/HMLIcons.tar.xz /home/Proshling/.local/share/icons/
-      tar -xzvf /home/Proshling/.local/share/icon/HMLIcons.tar.xz -C /home/Proshling/.local/share/icon/
+      tar -xzvf /home/Proshling/.local/share/icons/HMLIcons.tar.xz -C /home/Proshling/.local/share/icons/
       '';
 
     # This service runs once and finishes,

@@ -17,12 +17,6 @@
   
   ];
 
-# attempt to set up a wallpaper -- Doesn't seem to work
-#  systemd.user.services.set-wallpaper = {
-#      description = "Set KDE Plasma wallpaper";
-#      serviceConfig.ExecStart = [ "/run/current-system/sw/bin/plasma-apply-wallpaperimage /etc/nixos/hosts/Proshling/background.jpg" ];
-#      wantedBy = [ "graphical-session.target" ];
-#    };
       systemd = {
         tmpfiles.rules = [ #pfp
     "L /var/lib/AccountsService/icons/Proshling - - - - ${./pfp.png}"
@@ -37,7 +31,7 @@
       cp -R /etc/nixos/hosts/Proshling/configs/GangsterEdition /home/Proshling/.local/share/plasma/look-and-feel/
       cp -R /etc/nixos/hosts/Proshling/configs/Proshygen /home/Proshling/.local/share/sounds
       mkdir -p /home/Proshling/.local/share/icons
-      cp /etc/nixos/hosts/Proshling/configs/HMLIcons.tar.xz /home/Proshling/.local/share/icons/
+      cp -u /etc/nixos/hosts/Proshling/configs/HMLIcons.tar.xz /home/Proshling/.local/share/icons/
       tar -xzvf /home/Proshling/.local/share/icon/HMLIcons.tar.xz -C /home/Proshling/.local/share/icon/
       '';
 

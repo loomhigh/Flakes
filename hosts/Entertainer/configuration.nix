@@ -53,6 +53,12 @@ Much love.
     };
   };
 
+# To Ensure external devices automount
+services.udiskie = {
+  enable = true;
+  notify = false;
+};
+
 /* IDK what this does, kinda just copypasted it
 xdg.terminal-exec = {
   enable = true;

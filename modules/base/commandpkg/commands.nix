@@ -8,7 +8,7 @@
   deno # goes with yt-dlp
   traceroute #allows you to see where your pings travel through
   unzip #allows me to use the unzip and zip command
-
+  nix-index #includes nix-locate command
 # Read Hardware info like GPUs and stuff
   inxi
   lshw 

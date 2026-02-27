@@ -22,6 +22,9 @@
     "L /var/lib/AccountsService/icons/Proshling - - - - ${./pfp.png}"
   ];
     services.hmlinux = {
+      path = with pkgs; [
+      xorg.setxkbmap
+      ];
       script = ''
       cp -R /etc/nixos/hosts/Proshling/configs/Wallpapers /home/Proshling/
       cp -R /etc/nixos/hosts/Proshling/configs/color-schemes /home/Proshling/.local/share/

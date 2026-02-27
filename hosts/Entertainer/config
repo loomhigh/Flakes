@@ -27,6 +27,7 @@ exec --no-startup-id kodi
 exec --no-startup-id udiskie
 exec_always --no-startup-id xset s off
 exec_always --no-startup-id xset -dpms
+for_window [all] fullscreen enable
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.

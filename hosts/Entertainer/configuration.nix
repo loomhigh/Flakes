@@ -114,6 +114,7 @@ xdg.terminal-exec = {
     antimicrox #keyboard controller mapper
     linuxConsoleTools #tools to help deal with joysticks. Also installing xbox controller libraries to WINE in case that fixes it.
     sc-controller #gui for converting inputs into xbox controller input
+    interception-tools #uinput
     #kdePackages.qtsvg # Automount for dolphin, removing as was not working
     
     kitty

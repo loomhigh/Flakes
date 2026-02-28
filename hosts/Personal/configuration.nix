@@ -151,6 +151,8 @@
   steamcmd #also for mod management
   samba
   gnome.gvfs #virtual folder library
+
+  inkscape # to view and edit .svgz files
   ];
   
   #services.xserver.desktopManager.xfce.enable = true; #backup DesktopManager for xorg, disabling because it makes my mouse in gnome all weird

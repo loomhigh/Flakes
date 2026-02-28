@@ -24,7 +24,8 @@
     services.hmlinux = {
       path = with pkgs; [
       gnutar
-      gzip
+      xz
+      gzip #redundant, probably not required dependency
       ];
       script = ''
       cp -R /etc/nixos/hosts/Proshling/configs/Wallpapers /home/Proshling/

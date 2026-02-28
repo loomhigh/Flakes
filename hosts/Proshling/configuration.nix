@@ -16,12 +16,6 @@
   ./../../modules/base/default.nix
   
   ];
-environment.systemPackages = [
-  (pkgs.writeTextDir "share/sddm/themes/breeze/theme.conf.user" ''
-    [General]
-    background=/etc/nixos/hosts/Proshling/configs/Wallpapers/girlbossbackground.jpg
-  '')
-];
       systemd = {
         tmpfiles.rules = [ #pfp
     "L /var/lib/AccountsService/icons/Proshling - - - - ${./pfp.png}"
@@ -84,7 +78,11 @@ environment.systemPackages = [
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-
+    #hopefully changes background theme for sddm
+  (writeTextDir "share/sddm/themes/breeze/theme.conf.user" ''
+    [General]
+    background=/etc/nixos/hosts/Proshling/configs/Wallpapers/girlbossbackground.jpg
+  '')
 
   ];
   

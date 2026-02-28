@@ -35,7 +35,7 @@
       cp -R /etc/nixos/hosts/Proshling/configs/GangsterEdition /home/Proshling/.local/share/plasma/look-and-feel/
       cp -R /etc/nixos/hosts/Proshling/configs/Proshygen /home/Proshling/.local/share/sounds
       mkdir -p /home/Proshling/.local/share/icons
-      tar -x /etc/nixos/hosts/Proshling/configs/HMLIcons.tar.xz
+      tar -xf /etc/nixos/hosts/Proshling/configs/HMLIcons.tar.xz
       cp -Ru /etc/nixos/hosts/Proshling/configs/HMLIcons /home/Proshling/.local/share/icons/
       '';
 

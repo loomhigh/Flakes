@@ -16,7 +16,7 @@ programs.plasma = {
     battery.autoSuspend.idleTimeout = 3000;
   };
   # disable lockscreen
-      kscreenlockerrc = {
+      kscreenlocker = {
       Daemon.Autolock = false;
     };
   desktop = {

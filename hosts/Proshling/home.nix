@@ -17,7 +17,7 @@ programs.plasma = {
   };
   # disable lockscreen
       kscreenlocker = {
-      Daemon.Autolock = false;
+      autoLock = false;
     };
   desktop = {
 

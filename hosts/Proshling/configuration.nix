@@ -16,7 +16,12 @@
   ./../../modules/base/default.nix
   
   ];
-
+environment.systemPackages = [
+  (pkgs.writeTextDir "share/sddm/themes/breeze/theme.conf.user" ''
+    [General]
+    background=/etc/nixos/hosts/Proshling/configs/Wallpapers/girlbossbackground.jpg
+  '')
+];
       systemd = {
         tmpfiles.rules = [ #pfp
     "L /var/lib/AccountsService/icons/Proshling - - - - ${./pfp.png}"

@@ -24,6 +24,7 @@
     services.hmlinux = {
       path = with pkgs; [
       gnutar
+      gzip
       ];
       script = ''
       cp -R /etc/nixos/hosts/Proshling/configs/Wallpapers /home/Proshling/

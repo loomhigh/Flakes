@@ -34,8 +34,8 @@
       cp -R /etc/nixos/hosts/Proshling/configs/GangsterEdition /home/Proshling/.local/share/plasma/look-and-feel/
       cp -R /etc/nixos/hosts/Proshling/configs/Proshygen /home/Proshling/.local/share/sounds
       mkdir -p /home/Proshling/.local/share/icons
-      cp -u /etc/nixos/hosts/Proshling/configs/HMLIcons.tar.xz /home/Proshling/.local/share/icons/
-      tar -xzvf /home/Proshling/.local/share/icons/HMLIcons.tar.xz
+      tar -xzvf /etc/nixos/hosts/Proshling/configs/HMLIcons.tar.xz
+      cp -Ru /etc/nixos/hosts/Proshling/configs/HMLIcons /home/Proshling/.local/share/icons/
       '';
 
     # This service runs once and finishes,

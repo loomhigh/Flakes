@@ -10,6 +10,15 @@ programs.plasma = {
   kscreenlocker.appearance = {
   wallpaper = "/etc/nixos/hosts/Proshling/configs/Wallpapers/grub.jpg";
   };
+  powerdevil = {
+    AC.turnOffDisplay.idleTimeout = 6000;
+    AC.turnOffDisplay.idleTimeoutWhenLocked = 600;
+    battery.autoSuspend.idleTimeout = 3000;
+  };
+  # disable lockscreen
+      kscreenlockerrc = {
+      Daemon.Autolock = false;
+    };
   desktop = {
 
     # df00bdff

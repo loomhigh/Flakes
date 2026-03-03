@@ -14,6 +14,7 @@
   lshw 
   pciutils
   virtualgl # contains glxinfo
+  bulky # bulk rename utility
   
   ];
 

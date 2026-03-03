@@ -14,7 +14,7 @@
     ./../../modules/development/default.nix #adds media editing tools
     ./../../modules/extra/vesktop/vesktop.nix #Discord
     ./../../modules/office/default.nix #libreoffice and such
-    ./../../modules/extra/fractal/fractal.nix #Matrix Client for Gnome
+    ./../../modules/extra/matrix/element.nix #Matrix Client for Gnome
     # ./../../modules/extra/mopidy/mopidy.nix #basic audio player. Too much work
     ./../../modules/extra/clementine/clementine.nix #Music Playing app that connects to spotify
     ./../../modules/extra/PLUG/plug.nix #for programs relating to the Perth Linux Users Group

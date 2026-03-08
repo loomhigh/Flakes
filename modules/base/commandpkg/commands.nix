@@ -17,8 +17,8 @@
   bulky # bulk rename utility
   nmap #good for finding local IP addresses
   #python314 # Python3
-  python314Packages.types-dateutil 
-  python314Packages.icalendar
+  #python314Packages.types-dateutil 
+  #python314Packages.icalendar
   ];
 
 }

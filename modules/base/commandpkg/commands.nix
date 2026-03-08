@@ -19,6 +19,8 @@
   python314 # Python3
   python314Packages.dateutils #added for PLUG
   python314Packages.ical
+  python313Packages.icalendar 
+
   ];
 
 }

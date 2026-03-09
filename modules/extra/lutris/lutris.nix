@@ -9,6 +9,7 @@ environment.systemPackages = with pkgs; [
 	wineWowPackages.stable ##Let Lutris handle windows compatibility tbh
 	winetricks
 	driversi686Linux.mesa #Drivers to run bdl2?
+	mangohud #for benchmarking and crud
 ];
 
 }

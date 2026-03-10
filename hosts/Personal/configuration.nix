@@ -153,6 +153,11 @@
   gnome.gvfs #virtual folder library
 
   inkscape # to view and edit .svgz files
+#python, originally in command module but caused issues with an unrelated flake
+  python314 # Python3
+  python314Packages.dateutils #added for PLUG
+  python314Packages.ical
+  python313Packages.icalendar 
   ];
   
   #services.xserver.desktopManager.xfce.enable = true; #backup DesktopManager for xorg, disabling because it makes my mouse in gnome all weird

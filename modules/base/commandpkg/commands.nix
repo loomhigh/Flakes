@@ -16,10 +16,7 @@
   virtualgl # contains glxinfo
   bulky # bulk rename utility
   nmap #good for finding local IP addresses
-  python314 # Python3
-  python314Packages.dateutils #added for PLUG
-  python314Packages.ical
-  python313Packages.icalendar 
+
 
   ];
 

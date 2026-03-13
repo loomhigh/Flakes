@@ -6,10 +6,7 @@ environment.systemPackages = with pkgs; [
 	
 vmware-workstation #virtual machine manager required by TAFE
 open-vm-tools
-ciscoPacketTracer8
+
 ];
-nixpkgs.config.permittedInsecurePackages = [
- "ciscoPacketTracer8-8.2.2"
-   ];
 
 }

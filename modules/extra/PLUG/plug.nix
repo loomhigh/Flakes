@@ -11,6 +11,7 @@ ansible #unstable is the only one that seems to have a version passt 2.2
       dateutils
       icalendar
       ical
+      markdown
   ]))
 #python313 # Python3
 #python313Packages.dateutils #added for PLUG

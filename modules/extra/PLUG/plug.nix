@@ -13,6 +13,7 @@ ansible #unstable is the only one that seems to have a version passt 2.2
       ical
       markdown
       soupsieve #BeautifulSoup, converts html to txt
+      beautifulsoup4
   ]))
 #python313 # Python3
 #python313Packages.dateutils #added for PLUG

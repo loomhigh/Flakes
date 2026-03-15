@@ -12,6 +12,7 @@ ansible #unstable is the only one that seems to have a version passt 2.2
       icalendar
       ical
       markdown
+      soupsieve #BeautifulSoup, converts html to txt
   ]))
 #python313 # Python3
 #python313Packages.dateutils #added for PLUG

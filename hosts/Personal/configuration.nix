@@ -154,10 +154,7 @@
 
   inkscape # to view and edit .svgz files
 #python, originally in command module but caused issues with an unrelated flake
-  python313 # Python3
-  python313Packages.dateutils #added for PLUG
-  python313Packages.ical
-  python313Packages.icalendar 
+
   ];
   
   #services.xserver.desktopManager.xfce.enable = true; #backup DesktopManager for xorg, disabling because it makes my mouse in gnome all weird

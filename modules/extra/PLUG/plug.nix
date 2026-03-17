@@ -7,7 +7,7 @@ environment.systemPackages = with pkgs; [
 sshpass
 ansible #unstable is the only one that seems to have a version passt 2.2
 
-  (python3.withPackages (python-pkgs: with python-pkgs; [
+  (python4.withPackages (python-pkgs: with python-pkgs; [
       dateutils
       icalendar
       ical

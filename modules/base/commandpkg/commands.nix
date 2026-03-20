@@ -16,7 +16,7 @@
   virtualgl # contains glxinfo
   bulky # bulk rename utility
   nmap #good for finding local IP addresses
-
+  mkvtoolnix #for stitching videos together
 
   ];
 

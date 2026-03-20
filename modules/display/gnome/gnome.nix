@@ -17,6 +17,23 @@ programs.kdeconnect = {
   gnomeExtensions.gspotify
 
   ];
+  
+### Gsteamer and HEIC Thumbs
+environment.systemPackages = [ pkgs.libheif pkgs.libheif.out ];
+environment.pathsToLink = [ "share/thumbnailers" ];
+nixpkgs.overlays = [
+  (final: prev: {
+    nautilus = prev.nautilus.overrideAttrs (nprev: {
+      buildInputs =
+        nprev.buildInputs
+        ++ (with pkgs.gst_all_1; [
+          gst-plugins-good
+          gst-plugins-bad
+        ]);
+    });
+  })
+];
+###
 
    # Enable the GNOME Desktop Environment.
   services.displayManager.gdm.enable = true;

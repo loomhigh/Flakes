@@ -15,12 +15,11 @@ programs.kdeconnect = {
   gnomeExtensions.gsconnect
   gnomeExtensions.system-monitor
   gnomeExtensions.gspotify
-
+  libheif #thumbnails for heic
+  libheif.out
   ];
-  
+  environment.pathsToLink = [ "share/thumbnailers" ];
 ### Gsteamer and HEIC Thumbs
-environment.systemPackages = [ pkgs.libheif pkgs.libheif.out ];
-environment.pathsToLink = [ "share/thumbnailers" ];
 nixpkgs.overlays = [
   (final: prev: {
     nautilus = prev.nautilus.overrideAttrs (nprev: {

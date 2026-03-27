@@ -17,7 +17,7 @@
   bulky # bulk rename utility
   nmap #good for finding local IP addresses
   mkvtoolnix #for stitching videos together
-
+  ffmpeg-full #for converting and messing with video files
   ];
 
 }

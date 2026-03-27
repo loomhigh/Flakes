@@ -153,6 +153,7 @@
   gnome.gvfs #virtual folder library
 
   inkscape # to view and edit .svgz files
+  libretro.thepowdertoy #Little game as a treat
 #python, originally in command module but caused issues with an unrelated flake
 
   ];

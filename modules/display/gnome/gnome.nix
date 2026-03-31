@@ -31,6 +31,15 @@ nixpkgs.overlays = [
         ]);
     });
   })
+  # to fix Google Drive problems, This is temporary
+  (final: prev: {
+    gnome = prev.gnome.overrideScope (gfinal: gprev: {
+      gvfs = gprev.gvfs.override {
+       googleSupport = true;
+       gnomeSupport = true;
+      };
+      });
+  })
 ];
 ###
 
@@ -121,5 +130,8 @@ nixpkgs.overlays = [
       };
     }
   ];
-
+#### TEMPORARY
+      permittedInsecurePackages = [
+        "libsoup-2.74.3"
+       ];
 }

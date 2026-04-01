@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-  handbrkdePackages.kdenliveake
+  handbrkdePackages.kdenlive
   ];
 
 }

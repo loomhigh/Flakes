@@ -53,6 +53,18 @@ Much love.
     };
   };
 
+#ensure device is in performance mode
+services.auto-cpufreq.enable = true;
+services.auto-cpufreq.settings = {
+  battery = {
+     governor = "powersave";
+     turbo = "never";
+  };
+  charger = {
+     governor = "performance";
+     turbo = "auto";
+  };
+};
 # To Ensure external devices automount
 services.udisks2.enable = true;
 

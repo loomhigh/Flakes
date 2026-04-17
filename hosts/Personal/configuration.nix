@@ -36,7 +36,7 @@
 
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = lib.mkForce [ "nvidia" ];
- /*
+ 
   hardware.nvidia = {
 
     # Modesetting is required.
@@ -71,15 +71,15 @@
     #package = config.boot.kernelPackages.nvidiaPackages.legacy_535; # Older versions
     
     # Prime
-    prime = {
+    #prime = {
 		# Make sure to use the correct Bus ID values for your system!
-    offload.enable = true;
-		intelBusId = "PCI:0:2:0";
-		nvidiaBusId = "PCI:1:0:0";
+    #offload.enable = true;
+		#intelBusId = "PCI:0:2:0";
+		#nvidiaBusId = "PCI:1:0:0";
 		# amdgpuBusId = "PCI:54:0:0"; For AMD GPU
-	};
+	#};
   };
-  */
+  #*/
   ## END OF HARDWARE STUFF
 
   #bootloader enabling dual-boot

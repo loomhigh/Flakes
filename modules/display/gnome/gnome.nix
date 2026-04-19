@@ -15,6 +15,7 @@ programs.kdeconnect = {
   gnomeExtensions.gsconnect
   gnomeExtensions.system-monitor
   gnomeExtensions.gspotify
+  gnomeExtensions.edit-desktop-files
   libheif #thumbnails for heic
   libheif.out
   ];

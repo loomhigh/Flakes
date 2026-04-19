@@ -122,6 +122,7 @@ nixpkgs.overlays = [
           blur-my-shell.extensionUuid
           system-monitor.extensionUuid
           gspotify.extensionUuid
+          edit-desktop-files.extensionUuid
         ];
       #  favourite-apps = [
       #    "['org.gnome.Nautilus.desktop', 'org.gnome.settings.desktop', 'firefox.desktop', 'org.gnome.Console.desktop']"

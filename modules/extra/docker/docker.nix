@@ -12,7 +12,7 @@
   services.monica = {
     enable = true;
     database.createLocally = true;
-    dataDir = "/home/personal/Documents/monica/";
+    #dataDir = "/home/personal/Documents/monica/";
     appKeyFile = "/etc/nixos/modules/extra/docker/appkeyidk";
     appURL = "https://127.0.0.1:8000";
   nginx = { 

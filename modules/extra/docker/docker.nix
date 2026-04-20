@@ -4,6 +4,13 @@
 
   environment.systemPackages = with pkgs; [
     docker
+    monica
   ];
 
+  services.monica = {
+    enable = true;
+    hostname = "monica.campaigndecentral.ch";
+    appURL = "localhost:8080";
+    #appKeyFile = config.sops.secrets.monica_appkey.path;
+  };
 }

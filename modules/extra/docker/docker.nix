@@ -9,8 +9,8 @@
 
   services.monica = {
     enable = true;
-    hostname = "monica.campaigndecentral.ch";
-    appURL = "localhost:8080";
-    appKeyFile = "/var/lib/monica/app-key";
+    #hostname = "monica.campaigndecentral.ch";
+    #appURL = "localhost:8080";
+    #appKeyFile = "/var/lib/monica/app-key";
   };
 }

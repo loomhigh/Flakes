@@ -11,8 +11,8 @@
   };
   services.monica = {
     enable = true;
-    database.createLocally = true;
-    dataDir = "/var/lib/monica";
+    #database.createLocally = true;
+    #dataDir = "/var/lib/monica";
     appKeyFile = "/etc/nixos/modules/extra/docker/appkeyidk";
     appURL = "https://127.0.0.1:8000";
   nginx = { 

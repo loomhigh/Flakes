@@ -11,6 +11,6 @@
     enable = true;
     hostname = "monica.campaigndecentral.ch";
     appURL = "localhost:8080";
-    appKeyFile = config.sops.secrets.monica_appkey.path;
+    appKeyFile = "Q7qGf3xh9YkJzTStq0VKvhkwZGNhlXsVJpLC3iF5hOI="
   };
 }

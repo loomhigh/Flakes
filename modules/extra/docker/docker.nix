@@ -11,9 +11,13 @@
   };
   services.monica = {
     enable = true;
+    database.createLocally = true;
    # appKeyFile = "/etc/nixos/modules/extra/docker/appkeyidk";
-
-    nginx.listen = [ { 
+  
+  nginx = { 
+    forceSSL = true;
+    enableACME = true;
+    listen = [ { 
       addr = "127.0.0.1"; 
       #port = 8000; 
       ssl = false; } ];

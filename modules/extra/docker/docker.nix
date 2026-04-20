@@ -9,8 +9,11 @@
 
   services.monica = {
     enable = true;
-    hostname = "monica.campaigndecentral.ch";
-    appURL = "localhost:8080";
     appKeyFile = "/etc/nixos/modules/extra/docker/appkeyidk";
+
+    nginx.listen = [ { 
+      addr = "127.0.0.1"; 
+      port = port; 
+      ssl = false; } ];
   };
 }

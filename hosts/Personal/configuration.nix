@@ -21,6 +21,7 @@
     ./../../modules/extra/TAFE/TAFE.nix #packages needed for TAFE work, atm includes VMware workstation
     ./../../modules/extra/chromium/chromium.nix
     ./../../modules/extra/lutris/lutris.nix #going to see if this lets me do the rim thing
+    ./../../modules/extra/docker/docker.nix
   ];
 
 # Hardware Adjustments 

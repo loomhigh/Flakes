@@ -13,9 +13,7 @@
     enable = true;
     database.createLocally = true;
     appKeyFile = "/etc/nixos/modules/extra/docker/appkeyidk";
-  
-
-
+    appURL = "https://127.0.0.1:8000";
   nginx = { 
     forceSSL = true;
     sslCertificate = "/etc/nixos/modules/extra/docker/cert.pem";
@@ -25,6 +23,6 @@
       addr = "127.0.0.1"; 
       port = 8000; 
       ssl = true; } ];
-  };
+   };
   };
 }

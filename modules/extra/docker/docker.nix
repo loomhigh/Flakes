@@ -13,7 +13,7 @@
 
     nginx.listen = [ { 
       addr = "127.0.0.1"; 
-      port = port; 
+      port = 8000; 
       ssl = false; } ];
   };
 }

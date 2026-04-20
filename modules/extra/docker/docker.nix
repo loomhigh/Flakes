@@ -6,7 +6,10 @@
     docker
     monica
   ];
-
+  services.nginx = {
+    enable=true;
+  };
+  
   services.monica = {
     enable = true;
     appKeyFile = "/etc/nixos/modules/extra/docker/appkeyidk";

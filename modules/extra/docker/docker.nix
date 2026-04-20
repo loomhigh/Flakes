@@ -11,6 +11,6 @@
     enable = true;
     hostname = "monica.campaigndecentral.ch";
     appURL = "localhost:8080";
-    appKey = "/etc/nixos/modules/extra/docker/appkeyidk";
+    appKeyFile = "/etc/nixos/modules/extra/docker/appkeyidk";
   };
 }

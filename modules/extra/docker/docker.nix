@@ -9,14 +9,13 @@
   services.nginx = {
     enable=true;
   };
-  
   services.monica = {
     enable = true;
     appKeyFile = "/etc/nixos/modules/extra/docker/appkeyidk";
 
     nginx.listen = [ { 
       addr = "127.0.0.1"; 
-      port = 8000; 
+      port = 8080; 
       ssl = false; } ];
   };
 }

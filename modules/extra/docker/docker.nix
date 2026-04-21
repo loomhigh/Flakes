@@ -19,6 +19,7 @@
   nginx = { 
     forceSSL = true;
     root = "/var/lib/monica";
+    serverName = "https://localhost:8000/";
     #enableACME = true; #IDK what this is
     sslCertificate = "/etc/nixos/modules/extra/docker/cert.pem";
     sslCertificateKey = "/etc/nixos/modules/extra/docker/key.pem";

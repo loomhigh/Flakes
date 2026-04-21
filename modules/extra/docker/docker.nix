@@ -17,18 +17,17 @@
     appKeyFile = "/etc/nixos/modules/extra/docker/appkeyidk";
     appURL = "https://127.0.0.1:8000";
   nginx = { 
-    forceSSL = true;
+   # forceSSL = true;
     root = "/var/lib/monica";
     #enableACME = true; #IDK what this is
     sslCertificate = "/etc/nixos/modules/extra/docker/cert.pem";
     sslCertificateKey = "/etc/nixos/modules/extra/docker/key.pem";
     sslTrustedCertificate = "/etc/nixos/modules/extra/docker/cert.pem";
-    listen = [ { 
-      addr = "127.0.0.1"; 
-      port = 8000;
-      port = 3306; 
-      ssl = true; 
-    } ];
+   # listen = [ { 
+   #   addr = "127.0.0.1"; 
+   #   port = 8000;
+   #   ssl = true; 
+   # } ];
    };
   };
 }

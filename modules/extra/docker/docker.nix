@@ -18,6 +18,7 @@
     appURL = "https://127.0.0.1:8000";
   nginx = { 
     forceSSL = true;
+    enableACME = true;
     sslCertificate = "/etc/nixos/modules/extra/docker/cert.pem";
     sslCertificateKey = "/etc/nixos/modules/extra/docker/key.pem";
     sslTrustedCertificate = "/etc/nixos/modules/extra/docker/cert.pem";

@@ -25,7 +25,8 @@
     sslTrustedCertificate = "/etc/nixos/modules/extra/docker/cert.pem";
     listen = [ { 
       addr = "127.0.0.1"; 
-      port = 8000; 
+      port = 8000;
+      port = 3306; 
       ssl = true; 
     } ];
    };

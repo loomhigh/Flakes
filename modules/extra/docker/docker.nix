@@ -17,7 +17,7 @@
     appKeyFile = "/etc/nixos/modules/extra/docker/appkeyidk";
     appURL = "https://127.0.0.1:8000";
   nginx = { 
-   # forceSSL = true;
+    forceSSL = true;
     root = "/var/lib/monica";
     #enableACME = true; #IDK what this is
     sslCertificate = "/etc/nixos/modules/extra/docker/cert.pem";

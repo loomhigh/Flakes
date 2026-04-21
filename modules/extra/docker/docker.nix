@@ -13,7 +13,7 @@
     enable = true;
     database.createLocally = true;
     #dataDir = "/home/personal/Documents/monica";
-    maxUploadSize = "20G";
+    maxUploadSize = "2G";
     appKeyFile = "/etc/nixos/modules/extra/docker/appkeyidk";
     appURL = "https://127.0.0.1:8000";
   nginx = { 

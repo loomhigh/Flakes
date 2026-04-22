@@ -25,7 +25,7 @@
     root = "/var/lib/monica";
     kTLS = true;
     locations = {
-  "/" = "http://localhost:3306";
+  "https://localhost:8000"
 };
     #serverName = "https://localhost:8000/";
     #enableACME = true; #IDK what this is

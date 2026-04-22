@@ -19,12 +19,12 @@
     appKeyFile = "/etc/nixos/modules/extra/docker/appkeyidk";
     appURL = "https://localhost:8000";
   
-  locations = {
+  nginx = { 
+    locations = {
     "/" = {
       root = "var/lib/monica";
     };
   };
-  nginx = { 
     forceSSL = true;
     root = "/var/lib/monica";
     kTLS = true;

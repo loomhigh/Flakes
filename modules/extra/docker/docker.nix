@@ -14,10 +14,10 @@
   services.monica = {
     enable = true;
     #database.createLocally = true;
-    dataDir = "/var/lib/monica";
+    #dataDir = "/var/lib/monica";
     maxUploadSize = "2G";
     appKeyFile = "/etc/nixos/modules/extra/docker/appkeyidk";
-    appURL = "http://127.0.0.1:8000";
+    # "http://127.0.0.1:8000";
   
 /*
   nginx = { 

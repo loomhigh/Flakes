@@ -30,7 +30,6 @@
 # Database for SQLite - used for local development
       DB_TEST_DRIVER="sqlite";
       #DB_TEST_DATABASE=full_path_to_the_sqlite_database;
-      DB_TEST_HOST=127.0.0.2;
       DB_TEST_USERNAME="root";
       DB_TEST_PASSWORD="root";
 

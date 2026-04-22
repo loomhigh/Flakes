@@ -20,9 +20,9 @@
     appURL = "https://127.0.0.1:8000";
   
   nginx = { 
-  /*
+  #/*
     locations = {
-    "~ \\.(js|css|gif|png|ico|jpg|jpeg)$" = {
+    "/(js|css|gif|png|ico|jpg|jpeg)$" = {
       extraConfig = "expires 365d;";
     };
   };

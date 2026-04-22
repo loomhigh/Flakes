@@ -6,11 +6,11 @@
     docker
     monica
   ];
-  /*
+#  /*
   services.nginx = {
     enable=true;
   };
-*/
+
   services.monica = {
     enable = true;
     database.createLocally = true;
@@ -19,7 +19,7 @@
     appKeyFile = "/etc/nixos/modules/extra/docker/appkeyidk";
     appURL = "https://127.0.0.1:8000";
   
-  /*
+
   nginx = { 
     forceSSL = true;
     root = "/var/lib/monica";
@@ -36,6 +36,6 @@
     } ];
     
    };
-   */
+#   */
   };
 }

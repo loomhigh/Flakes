@@ -4,13 +4,18 @@
 
   environment.systemPackages = with pkgs; [
     docker
-    monica
+    #monica
   ];
-  #/*
+
+virtualisation.docker = {
+  enable = true;
+};
+
+  /* ATTEMPTED TO USE MONICA. HAD MANY ISSUES. GIVING UP
   services.nginx = {
     enable=true;
   };
-  #*/
+  
   services.monica = {
     enable = true;
     database.createLocally = true;
@@ -38,7 +43,7 @@ locations = {
     };
 
   };
-  #*/
+
     forceSSL = true;
     root = lib.mkForce "/var/lib/monica/public";
     kTLS = true;
@@ -55,4 +60,5 @@ locations = {
    };
 
   };
+  #*/
 }

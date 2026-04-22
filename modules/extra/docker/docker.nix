@@ -24,8 +24,8 @@
     "~ \\.(js|css|gif|png|ico|jpg|jpeg)$" = {
       extraConfig = "expires 365d;";
     };
-  };
   #*/
+  };
     forceSSL = true;
     root = "/var/lib/monica";
     kTLS = true;

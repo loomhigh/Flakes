@@ -6,25 +6,24 @@
     docker
     monica
   ];
-#  /*
+  /*
   services.nginx = {
     enable=true;
   };
-
+  #*/
   services.monica = {
     enable = true;
-    database.createLocally = true;
-    #dataDir = "/home/personal/Documents/monica";
+    #database.createLocally = true;
+    dataDir = "/var/lib/monica";
     maxUploadSize = "2G";
     appKeyFile = "/etc/nixos/modules/extra/docker/appkeyidk";
     appURL = "https://127.0.0.1:8000";
   
-
+/*
   nginx = { 
     forceSSL = true;
     root = "/var/lib/monica";
     kTLS = true;
-    enableACME = true;
     #serverName = "https://localhost:8000/";
     #enableACME = true; #IDK what this is
     sslCertificate = "/etc/nixos/modules/extra/docker/cert.pem";
@@ -37,6 +36,6 @@
     } ];
     
    };
-#   */
+  #*/
   };
 }

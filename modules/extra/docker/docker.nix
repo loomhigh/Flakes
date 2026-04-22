@@ -17,18 +17,13 @@
     dataDir = "/var/lib/monica";
     maxUploadSize = "2G";
     appKeyFile = "/etc/nixos/modules/extra/docker/appkeyidk";
-    appURL = "http://127.0.0.1:8000";
+    appURL = "https://localhost:8000";
   
 
   nginx = { 
     forceSSL = true;
     root = "/var/lib/monica";
     kTLS = true;
-    locations = {
-  "/" = "http://localhost:8000";
-};
-    #serverName = "https://localhost:8000/";
-    #enableACME = true; #IDK what this is
     sslCertificate = "/etc/nixos/modules/extra/docker/cert.pem";
     sslCertificateKey = "/etc/nixos/modules/extra/docker/key.pem";
     sslTrustedCertificate = "/etc/nixos/modules/extra/docker/cert.pem";

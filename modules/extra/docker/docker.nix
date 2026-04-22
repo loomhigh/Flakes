@@ -21,8 +21,8 @@
   
   nginx = { 
     locations = {
-    "/" = {
-      root = "/var/lib/monica";
+    "~ \\.(js|css|gif|png|ico|jpg|jpeg)$" = {
+      extraConfig = "expires 365d;";
     };
   };
     forceSSL = true;

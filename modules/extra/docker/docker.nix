@@ -33,7 +33,7 @@ locations = {
       index = "index.php";
       tryFiles = "$uri $uri/ /index.php?$query_string";
     };
-    "/" = {
+    "/storage/app/public" = {
       tryFiles = "$uri =404";
     };
 

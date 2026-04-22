@@ -33,9 +33,7 @@ locations = {
       index = "index.php";
       tryFiles = "$uri $uri/ /index.php?$query_string";
     };
-    "~ \\.php$".extraConfig = ''
-      fastcgi_pass unix:${config.services.phpfpm.pools."monica".socket};
-    '';
+
   };
   #*/
     forceSSL = true;

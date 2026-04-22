@@ -24,6 +24,11 @@
     forceSSL = true;
     root = "/var/lib/monica";
     kTLS = true;
+    locations = {
+  "/" = {
+    proxyPass = "http://localhost:3306";
+  };
+};
     #serverName = "https://localhost:8000/";
     #enableACME = true; #IDK what this is
     sslCertificate = "/etc/nixos/modules/extra/docker/cert.pem";
@@ -34,11 +39,7 @@
       port = 8000;
       ssl = true; 
     } ];
-      listen = [ { 
-      addr = "127.0.0.1"; 
-      port = 3306;
-      ssl = true; 
-    } ];
+    
     
    };
 

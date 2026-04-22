@@ -23,7 +23,6 @@
       #APP_ENV=lib.mkForce "local";
       #Database Test
       #DB_DATABASE=lib.mkForce "/home/personal/Documents/monica";
-      SESSION_SECURE_COOKIE = tlsEnabled;
     };
 
 

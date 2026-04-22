@@ -25,8 +25,6 @@
       
       #Database Test
       DB_CONNECTION="sqlite";
-      DB_HOST=127.0.0.1;
-      DB_PORT=3306;
       DB_DATABASE=/home/personal/Documents/monica;
 
 # Database for SQLite - used for local development

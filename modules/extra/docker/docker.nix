@@ -41,7 +41,7 @@ locations = {
   };
   #*/
     forceSSL = true;
-    root = mkForce "/var/lib/monica/public";
+    root = lib.mkForce "/var/lib/monica/public";
     kTLS = true;
     sslCertificate = "/etc/nixos/modules/extra/docker/cert.pem";
     sslCertificateKey = "/etc/nixos/modules/extra/docker/key.pem";

@@ -20,7 +20,7 @@
     appURL = "https://127.0.0.1:8000";
     config = {
       APP_DEBUG=true;
-      APP_ENV=local;
+      APP_ENV="local";
       APP_URL=https://127.0.0.1:8000;
     };
 

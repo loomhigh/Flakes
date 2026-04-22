@@ -22,7 +22,7 @@
   nginx = { 
     locations = {
     "/" = {
-      root = "var/lib/monica";
+      root = "/var/lib/monica";
     };
   };
     forceSSL = true;

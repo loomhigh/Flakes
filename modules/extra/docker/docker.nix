@@ -33,6 +33,9 @@ locations = {
       index = "index.php";
       tryFiles = "$uri $uri/ /index.php?$query_string";
     };
+    "/" = {
+      tryFiles = "$uri =404";
+    };
 
   };
   #*/

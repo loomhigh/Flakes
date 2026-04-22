@@ -23,19 +23,26 @@
       #APP_ENV=lib.mkForce "local";
       #Database Test
       #DB_DATABASE=lib.mkForce "/home/personal/Documents/monica";
-
+      SESSION_SECURE_COOKIE = tlsEnabled;
     };
 
 
   nginx = { 
   #/*
-    locations = {
-    "/storage/app/public/" = {
+locations = {
+    "/" = {
+      index = "index.php";
+      tryFiles = "$uri $uri/ /index.php?$query_string";
+    };
+    "~ \\.php$".extraConfig = ''
+      fastcgi_pass unix:${config.services.phpfpm.pools."monica".socket};
+    '';
+      "~ \\.(js|css|gif|png|ico|jpg|jpeg)$" = {
     };
   };
   #*/
     forceSSL = true;
-    root = "/var/lib/monica";
+    root = mkForce "/var/lib/monica/public";
     kTLS = true;
     sslCertificate = "/etc/nixos/modules/extra/docker/cert.pem";
     sslCertificateKey = "/etc/nixos/modules/extra/docker/key.pem";

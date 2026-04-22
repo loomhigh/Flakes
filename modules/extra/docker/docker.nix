@@ -23,7 +23,7 @@
   nginx = { 
     forceSSL = true;
     root = "/var/lib/monica";
-    services.monica.nginx.kTLS = true;
+    kTLS = true;
     #serverName = "https://localhost:8000/";
     #enableACME = true; #IDK what this is
     sslCertificate = "/etc/nixos/modules/extra/docker/cert.pem";

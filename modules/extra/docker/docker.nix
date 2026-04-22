@@ -18,8 +18,9 @@
     maxUploadSize = "2G";
     appKeyFile = "/etc/nixos/modules/extra/docker/appkeyidk";
     appURL = "https://localhost:8000";
-  /*
+  
   nginx = { 
+  /*
     locations = {
     "~ \\.(js|css|gif|png|ico|jpg|jpeg)$" = {
       extraConfig = "expires 365d;";

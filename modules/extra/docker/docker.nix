@@ -17,7 +17,7 @@
     dataDir = "/var/lib/monica";
     maxUploadSize = "2G";
     appKeyFile = "/etc/nixos/modules/extra/docker/appkeyidk";
-    "http://127.0.0.1:8000";
+    appURL = "http://127.0.0.1:8000";
   
 
   nginx = { 

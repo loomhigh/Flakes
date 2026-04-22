@@ -20,7 +20,7 @@
     appURL = "https://127.0.0.1:8000";
     config = {
       APP_DEBUG=true;
-      APP_ENV=lib.mkForce "local";
+      #APP_ENV=lib.mkForce "local";
       #Database Test
       #DB_DATABASE=lib.mkForce "/home/personal/Documents/monica";
 

@@ -25,7 +25,7 @@
       
       #Database Test
       DB_CONNECTION="sqlite";
-      DB_DATABASE=lib.mkForce "/home/personal/Documents/monica";
+      DB_DATABASE=lib.mkForce "/home/personal/Documents/monica/";
 
 # Database for SQLite - used for local development
       DB_TEST_DRIVER="sqlite";

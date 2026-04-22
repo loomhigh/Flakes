@@ -36,8 +36,6 @@ locations = {
     "~ \\.php$".extraConfig = ''
       fastcgi_pass unix:${config.services.phpfpm.pools."monica".socket};
     '';
-      "~ \\.(js|css|gif|png|ico|jpg|jpeg)$" = {
-    };
   };
   #*/
     forceSSL = true;

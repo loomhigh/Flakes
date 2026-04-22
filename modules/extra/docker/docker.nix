@@ -24,7 +24,9 @@
     forceSSL = true;
     root = "/var/lib/monica";
     kTLS = true;
-    locations = "https://localhost:8000";
+    locations = {
+  "/" = "http://localhost:8000";
+};
     #serverName = "https://localhost:8000/";
     #enableACME = true; #IDK what this is
     sslCertificate = "/etc/nixos/modules/extra/docker/cert.pem";

@@ -18,12 +18,16 @@
     maxUploadSize = "2G";
     appKeyFile = "/etc/nixos/modules/extra/docker/appkeyidk";
     appURL = "https://127.0.0.1:8000";
-  
+    config = {
+      APP_DEBUG=true;
+
+    };
+
+
   nginx = { 
   #/*
     locations = {
-    "/(js|css|gif|png|ico|jpg|jpeg)$" = {
-      extraConfig = "expires 365d;";
+    "/storage/app/public/" = {
     };
   };
   #*/

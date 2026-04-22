@@ -22,6 +22,20 @@
       APP_DEBUG=true;
       APP_ENV=lib.mkForce "local";
       APP_URL=https://127.0.0.1:8000;
+      
+      #Database Test
+      DB_CONNECTION=sqlite;
+      DB_HOST=127.0.0.1;
+      DB_PORT=3306;
+      DB_DATABASE=/home/personal/Documents/monica/;
+
+# Database for SQLite - used for local development
+      DB_TEST_DRIVER=sqlite;
+      DB_TEST_DATABASE=full_path_to_the_sqlite_database;
+      DB_TEST_HOST=127.0.0.1;
+      DB_TEST_USERNAME=root;
+      DB_TEST_PASSWORD=root;
+
     };
 
 

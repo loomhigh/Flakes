@@ -11,7 +11,7 @@ virtualisation.docker = {
   enable = true;
 };
 
-  /* ATTEMPTED TO USE MONICA. HAD MANY ISSUES. GIVING UP
+   ATTEMPTED TO USE MONICA. HAD MANY ISSUES. GIVING UP
   services.nginx = {
     enable=true;
   };

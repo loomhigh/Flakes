@@ -11,7 +11,7 @@ virtualisation.docker = {
   enable = true;
 };
 
-   ATTEMPTED TO USE MONICA. HAD MANY ISSUES. GIVING UP
+  # ATTEMPTED TO USE MONICA. HAD MANY ISSUES. GIVING UP
   services.nginx = {
     enable=true;
   };
@@ -38,9 +38,9 @@ locations = {
       index = "index.php";
       tryFiles = "$uri $uri/ /index.php?$query_string";
     };
-    "/store/photos/*" = {
-      tryFiles = "$uri =404";
-    };
+  #   "/store/photos/*" = {
+  #    tryFiles = "$uri =404";
+  #  };
 
   };
 

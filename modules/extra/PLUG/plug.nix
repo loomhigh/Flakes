@@ -2,6 +2,7 @@
 
 {
 programs.nix-ld.enable = true;
+environment.localBinInPath = true;
 
 environment.systemPackages = with pkgs; [
 uv

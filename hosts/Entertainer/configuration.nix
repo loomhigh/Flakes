@@ -11,6 +11,7 @@ Much love.
 
 {
   imports = [
+    ./home.nix
     ./../../modules/locale.nix
     ./../../modules/base/default.nix #imports basic utilities I like having in all systems like VLC, and some command utils
     ./../../modules/core/default.nix #adds fish

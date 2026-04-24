@@ -2,7 +2,10 @@
 
 {
  home.stateVersion = "26.05";
-
+home.packages = with pkgs; [
+    uv
+    monica
+];
 /* BEFORE USING HOME-MANAGER
 
 For this host you need to fix the username problem.

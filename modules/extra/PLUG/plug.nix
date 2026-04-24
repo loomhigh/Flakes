@@ -19,6 +19,7 @@ ansible #unstable is the only one that seems to have a version passt 2.2
 #python313Packages.dateutils #added for PLUG
 #python313Packages.ical #
 #python313Packages.icalendar
+python313Packages.markdown #see if this fixes no markdown module error
 ];
 
 }

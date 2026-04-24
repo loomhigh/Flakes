@@ -1,7 +1,7 @@
 {config, pkgs, lib, ...}:
 
 let
-  pkgs = import <nixpkgs> {};
+  pkgs = import python3 {};
 in pkgs.mkShell {
   packages = [
     (pkgs.python3.withPackages (python-pkgs: with python-pkgs; [

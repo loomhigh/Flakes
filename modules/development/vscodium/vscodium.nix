@@ -3,10 +3,10 @@
 {
 
 environment.systemPackages = with pkgs; [
-  vscode-extensions.ms-python.python
   (vscode-with-extensions.override {
     vscode = vscodium;
     vscodeExtensions = with vscode-extensions; [
+      ms-python.python
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       {
         name = "vscode-pull-request-github";

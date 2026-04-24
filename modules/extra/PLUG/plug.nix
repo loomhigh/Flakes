@@ -8,12 +8,12 @@ sshpass
 ansible #unstable is the only one that seems to have a version passt 2.2
 
   (python3.withPackages (python-pkgs: [
-      dateutils
+      python-pkgs.dateutils
      # icalendar
       ical
-      markdown
-      soupsieve #BeautifulSoup, converts html to txt
-      beautifulsoup4
+      python-pkgs.markdown
+      python-pkgs.soupsieve #BeautifulSoup, converts html to txt
+      python-pkgs.beautifulsoup4
   ]))
 #python313 # Python3
 #python313Packages.dateutils #added for PLUG

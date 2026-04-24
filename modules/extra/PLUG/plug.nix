@@ -1,5 +1,20 @@
 {config, pkgs, lib, ...}:
 
+let
+  pkgs = import <nixpkgs> {};
+in pkgs.mkShell {
+  packages = [
+    (pkgs.python3.withPackages (python-pkgs: with python-pkgs; [
+      dateutils
+      icalendar
+      ical
+      markdown
+      soupsieve #BeautifulSoup, converts html to txt
+      beautifulsoup4
+    ]))
+  ];
+}
+
 {
 
 environment.systemPackages = with pkgs; [
@@ -19,7 +34,6 @@ ansible #unstable is the only one that seems to have a version passt 2.2
 #python313Packages.dateutils #added for PLUG
 #python313Packages.ical #
 #python313Packages.icalendar
-python313Packages.markdown #see if this fixes no markdown module error
 ];
 
 }

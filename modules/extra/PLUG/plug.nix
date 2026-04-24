@@ -5,7 +5,7 @@ programs.nix-ld.enable = true;
 environment.localBinInPath = true;
 
 environment.systemPackages = with pkgs; [
-uv
+#uv
 sshpass
 ansible #unstable is the only one that seems to have a version passt 2.2
 /*

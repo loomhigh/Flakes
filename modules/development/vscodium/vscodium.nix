@@ -7,6 +7,7 @@ environment.systemPackages = with pkgs; [
     vscode = vscodium;
     vscodeExtensions = with vscode-extensions; [
       ms-python.python
+      ms-python.debugpy
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       {
         name = "vscode-pull-request-github";

@@ -3,6 +3,7 @@
 {
 
 environment.systemPackages = with pkgs; [
+  vscode-extensions.ms-python.python
   (vscode-with-extensions.override {
     vscode = vscodium;
     vscodeExtensions = with vscode-extensions; [

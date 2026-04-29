@@ -26,6 +26,7 @@ pkgs.mkShell rec {
     pythonPackages.markdown
     pythonPackages.soupsieve #BeautifulSoup, converts html to txt
     pythonPackages.beautifulsoup4
+    pythonPackages.pillow
 
     # In this particular example, in order to compile any binary extensions they may
     # require, the Python modules listed in the hypothetical requirements.txt need

@@ -44,7 +44,7 @@ outputs = inputs@{ self, nixpkgs, home-manager, plasma-manager, ...}:
       hosts = builtins.filter (x: x != null) (lib.mapAttrsToList (name: value: if (value == "directory") then name else null) (builtins.readDir ./hosts));
     in {
       # for Python shells to work
-      devShells = forAllSystems (system: {
+      devShells = (system: {
         default = nixpkgs.legacyPackages.${system}.callPackage ./shell.nix { };
       });
 

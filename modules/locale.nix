@@ -16,7 +16,7 @@
 
   # Set your time zone.
   time.timeZone = "Australia/Perth";
-
+  environment.variables.TZ = "Australia/Perth"; # for python packages
   # Select internationalisation properties.
   i18n.defaultLocale = "en_AU.UTF-8";
 
@@ -30,7 +30,6 @@
     LC_PAPER = "en_AU.UTF-8";
     LC_TELEPHONE = "en_AU.UTF-8";
     LC_TIME = "en_AU.UTF-8";
-    TZ = "en_AU.UTF-8";
   };
 
   # this enables flakes, the most common way of managing nixOS

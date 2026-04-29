@@ -16,7 +16,7 @@
 
   # Set your time zone.
   time.timeZone = "Australia/Perth";
-  environment.variables.TZ = "Australia/Perth"; # for python packages
+  TZ = "Australia/Perth"; # for python packages
   # Select internationalisation properties.
   i18n.defaultLocale = "en_AU.UTF-8";
 

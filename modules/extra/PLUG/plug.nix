@@ -1,11 +1,10 @@
 {config, pkgs, lib, ...}:
 
 {
-INHERIT <nixpkgs> {};
-( pkgs.python35.buildEnv.override  {
+
+pkgs.python35.buildEnv.override = {
 extraLibs = with pkgs.python35Packages; [ numpy toolz ];
-}).env
-programs.nix-ld.enable = true;
+}.env;
 
 environment.systemPackages = with pkgs; [  
 #uv

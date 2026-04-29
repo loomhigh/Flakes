@@ -1,11 +1,8 @@
 {config, pkgs, lib, ...}:
 
 # shell.nix
-let
-  
-pkgs = import <nixpkgs> {};
 
-in pkgs.mkShell {
+pkgs.mkShell {
   
 packages = [
     

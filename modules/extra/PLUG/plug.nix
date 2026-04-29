@@ -6,7 +6,7 @@ environment.systemPackages = with pkgs; [
 #uv
 sshpass
 ansible #unstable is the only one that seems to have a version passt 2.2
-/*
+
   (python3.withPackages (python-pkgs: [
       python-pkgs.uv
       python-pkgs.dateutils
@@ -20,7 +20,7 @@ ansible #unstable is the only one that seems to have a version passt 2.2
 python313Packages.dateutils #added for PLUG
 python313Packages.ical #
 python313Packages.icalendar
-*/
+#*/
 ];
 
 }

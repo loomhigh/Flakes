@@ -43,6 +43,12 @@ outputs = inputs@{ self, nixpkgs, home-manager, plasma-manager, ...}:
       # every directory in ./hosts has config for that machine
       hosts = builtins.filter (x: x != null) (lib.mapAttrsToList (name: value: if (value == "directory") then name else null) (builtins.readDir ./hosts));
     in {
+      # for Python shells to work
+       {
+      devShells = forAllSystems (system: {
+        default = nixpkgs.legacyPackages.${system}.callPackage ./shell.nix { };
+      });
+
       # generate a nixos configuration for every host in ./hosts
       nixosConfigurations = builtins.listToAttrs
         (map (host: {

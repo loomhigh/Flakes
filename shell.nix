@@ -1,0 +1,26 @@
+{ 
+  pkgs, 
+  lib, 
+  stdenv, 
+  ... 
+}:
+
+let
+  pythonPackages = pkgs.python3Packages;
+in
+pkgs.mkShell {
+  buildInputs = with pkgs; [
+    pythonPackages.python
+    pythonPackages.venvShellHook
+  ];
+  venvDir = "./.venv";
+  postVenvCreation = ''
+    unset SOURCE_DATE_EPOCH
+  '';
+  postShellHook = ''
+    unset SOURCE_DATE_EPOCH
+    export LD_LIBRARY_PATH=${lib.makeLibraryPath [stdenv.cc.cc]}
+    pip install -r requirements.txt
+    exit
+  '';
+}

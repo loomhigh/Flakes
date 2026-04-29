@@ -22,6 +22,7 @@
     ./../../modules/extra/chromium/chromium.nix
     ./../../modules/extra/lutris/lutris.nix #going to see if this lets me do the rim thing
     ./../../modules/extra/docker/docker.nix
+    ./../../modules/extra/PLUG/python.nix
   ];
 
 # Hardware Adjustments 

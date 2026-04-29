@@ -16,7 +16,13 @@
 
   # Set your time zone.
   time.timeZone = "Australia/Perth";
-  TZ = "Australia/Perth"; # for python packages
+  environment.variables.TZ = "Australia/Perth"; # for python packages (Didn't help)
+  # moves SSL certificates to make UV python able to see them
+  
+  environment.etc.certfile = {
+  source = "/etc/ssl/certs/ca-bundle.crt";
+  target = "ssl/cert.pem";
+  };
   # Select internationalisation properties.
   i18n.defaultLocale = "en_AU.UTF-8";
 

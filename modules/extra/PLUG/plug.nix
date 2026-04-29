@@ -1,10 +1,13 @@
 {config, pkgs, lib, ...}:
 
 {
+  
+( pkgs.python35.buildEnv.override  {
+extraLibs = with pkgs.python35Packages; [ numpy toolz ];
+}).env
 programs.nix-ld.enable = true;
-environment.localBinInPath = true;
 
-environment.systemPackages = with pkgs; [
+environment.systemPackages = with pkgs; [  
 #uv
 sshpass
 ansible #unstable is the only one that seems to have a version passt 2.2

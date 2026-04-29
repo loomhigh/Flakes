@@ -2,17 +2,19 @@
 
 # shell.nix
 
-pkgs.mkShell {
-  
-packages = [
-    
-(pkgs.python3.withPackages (python-pkgs: with python-pkgs; [
-      
-# select Python packages here
+{ pkgs ? import <nixpkgs> {} }:
+with pkgs; # Same for pkgs.
+mkShell {
+  buildInputs = [
+    # Defines a python + set of packages.
+    (python3.withPackages (ps: with ps; with python3Packages; [
+
       pandas
-      requests
-    
-]))
-  
-];
+      numpy
+      matplotlib
+    ]))
+  ];
+
+  # Automatically run jupyter when entering the shell.
+  #shellHook = "jupyter notebook";
 }

@@ -19,6 +19,13 @@ pkgs.mkShell rec {
     # add them to PYTHONPATH and thus make them accessible from within the venv.
     pythonPackages.numpy
     pythonPackages.requests
+    pythonPackages.uv
+    pythonPackages.dateutils
+    pythonPackages.icalendar
+    pythonPackages.ical
+    pythonPackages.markdown
+    pythonPackages.soupsieve #BeautifulSoup, converts html to txt
+    pythonPackages.beautifulsoup4
 
     # In this particular example, in order to compile any binary extensions they may
     # require, the Python modules listed in the hypothetical requirements.txt need

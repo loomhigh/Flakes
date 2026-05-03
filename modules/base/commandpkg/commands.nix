@@ -18,6 +18,7 @@
   nmap #good for finding local IP addresses
   mkvtoolnix #for stitching videos together
   ffmpeg-full #for converting and messing with video files
+  arp-scan #show local IP addresses
   ];
 
 }

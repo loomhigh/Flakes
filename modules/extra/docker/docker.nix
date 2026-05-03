@@ -27,7 +27,7 @@ virtualisation.docker = {
       APP_DEBUG=true;
       #APP_ENV=lib.mkForce "local";
       #Database Test
-      DB_DATABASE=lib.mkForce "/home/personal/monica";
+      #DB_DATABASE=lib.mkForce "/home/personal/monica";
     };
 
 

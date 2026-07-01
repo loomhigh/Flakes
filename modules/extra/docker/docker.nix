@@ -1,5 +1,5 @@
 {config, pkgs, lib, ...}:
-
+/*
 {
 
   environment.systemPackages = with pkgs; [
@@ -12,6 +12,7 @@ virtualisation.docker = {
 };
 
   # ATTEMPTED TO USE MONICA. HAD MANY ISSUES. GIVING UP
+
   services.nginx = {
     enable=true;
   };
@@ -60,5 +61,6 @@ locations = {
    };
 
   };
-  #*/
+
 }
+*/

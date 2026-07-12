@@ -19,6 +19,8 @@
   mkvtoolnix #for stitching videos together
   ffmpeg-full #for converting and messing with video files
   arp-scan #show local IP addresses
+  jbtl #For JSON, not sure if useful yet
+  
   ];
 
 }

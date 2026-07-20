@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+  qgis-ltr
   qgis
     (python3.withPackages (python-pkgs: with python-pkgs; [
       pyproj

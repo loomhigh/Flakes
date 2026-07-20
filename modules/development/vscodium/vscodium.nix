@@ -9,7 +9,7 @@ environment.systemPackages = with pkgs; [
       ms-python.python
       ms-python.debugpy
       jnoortheen.nix-ide
-      github.vscode-pull-request-
+      github.vscode-pull-request-github
     ];
   })
 ];

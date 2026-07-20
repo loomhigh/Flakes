@@ -2,12 +2,12 @@
 
 {
   environment.systemPackages = with pkgs; [
-  qgis-ltr
+  #qgis-ltr
   qgis
-    (python3.withPackages (python-pkgs: with python-pkgs; [
-      pyproj
-      pyqt5
-  ]))
+  #  (python3.withPackages (python-pkgs: with python-pkgs; [
+  #    pyproj
+  #    pyqt5
+  #]))
   ];
 
 }

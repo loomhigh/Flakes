@@ -67,14 +67,14 @@
     #package = config.boot.kernelPackages.nvidiaPackages.legacy_535; # Older versions
     
     #\ Prime
-    dynamicBoost.enable = true;
-    prime = {
+    #dynamicBoost.enable = true;
+    #prime = {
 		# Make sure to use the correct Bus ID values for your system!
-    offload.enable = true;
-		intelBusId = "PCI:0:2:0";
-		nvidiaBusId = "PCI:1:0:0";
+    #offload.enable = true;
+		#intelBusId = "PCI:0:2:0";
+		#nvidiaBusId = "PCI:1:0:0";
 		# amdgpuBusId = "PCI:54:0:0"; For AMD GPU
-	};
+	#};
   };
   #*/
   ## END OF HARDWARE STUFF

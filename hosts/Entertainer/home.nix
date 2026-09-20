@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-home.stateVersion = "26.05";
+ home.stateVersion = "26.05";
 
 /* BEFORE USING HOME-MANAGER
 

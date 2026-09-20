@@ -60,7 +60,9 @@
 
 
   #bootloader  
-  boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.home.packages = with pkgs; [
+
+];enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   
   # Enable automatic login for the user.

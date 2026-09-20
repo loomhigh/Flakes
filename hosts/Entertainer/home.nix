@@ -1,10 +1,8 @@
 { pkgs, ... }:
 
 {
- home.stateVersion = "26.05";
-home.packages = with pkgs; [
+home.stateVersion = "26.05";
 
-];
 /* BEFORE USING HOME-MANAGER
 
 For this host you need to fix the username problem.

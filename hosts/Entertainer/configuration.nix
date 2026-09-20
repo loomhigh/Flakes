@@ -20,7 +20,7 @@ Much love.
     ./../../modules/extra/lutris/lutris.nix # includes wine
   ];
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.entertainer = {
+  users.users.Entertainer = {
     isNormalUser = true;
     description = "Entertainer";
     extraGroups = [ "networkmanager" "wheel" "video"];

@@ -78,7 +78,7 @@ xdg.terminal-exec = {
 };
 */
   #services.xserver.desktopManager.kodi.enable = true;
-  services.displayManager.autoLogin.user = "entertainer";
+  services.displayManager.autoLogin.user = "Entertainer";
   services.xserver.displayManager.lightdm.greeter.enable = false;
 
   #bluetooth
@@ -117,6 +117,10 @@ xdg.terminal-exec = {
     # Add any missing dynamic libraries for unpackaged programs
     # here, NOT in environment.systemPackages
   ];
+  #bootloader  
+  boot.loader.systemd-boot.home.packages = with pkgs; [
+
+];enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

@@ -108,7 +108,7 @@ xdg.terminal-exec = {
   # Install firefox and set default shell to fish
   users.defaultUserShell = pkgs.fish;
   programs = {
-
+    kdeconnect.enable = true;
   };
 
   #To enable Dynamic Links

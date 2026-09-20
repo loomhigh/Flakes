@@ -117,10 +117,6 @@ xdg.terminal-exec = {
     # Add any missing dynamic libraries for unpackaged programs
     # here, NOT in environment.systemPackages
   ];
-  #bootloader  
-  boot.loader.systemd-boot.home.packages = with pkgs; [
-
-];enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

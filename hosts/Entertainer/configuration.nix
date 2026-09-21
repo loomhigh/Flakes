@@ -155,6 +155,7 @@ xdg.terminal-exec = {
     
     kitty
     mangohud #for testing while gaming
+    libretro.mgba
     #dmenu-rs #for opening apps, stops automatic fullscreen
     #i3status #having this stops automatic fullscreen
     #fossGames

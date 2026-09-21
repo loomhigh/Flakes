@@ -132,7 +132,7 @@ xdg.terminal-exec = {
     
     #packages of convenience.
     kdePackages.dolphin
-    xfce.thunar
+    thunar
     micro
 
     #Fixing Audio and screensaver. 

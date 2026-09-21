@@ -137,7 +137,7 @@ xdg.terminal-exec = {
 
     #Fixing Audio and screensaver. 
     #Pipwire and pulse for the command utilities, and xorg.xset to have a command that turns off screensaver when starting up.
-    xorg.xset
+    xset
     pulseaudio
     pipewire
     

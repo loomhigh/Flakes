@@ -145,6 +145,7 @@ xdg.terminal-exec = {
     usermount
     udisks
     udiskie
+    deskreen
 
     #controller profiles
     antimicrox #keyboard controller mapper

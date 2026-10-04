@@ -145,7 +145,7 @@ xdg.terminal-exec = {
     usermount
     udisks
     udiskie
-    deskreen
+    python313Packages.xdg
     firefox
 
     #controller profiles

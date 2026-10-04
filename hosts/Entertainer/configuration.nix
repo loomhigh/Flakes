@@ -146,6 +146,7 @@ xdg.terminal-exec = {
     udisks
     udiskie
     deskreen
+    firefox
 
     #controller profiles
     antimicrox #keyboard controller mapper

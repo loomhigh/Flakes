@@ -52,7 +52,10 @@ Much love.
       ];
     };
   };
-
+# steam
+  programs.steam = {
+    enable = true;
+  };
 #ensure device is in performance mode
 services.auto-cpufreq.enable = true;
 services.auto-cpufreq.settings = {
@@ -129,7 +132,6 @@ xdg.terminal-exec = {
     # Reduntant addition of kodi and I3
     kodi
     i3
-    steam-unwrapped
     
     #packages of convenience.
     kdePackages.dolphin

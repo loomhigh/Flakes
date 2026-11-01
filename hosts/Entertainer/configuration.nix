@@ -129,6 +129,7 @@ xdg.terminal-exec = {
     # Reduntant addition of kodi and I3
     kodi
     i3
+    steam
     
     #packages of convenience.
     kdePackages.dolphin
